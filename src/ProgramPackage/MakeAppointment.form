@@ -73,7 +73,7 @@
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="ICbox" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jCheckBox4" min="-2" pref="96" max="-2" attributes="0"/>
+                                      <Component id="TtrainBox" min="-2" pref="96" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="103" alignment="0" groupAlignment="0" attributes="0">
                                       <Component id="appDateLabel" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -107,7 +107,7 @@
                       <Component id="jLabel1" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
                       <Component id="jButton2" alignment="3" min="-2" pref="68" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="npPet" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -119,7 +119,7 @@
                       <Component id="HCbox" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="BCbox" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="ICbox" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="TtrainBox" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -131,7 +131,7 @@
                       <Component id="appTimeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="timeBox" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="30" max="32767" attributes="0"/>
+                  <EmptySpace pref="28" max="32767" attributes="0"/>
                   <Component id="errorLabel" min="-2" pref="21" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="nextStepBtn" min="-2" max="-2" attributes="0"/>
@@ -177,9 +177,9 @@
             <Property name="text" type="java.lang.String" value="Choose Appointment Date :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox4">
+        <Component class="javax.swing.JCheckBox" name="TtrainBox">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jCheckBox4"/>
+            <Property name="text" type="java.lang.String" value="Training"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">

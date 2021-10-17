@@ -18,8 +18,6 @@ public class Service {
         this.price = price;
         this.available = available;
         
-        if (available = true)
-            services.add(this);
     }
 
     public Service() {
@@ -58,6 +56,11 @@ public class Service {
 
     public static ArrayList<Service> getAvailableServices(){
         return services;
+    }
+
+    @Override
+    public String toString() {
+        return "\nService{" + "name=" + name + ", price=" + price + '}';
     }
     
     

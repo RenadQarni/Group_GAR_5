@@ -15,21 +15,30 @@ import java.util.logging.Logger;
  */
 public class MakeAppointment extends javax.swing.JFrame {
 
-    static PrintWriter p;
+    
     static File file;
+    static PrintWriter p;
     static FileWriter f;
     static ArrayList<String> a = new ArrayList<>();
 
     /**
      * Creates new form VeterinaryClinic
      */
-    public MakeAppointment() {
+    public MakeAppointment() throws FileNotFoundException {
         initComponents();
+        
+        file = new File("AppointmentInfo.txt");
+        p = new PrintWriter(file);
+        
+        // init services
+        Service.services.add( new Service("Health Care", 100, true));
+        Service.services.add( new Service("Beauty Cut", 150, true));
+        Service.services.add( new Service("Insects Control", 80, true));
+        Service.services.add( new Service("Training", 250, true));
     }
 
     static void file() throws IOException {
-        file = new File("Out.txt");
-        f = null;
+        //f = null;
         try {
             f = new FileWriter(file);
         } catch (IOException ex) {
@@ -56,7 +65,7 @@ public class MakeAppointment extends javax.swing.JFrame {
         BCbox = new javax.swing.JCheckBox();
         ICbox = new javax.swing.JCheckBox();
         appDateLabel = new javax.swing.JLabel();
-        jCheckBox4 = new javax.swing.JCheckBox();
+        TtrainBox = new javax.swing.JCheckBox();
         jLabel4 = new javax.swing.JLabel();
         npPet = new javax.swing.JSpinner();
         nextStepBtn = new javax.swing.JButton();
@@ -89,7 +98,7 @@ public class MakeAppointment extends javax.swing.JFrame {
 
         appDateLabel.setText("Choose Appointment Date :");
 
-        jCheckBox4.setText("jCheckBox4");
+        TtrainBox.setText("Training");
 
         jLabel4.setText("How many pets?");
 
@@ -146,7 +155,7 @@ public class MakeAppointment extends javax.swing.JFrame {
                                     .addGap(18, 18, 18)
                                     .addComponent(ICbox)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jCheckBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(TtrainBox, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(MakeAppointmentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(appDateLabel)
                                     .addComponent(appTimeLabel)
@@ -168,7 +177,7 @@ public class MakeAppointment extends javax.swing.JFrame {
                 .addGroup(MakeAppointmentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
+                .addGap(24, 24, 24)
                 .addGroup(MakeAppointmentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(npPet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
@@ -179,7 +188,7 @@ public class MakeAppointment extends javax.swing.JFrame {
                     .addComponent(HCbox)
                     .addComponent(BCbox)
                     .addComponent(ICbox)
-                    .addComponent(jCheckBox4))
+                    .addComponent(TtrainBox))
                 .addGap(37, 37, 37)
                 .addGroup(MakeAppointmentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(appDateLabel)
@@ -188,7 +197,7 @@ public class MakeAppointment extends javax.swing.JFrame {
                 .addGroup(MakeAppointmentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(appTimeLabel)
                     .addComponent(timeBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addComponent(errorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(nextStepBtn)
@@ -220,6 +229,7 @@ public class MakeAppointment extends javax.swing.JFrame {
         a.add(spinner);
     }//GEN-LAST:event_noPet
 
+    // --------- Check if user fill in all the requirements ---------
     private boolean checkAppoinmentInfo() {
         servicesLable.setForeground(Color.black);
         appDateLabel.setForeground(Color.black);
@@ -230,7 +240,7 @@ public class MakeAppointment extends javax.swing.JFrame {
 
         if (validInfo == true) {
 
-            if (!HCbox.isSelected() && !BCbox.isSelected() && !ICbox.isSelected()) {
+            if (!HCbox.isSelected() && !BCbox.isSelected() && !ICbox.isSelected() && !TtrainBox.isSelected()) {
                 servicesLable.setForeground(Color.red);
                 errorLabel.setText("Please fill in all the requirements to confirm the appointment");
                 errorLabel.setForeground(Color.red);
@@ -254,11 +264,29 @@ public class MakeAppointment extends javax.swing.JFrame {
 
         return validInfo;
     }
+    
     private void saveAppoinmentInfo(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_saveAppoinmentInfo
         if (checkAppoinmentInfo() == true) {
+            
+            Appointment a = new Appointment();
+            a.setNoPet( (int) npPet.getValue());
+            a.setDate(appoDateChooser.getDate());
+            a.setTime(timeBox.getItemAt( timeBox.getSelectedIndex() ));
+            
+            if(HCbox.isSelected())
+                a.addService( Service.services.get(0) );
+            if(BCbox.isSelected())
+                a.addService( Service.services.get(1) );
+            if(ICbox.isSelected())
+                a.addService( Service.services.get(2) );
+            if(TtrainBox.isSelected())
+                a.addService( Service.services.get(3) );
+            
+            p.print(a);
+            
             ConfirmAppointment X = new ConfirmAppointment();
             X.setVisible(true);
-            MakeAppointmentPanel.setVisible(false);
+            this.dispose();
         }
 
     }//GEN-LAST:event_saveAppoinmentInfo
@@ -294,7 +322,11 @@ public class MakeAppointment extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MakeAppointment().setVisible(true);
+                try {
+                    new MakeAppointment().setVisible(true);
+                } catch (FileNotFoundException ex) {
+                    Logger.getLogger(MakeAppointment.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
@@ -304,12 +336,12 @@ public class MakeAppointment extends javax.swing.JFrame {
     private javax.swing.JCheckBox HCbox;
     private javax.swing.JCheckBox ICbox;
     private javax.swing.JPanel MakeAppointmentPanel;
+    private javax.swing.JCheckBox TtrainBox;
     private javax.swing.JLabel appDateLabel;
     private javax.swing.JLabel appTimeLabel;
     private com.toedter.calendar.JDateChooser appoDateChooser;
     private javax.swing.JLabel errorLabel;
     private javax.swing.JButton jButton2;
-    private javax.swing.JCheckBox jCheckBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JButton nextStepBtn;
