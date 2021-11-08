@@ -3,9 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/renad/Desktop/NetBeans_Project/Group_GAR_5/src/Appointment.java</file>
-            <file>file:/C:/Users/renad/Desktop/NetBeans_Project/Group_GAR_5/src/MakeAppointment.java</file>
-            <file>file:/C:/Users/renad/Desktop/NetBeans_Project/Group_GAR_5/src/Service.java</file>
+            <file>file:/C:/Users/renad/Documents/GitHub/Group_GAR_5/src/ProgramPackage/Service.java</file>
+            <file>file:/C:/Users/renad/Documents/GitHub/Group_GAR_5/src/ProgramPackage/ConfirmAppointment.java</file>
+            <file>file:/C:/Users/renad/Documents/GitHub/Group_GAR_5/src/ProgramPackage/MakeAppointment.java</file>
+            <file>file:/C:/Users/renad/Documents/GitHub/Group_GAR_5/src/ProgramPackage/Appointment.java</file>
         </group>
     </open-files>
 </project-private>
