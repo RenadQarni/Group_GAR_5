@@ -8,6 +8,7 @@ import static ProgramPackage.MakeAppointment.*;
  * @author renad
  */
 public class Appointment {
+    private int num ;
 
     private int noPet;
     private Date date;
