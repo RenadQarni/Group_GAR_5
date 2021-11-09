@@ -58,6 +58,7 @@ public class MakeAppointment extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jCalendar1 = new com.toedter.calendar.JCalendar();
         MakeAppointmentPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         servicesLable = new javax.swing.JLabel();
@@ -70,10 +71,10 @@ public class MakeAppointment extends javax.swing.JFrame {
         npPet = new javax.swing.JSpinner();
         nextStepBtn = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        appoDateChooser = new com.toedter.calendar.JDateChooser();
         timeBox = new javax.swing.JComboBox<>();
         appTimeLabel = new javax.swing.JLabel();
         errorLabel = new javax.swing.JLabel();
+        appoDateChooser = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -122,7 +123,6 @@ public class MakeAppointment extends javax.swing.JFrame {
         jButton2.setMaximumSize(new java.awt.Dimension(100, 100));
         jButton2.setMinimumSize(new java.awt.Dimension(50, 50));
 
-        timeBox.setBackground(new java.awt.Color(255, 255, 255));
         timeBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "    :     AM/PM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM" }));
 
         appTimeLabel.setText("Choose Appointment Time :");
@@ -156,20 +156,22 @@ public class MakeAppointment extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(TtrainBox, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(MakeAppointmentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(appDateLabel)
+                                .addGroup(MakeAppointmentPanelLayout.createSequentialGroup()
+                                    .addComponent(appDateLabel)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(appoDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MakeAppointmentPanelLayout.createSequentialGroup()
                                     .addComponent(appTimeLabel)
                                     .addGap(21, 21, 21)
-                                    .addGroup(MakeAppointmentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(timeBox, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(appoDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(timeBox, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(44, 44, 44)))))
                     .addGroup(MakeAppointmentPanelLayout.createSequentialGroup()
                         .addGap(151, 151, 151)
                         .addComponent(errorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(MakeAppointmentPanelLayout.createSequentialGroup()
                         .addGap(257, 257, 257)
                         .addComponent(nextStepBtn)))
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         MakeAppointmentPanelLayout.setVerticalGroup(
             MakeAppointmentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -195,17 +197,18 @@ public class MakeAppointment extends javax.swing.JFrame {
                     .addComponent(TtrainBox))
                 .addGap(37, 37, 37)
                 .addGroup(MakeAppointmentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(appDateLabel)
+                    .addGroup(MakeAppointmentPanelLayout.createSequentialGroup()
+                        .addComponent(appDateLabel)
+                        .addGap(29, 29, 29)
+                        .addGroup(MakeAppointmentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(appTimeLabel)
+                            .addComponent(timeBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(26, 26, 26)
+                        .addComponent(errorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(nextStepBtn))
                     .addComponent(appoDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(MakeAppointmentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(appTimeLabel)
-                    .addComponent(timeBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addComponent(errorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(nextStepBtn)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -216,7 +219,7 @@ public class MakeAppointment extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MakeAppointmentPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 450, Short.MAX_VALUE)
+            .addComponent(MakeAppointmentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 450, Short.MAX_VALUE)
         );
 
         pack();
@@ -346,6 +349,7 @@ public class MakeAppointment extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser appoDateChooser;
     private javax.swing.JLabel errorLabel;
     private javax.swing.JButton jButton2;
+    private com.toedter.calendar.JCalendar jCalendar1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JButton nextStepBtn;
