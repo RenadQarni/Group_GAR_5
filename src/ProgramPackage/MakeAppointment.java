@@ -148,16 +148,17 @@ public class MakeAppointment extends javax.swing.JFrame {
                                 .addComponent(Insects_Control_CheckBox)
                                 .addGap(18, 18, 18)
                                 .addComponent(Training_CheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(MakeAppointmentBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(MakeAppointmentBackground_PanelLayout.createSequentialGroup()
-                                    .addComponent(appDate_Label)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(appoDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MakeAppointmentBackground_PanelLayout.createSequentialGroup()
-                                    .addComponent(appTime_Label)
-                                    .addGap(21, 21, 21)
+                            .addGroup(MakeAppointmentBackground_PanelLayout.createSequentialGroup()
+                                .addGroup(MakeAppointmentBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MakeAppointmentBackground_PanelLayout.createSequentialGroup()
+                                        .addComponent(appTime_Label)
+                                        .addGap(21, 21, 21))
+                                    .addGroup(MakeAppointmentBackground_PanelLayout.createSequentialGroup()
+                                        .addComponent(appDate_Label)
+                                        .addGap(25, 25, 25)))
+                                .addGroup(MakeAppointmentBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(time_List, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(44, 44, 44)))
+                                    .addComponent(appoDateChooser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(MakeAppointmentBackground_PanelLayout.createSequentialGroup()
                                 .addComponent(pets_Label)
                                 .addGap(32, 32, 32)
@@ -170,7 +171,7 @@ public class MakeAppointment extends javax.swing.JFrame {
                     .addGroup(MakeAppointmentBackground_PanelLayout.createSequentialGroup()
                         .addGap(257, 257, 257)
                         .addComponent(nextStep_Button)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
         MakeAppointmentBackground_PanelLayout.setVerticalGroup(
             MakeAppointmentBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -204,7 +205,7 @@ public class MakeAppointment extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(nextStep_Button))
                     .addComponent(appoDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -232,6 +233,13 @@ public class MakeAppointment extends javax.swing.JFrame {
         a.add(spinner);
     }//GEN-LAST:event_noPet
 
+    // --------- Display error massage ---------
+    private void errorMsg() {
+        
+        errorMessage_Label.setText("Please fill in all the requirements to confirm the appointment");
+        errorMessage_Label.setForeground(Color.red);
+        
+    }
     // --------- Check if user fill in all the requirements ---------
     private boolean checkAppoinmentInfo() {
         Services_Label.setForeground(Color.black);
@@ -245,22 +253,19 @@ public class MakeAppointment extends javax.swing.JFrame {
 
             if (!Health_Care_CheckBox.isSelected() && !Beauty_Services_CheckBox.isSelected() && !Insects_Control_CheckBox.isSelected() && !Training_CheckBox.isSelected()) {
                 Services_Label.setForeground(Color.red);
-                errorMessage_Label.setText("Please fill in all the requirements to confirm the appointment");
-                errorMessage_Label.setForeground(Color.red);
+                errorMsg();
                 validInfo = false;
             }
 
             if (appoDateChooser.getDate() == null) {
                 appDate_Label.setForeground(Color.red);
-                errorMessage_Label.setText("Please fill in all the requirements to confirm the appointment");
-                errorMessage_Label.setForeground(Color.red);
+                errorMsg();
                 validInfo = false;
             }
 
             if (time_List.getSelectedIndex() == 0) {
                 appTime_Label.setForeground(Color.red);
-                errorMessage_Label.setText("Please fill in all the requirements to confirm the appointment");
-                errorMessage_Label.setForeground(Color.red);
+                errorMsg();
                 validInfo = false;
             }
         }

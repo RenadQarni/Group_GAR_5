@@ -16,7 +16,7 @@ public class Service {
     public Service(String name, int price, boolean available) {
         this.name = name;
         this.price = price;
-        this.available = available;
+        
         
     }
 
@@ -32,13 +32,7 @@ public class Service {
         this.price = price;
     }
 
-    public void setAvailable(boolean available) {
-        this.available = available;
-        if (available = true)
-            services.add(this);
-        else
-            services.remove(this);
-    }
+   
 
     // ------- Getter -------
 
@@ -50,10 +44,7 @@ public class Service {
         return price;
     }
 
-    public boolean isAvailable() {
-        return available;
-    }
-
+  
     public static ArrayList<Service> getAvailableServices(){
         return services;
     }
