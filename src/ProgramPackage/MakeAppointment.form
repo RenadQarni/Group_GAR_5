@@ -28,17 +28,17 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="MakeAppointmentPanel" min="-2" pref="600" max="-2" attributes="0"/>
+          <Component id="MakeAppointmentBackground_Panel" min="-2" pref="600" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="MakeAppointmentPanel" alignment="0" pref="450" max="32767" attributes="0"/>
+          <Component id="MakeAppointmentBackground_Panel" alignment="0" pref="450" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="MakeAppointmentPanel">
+    <Container class="javax.swing.JPanel" name="MakeAppointmentBackground_Panel">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -55,51 +55,52 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton2" min="-2" pref="55" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="179" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <Component id="backToprevious_Button" min="-2" pref="55" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                  <Component id="npPet" min="-2" pref="52" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="servicesLable" min="-2" max="-2" attributes="0"/>
+                              <Component id="Services_Label" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                                  <Component id="HCbox" min="-2" pref="102" max="-2" attributes="0"/>
+                                  <Component id="Health_Care_CheckBox" min="-2" pref="102" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="BCbox" min="-2" pref="102" max="-2" attributes="0"/>
+                                  <Component id="Beauty_Services_CheckBox" min="-2" pref="102" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="ICbox" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Insects_Control_CheckBox" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="TtrainBox" min="-2" pref="96" max="-2" attributes="0"/>
+                                  <Component id="Training_CheckBox" min="-2" pref="96" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" alignment="0" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="appDateLabel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="appDate_Label" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="appoDateChooser" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="appTimeLabel" min="-2" max="-2" attributes="0"/>
+                                      <Component id="appTime_Label" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                                      <Component id="timeBox" min="-2" pref="125" max="-2" attributes="0"/>
+                                      <Component id="time_List" min="-2" pref="125" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="pets_Label" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="PageTitle_Label" min="-2" max="-2" attributes="0"/>
+                                      <Component id="noOfPets_Spinner" min="-2" pref="52" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="151" max="-2" attributes="0"/>
-                          <Component id="errorLabel" min="-2" pref="350" max="-2" attributes="0"/>
+                          <Component id="errorMessage_Label" min="-2" pref="350" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="257" max="-2" attributes="0"/>
-                          <Component id="nextStepBtn" min="-2" max="-2" attributes="0"/>
+                          <Component id="nextStep_Button" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -109,43 +110,38 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" pref="24" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton2" min="-2" pref="52" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="backToprevious_Button" min="-2" pref="52" max="-2" attributes="0"/>
+                      <Component id="PageTitle_Label" min="-2" pref="24" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="npPet" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="noOfPets_Spinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="pets_Label" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="servicesLable" min="-2" max="-2" attributes="0"/>
+                  <Component id="Services_Label" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="HCbox" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="BCbox" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="ICbox" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="TtrainBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Health_Care_CheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Beauty_Services_CheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Insects_Control_CheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Training_CheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="appDateLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="appDate_Label" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="appTimeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="timeBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="appTime_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="time_List" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                          <Component id="errorLabel" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="errorMessage_Label" min="-2" pref="21" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="nextStepBtn" min="-2" max="-2" attributes="0"/>
+                          <Component id="nextStep_Button" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="appoDateChooser" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -155,7 +151,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="PageTitle_Label">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Dialog" size="18" style="1"/>
@@ -163,45 +159,45 @@
             <Property name="text" type="java.lang.String" value="Make Appointment"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="servicesLable">
+        <Component class="javax.swing.JLabel" name="Services_Label">
           <Properties>
             <Property name="text" type="java.lang.String" value="Choose Services :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="HCbox">
+        <Component class="javax.swing.JCheckBox" name="Health_Care_CheckBox">
           <Properties>
             <Property name="text" type="java.lang.String" value="Health Care"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="BCbox">
+        <Component class="javax.swing.JCheckBox" name="Beauty_Services_CheckBox">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Beauty Cut"/>
+            <Property name="text" type="java.lang.String" value="Beauty Services"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BCboxActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Beauty_Services_CheckBoxActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="ICbox">
+        <Component class="javax.swing.JCheckBox" name="Insects_Control_CheckBox">
           <Properties>
             <Property name="text" type="java.lang.String" value="Insects Control"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="appDateLabel">
+        <Component class="javax.swing.JLabel" name="appDate_Label">
           <Properties>
             <Property name="text" type="java.lang.String" value="Choose Appointment Date :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="TtrainBox">
+        <Component class="javax.swing.JCheckBox" name="Training_CheckBox">
           <Properties>
             <Property name="text" type="java.lang.String" value="Training"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="pets_Label">
           <Properties>
             <Property name="text" type="java.lang.String" value="How many pets?"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JSpinner" name="npPet">
+        <Component class="javax.swing.JSpinner" name="noOfPets_Spinner">
           <Properties>
             <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
               <SpinnerModel initial="1" maximum="5" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -211,7 +207,7 @@
             <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="noPet"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="nextStepBtn">
+        <Component class="javax.swing.JButton" name="nextStep_Button">
           <Properties>
             <Property name="text" type="java.lang.String" value="Next Step"/>
           </Properties>
@@ -219,7 +215,7 @@
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="saveAppoinmentInfo"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="backToprevious_Button">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -235,7 +231,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="timeBox">
+        <Component class="javax.swing.JComboBox" name="time_List">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="10">
@@ -256,12 +252,12 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="appTimeLabel">
+        <Component class="javax.swing.JLabel" name="appTime_Label">
           <Properties>
             <Property name="text" type="java.lang.String" value="Choose Appointment Time :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="errorLabel">
+        <Component class="javax.swing.JLabel" name="errorMessage_Label">
         </Component>
         <Component class="com.toedter.calendar.JDateChooser" name="appoDateChooser">
         </Component>

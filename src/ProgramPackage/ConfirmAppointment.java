@@ -12,15 +12,15 @@ package ProgramPackage;
 public class ConfirmAppointment extends javax.swing.JFrame {
 
     /**
-     * Creates new form Confirm
+     * Creates new form Confirmation_Button
      */
     public ConfirmAppointment() {
         initComponents();
         
-        BetsNo.setText(Appointment.appointments.get(0).PetsNo());
-        Date.setText(Appointment.appointments.get(0).Date());
-        Time.setText(Appointment.appointments.get(0).time());
-        Services.setText(Appointment.appointments.get(0).services());
+        BetsNo_Label.setText(Appointment.appointments.get(0).PetsNo());
+        Date_Label.setText(Appointment.appointments.get(0).Date());
+        Time_Label.setText(Appointment.appointments.get(0).time());
+        Services_Label.setText(Appointment.appointments.get(0).services());
     }
 
     /**
@@ -32,80 +32,82 @@ public class ConfirmAppointment extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        BetsNo = new javax.swing.JLabel();
-        Date = new javax.swing.JLabel();
-        Time = new javax.swing.JLabel();
-        Services = new javax.swing.JLabel();
+        ConfirmationBackground_Panel = new javax.swing.JPanel();
+        Page_Title_Label = new javax.swing.JLabel();
+        Confirmation_Button = new javax.swing.JButton();
+        Appointment_Info_Label = new javax.swing.JLabel();
+        BetsNo_Label = new javax.swing.JLabel();
+        Date_Label = new javax.swing.JLabel();
+        Time_Label = new javax.swing.JLabel();
+        Services_Label = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setEnabled(false);
-        jPanel1.setMinimumSize(new java.awt.Dimension(690, 450));
-        jPanel1.setPreferredSize(new java.awt.Dimension(690, 460));
+        ConfirmationBackground_Panel.setBackground(new java.awt.Color(255, 255, 255));
+        ConfirmationBackground_Panel.setEnabled(false);
+        ConfirmationBackground_Panel.setMinimumSize(new java.awt.Dimension(690, 450));
+        ConfirmationBackground_Panel.setPreferredSize(new java.awt.Dimension(690, 460));
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel1.setText("Confirm Appointment");
+        Page_Title_Label.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        Page_Title_Label.setText("Confirm Appointment");
 
-        jButton1.setText("Confirm");
+        Confirmation_Button.setText("Confirm");
 
-        jLabel2.setText("Appointment Information:");
+        Appointment_Info_Label.setText("Appointment Information:");
 
-        BetsNo.setText("BetsNo");
+        BetsNo_Label.setText("BetsNo");
 
-        Date.setText("Date");
+        Date_Label.setText("Date");
 
-        Time.setText("Time");
+        Time_Label.setText("Time");
 
-        Services.setText("Services");
+        Services_Label.setText("Services");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(301, Short.MAX_VALUE)
-                .addComponent(jButton1)
+        javax.swing.GroupLayout ConfirmationBackground_PanelLayout = new javax.swing.GroupLayout(ConfirmationBackground_Panel);
+        ConfirmationBackground_Panel.setLayout(ConfirmationBackground_PanelLayout);
+        ConfirmationBackground_PanelLayout.setHorizontalGroup(
+            ConfirmationBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ConfirmationBackground_PanelLayout.createSequentialGroup()
+                .addContainerGap(280, Short.MAX_VALUE)
+                .addComponent(Confirmation_Button)
                 .addGap(303, 303, 303))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(259, 259, 259)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(Services, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(8, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Time, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel1)
-                                    .addComponent(BetsNo, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Date, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGap(65, 65, 65))))
+            .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
+                .addGap(172, 172, 172)
+                .addGroup(ConfirmationBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
+                        .addGroup(ConfirmationBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Time_Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
+                                .addGroup(ConfirmationBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(ConfirmationBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(Page_Title_Label)
+                                        .addComponent(Appointment_Info_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(BetsNo_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 87, Short.MAX_VALUE)))
+                        .addGap(65, 65, 65))
+                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
+                        .addGroup(ConfirmationBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Services_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Date_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(jLabel2)
+        ConfirmationBackground_PanelLayout.setVerticalGroup(
+            ConfirmationBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Page_Title_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
+                .addComponent(Appointment_Info_Label)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BetsNo)
+                .addComponent(BetsNo_Label)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Date)
+                .addComponent(Date_Label)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Time)
+                .addComponent(Time_Label)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Services)
+                .addComponent(Services_Label)
                 .addGap(109, 109, 109)
-                .addComponent(jButton1)
+                .addComponent(Confirmation_Button)
                 .addContainerGap(46, Short.MAX_VALUE))
         );
 
@@ -113,21 +115,15 @@ public class ConfirmAppointment extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 690, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(ConfirmationBackground_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 460, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(ConfirmationBackground_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -170,13 +166,13 @@ public class ConfirmAppointment extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel BetsNo;
-    private javax.swing.JLabel Date;
-    private javax.swing.JLabel Services;
-    private javax.swing.JLabel Time;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel Appointment_Info_Label;
+    private javax.swing.JLabel BetsNo_Label;
+    private javax.swing.JPanel ConfirmationBackground_Panel;
+    private javax.swing.JButton Confirmation_Button;
+    private javax.swing.JLabel Date_Label;
+    private javax.swing.JLabel Page_Title_Label;
+    private javax.swing.JLabel Services_Label;
+    private javax.swing.JLabel Time_Label;
     // End of variables declaration//GEN-END:variables
 }
