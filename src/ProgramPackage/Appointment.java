@@ -1,16 +1,13 @@
 package ProgramPackage;
 
 import java.util.*;
-import static ProgramPackage.MakeAppointment.*;
-
 /**
  *
  * @author renad
  */
 public class Appointment {
-    private int num ;
-
-    private int noPet;
+   
+    private int noOfPets;
     private Date date;
     private String time;
     private ArrayList<Service> services = new ArrayList<>();
@@ -28,7 +25,7 @@ public class Appointment {
 
     // ------- Setter -------
     public void setNoPet(int noPet) {
-        this.noPet = noPet;
+        this.noOfPets = noPet;
     }
 
     public void setDate(Date date) {
@@ -41,7 +38,7 @@ public class Appointment {
 
     // ------- Getter -------
     public int getNoPet() {
-        return noPet;
+        return noOfPets;
     }
 
     public Date getDate() {
@@ -71,13 +68,13 @@ public class Appointment {
 
     public String PetsNo() {
 
-        return "Number of pets: " + noPet;
+        return "Number of pets: " + noOfPets;
 
     }
 
     @Override
     public String toString() {
-        return "Appointment{" + "noPet=" + noPet + "\n, date=" + date + ", time=" + time + "\n, services=" + printServices(services) + '}';
+        return "Appointment{" + "noPet=" + noOfPets + "\n, date=" + date + ", time=" + time + "\n, services=" + printServices(services) + '}';
     }
 
         public String Date(){
