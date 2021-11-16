@@ -5,6 +5,10 @@
  */
 package ProgramPackage;
 
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author renad
@@ -14,13 +18,17 @@ public class ConfirmAppointment extends javax.swing.JFrame {
     /**
      * Creates new form Confirmation_Button
      */
-    public ConfirmAppointment() {
+    public ConfirmAppointment(Appointment a) {
         initComponents();
         
-        BetsNo_Label.setText(Appointment.appointments.get(0).PetsNo());
-        Date_Label.setText(Appointment.appointments.get(0).Date());
-        Time_Label.setText(Appointment.appointments.get(0).time());
-        Services_Label.setText(Appointment.appointments.get(0).services());
+        BetsNo_Label.setText(a.PetsNo());
+        Date_Label.setText(a.Date());
+        Time_Label.setText(a.time());
+        Services_Label.setText(a.services());
+        TotalPrice_Label.setText("Total Price : "+a.getTotalPrice()+" SR");
+    }
+
+    ConfirmAppointment() {
     }
 
     /**
@@ -40,6 +48,8 @@ public class ConfirmAppointment extends javax.swing.JFrame {
         Date_Label = new javax.swing.JLabel();
         Time_Label = new javax.swing.JLabel();
         Services_Label = new javax.swing.JLabel();
+        TotalPrice_Label = new javax.swing.JLabel();
+        backToprevious_Button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,6 +73,18 @@ public class ConfirmAppointment extends javax.swing.JFrame {
 
         Services_Label.setText("Services");
 
+        TotalPrice_Label.setText("Total Price");
+
+        backToprevious_Button.setBackground(new java.awt.Color(255, 255, 255));
+        backToprevious_Button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back.png"))); // NOI18N
+        backToprevious_Button.setMaximumSize(new java.awt.Dimension(100, 100));
+        backToprevious_Button.setMinimumSize(new java.awt.Dimension(50, 50));
+        backToprevious_Button.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backToPrevious(evt);
+            }
+        });
+
         javax.swing.GroupLayout ConfirmationBackground_PanelLayout = new javax.swing.GroupLayout(ConfirmationBackground_Panel);
         ConfirmationBackground_Panel.setLayout(ConfirmationBackground_PanelLayout);
         ConfirmationBackground_PanelLayout.setHorizontalGroup(
@@ -72,7 +94,9 @@ public class ConfirmAppointment extends javax.swing.JFrame {
                 .addComponent(Confirmation_Button)
                 .addGap(303, 303, 303))
             .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                .addGap(172, 172, 172)
+                .addContainerGap()
+                .addComponent(backToprevious_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(111, 111, 111)
                 .addGroup(ConfirmationBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
                         .addGroup(ConfirmationBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -87,16 +111,19 @@ public class ConfirmAppointment extends javax.swing.JFrame {
                         .addGap(65, 65, 65))
                     .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
                         .addGroup(ConfirmationBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TotalPrice_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Services_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Date_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGap(0, 95, Short.MAX_VALUE))))
         );
         ConfirmationBackground_PanelLayout.setVerticalGroup(
             ConfirmationBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Page_Title_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
+                .addGroup(ConfirmationBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Page_Title_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(backToprevious_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
                 .addComponent(Appointment_Info_Label)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(BetsNo_Label)
@@ -106,9 +133,11 @@ public class ConfirmAppointment extends javax.swing.JFrame {
                 .addComponent(Time_Label)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Services_Label)
-                .addGap(109, 109, 109)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(TotalPrice_Label)
+                .addGap(81, 81, 81)
                 .addComponent(Confirmation_Button)
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(141, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -128,6 +157,19 @@ public class ConfirmAppointment extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void backToPrevious(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backToPrevious
+        // back to browse make appointment interface
+        
+        MakeAppointment X;
+        try {
+            X = new MakeAppointment();
+            X.setVisible(true);
+            this.dispose();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ConfirmAppointment.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+    }//GEN-LAST:event_backToPrevious
 
     /**
      * @param args the command line arguments
@@ -174,5 +216,7 @@ public class ConfirmAppointment extends javax.swing.JFrame {
     private javax.swing.JLabel Page_Title_Label;
     private javax.swing.JLabel Services_Label;
     private javax.swing.JLabel Time_Label;
+    private javax.swing.JLabel TotalPrice_Label;
+    private javax.swing.JButton backToprevious_Button;
     // End of variables declaration//GEN-END:variables
 }

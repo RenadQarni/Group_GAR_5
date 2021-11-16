@@ -1,13 +1,16 @@
 package ProgramPackage;
 
+import java.text.SimpleDateFormat;
 import java.util.*;
+
 /**
  *
  * @author renad
  */
 public class Appointment {
-   
+
     private int noOfPets;
+    private int totalPrice = 0;
     private Date date;
     private String time;
     private ArrayList<Service> services = new ArrayList<>();
@@ -36,6 +39,10 @@ public class Appointment {
         this.time = time;
     }
 
+    public void setTotalPrice(int totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
     // ------- Getter -------
     public int getNoPet() {
         return noOfPets;
@@ -47,6 +54,10 @@ public class Appointment {
 
     public String getTime() {
         return time;
+    }
+
+    public int getTotalPrice() {
+        return totalPrice;
     }
 
     // ------- Method -------
@@ -72,24 +83,17 @@ public class Appointment {
 
     }
 
-    @Override
-    public String toString() {
-        return "Appointment{" + "noPet=" + noOfPets + "\n, date=" + date + ", time=" + time + "\n, services=" + printServices(services) + '}';
+    public String Date() {
+        SimpleDateFormat f = new SimpleDateFormat("MMM dd, yyyy");
+        return "The selected date is: " + f.format(date);
     }
 
-        public String Date(){
-     
-       return "The selected date is: "+date;
+    public String time() {
+        return "The selected time is: " + time;
     }
 
-    public String time(){
-      
-       return "The selected time is: "+time;
-    }
-
-    public String services(){
-        
-        return  "The selected services is: "+printServices(services);
+    public String services() {
+        return "The selected services is: " + printServices(services);
     }
 
 }
