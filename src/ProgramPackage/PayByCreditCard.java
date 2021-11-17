@@ -6,6 +6,9 @@
 package ProgramPackage;
 
 import java.awt.Color;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -59,7 +62,7 @@ public class PayByCreditCard extends javax.swing.JFrame {
 
         Error_Message_Name.setText("name error");
 
-        nextBtn.setText("next");
+        nextBtn.setText("Next");
         nextBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nextBtnActionPerformed(evt);
@@ -92,7 +95,6 @@ public class PayByCreditCard extends javax.swing.JFrame {
 
         expiration_date.setText("Expriation Date  ");
 
-        Date.setForeground(new java.awt.Color(204, 204, 204));
         Date.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DateActionPerformed(evt);
@@ -122,14 +124,28 @@ public class PayByCreditCard extends javax.swing.JFrame {
         panel1.setLayout(panel1Layout);
         panel1Layout.setHorizontalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
+            .addGroup(panel1Layout.createSequentialGroup()
                 .addGap(10, 10, 10)
                 .addComponent(backToprevious_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel1Layout.createSequentialGroup()
-                        .addComponent(Credit_card_label)
-                        .addGap(155, 155, 155))
+                        .addComponent(jLabel2)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(panel1Layout.createSequentialGroup()
+                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Credit_card_label)
+                            .addGroup(panel1Layout.createSequentialGroup()
+                                .addComponent(expiration_date)
+                                .addGap(33, 33, 33)
+                                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Date, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Error_Message_Name)
+                                    .addGroup(panel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel3)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Error_Message_Date)))))
+                        .addGap(142, 185, Short.MAX_VALUE))
                     .addGroup(panel1Layout.createSequentialGroup()
                         .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -138,30 +154,21 @@ public class PayByCreditCard extends javax.swing.JFrame {
                             .addGroup(panel1Layout.createSequentialGroup()
                                 .addGap(22, 22, 22)
                                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Error_massage)
-                                    .addComponent(CVV, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(panel1Layout.createSequentialGroup()
-                                        .addComponent(Error_Message_cvv)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(nextBtn))))
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(nextBtn))
+                                    .addGroup(panel1Layout.createSequentialGroup()
+                                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(Error_massage)
+                                            .addComponent(CVV, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(Error_Message_cvv))
+                                        .addGap(0, 0, Short.MAX_VALUE))))
                             .addGroup(panel1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(CreditCard, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(panel1Layout.createSequentialGroup()
-                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addGroup(panel1Layout.createSequentialGroup()
-                                .addComponent(expiration_date)
-                                .addGap(33, 33, 33)
-                                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Error_Message_Date)
-                                    .addComponent(Date, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Error_Message_Name)
-                                    .addComponent(jLabel3))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                                    .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap())))
         );
         panel1Layout.setVerticalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -189,24 +196,18 @@ public class PayByCreditCard extends javax.swing.JFrame {
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(expiration_date)
                     .addComponent(Date, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel1Layout.createSequentialGroup()
-                        .addGap(59, 59, 59)
-                        .addComponent(jLabel2)
-                        .addGap(87, 87, 87))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addComponent(Error_Message_Date)
-                        .addGap(14, 14, 14)
-                        .addComponent(CVV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panel1Layout.createSequentialGroup()
-                                .addComponent(Error_Message_cvv)
-                                .addGap(21, 21, 21))
-                            .addComponent(nextBtn, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(Error_Message_Date))
+                .addGap(29, 29, 29)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(CVV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Error_Message_cvv)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addComponent(nextBtn)
                 .addGap(30, 30, 30))
         );
 
@@ -214,10 +215,7 @@ public class PayByCreditCard extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+            .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -281,18 +279,26 @@ public class PayByCreditCard extends javax.swing.JFrame {
     }//GEN-LAST:event_CVVKeyPressed
 
     private void DateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DateActionPerformed
+ String userInput = Date.getText();
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        if (userInput.trim().equals("")) {
+
+            Error_Message_Date.setText("You must enter the expiry date");
+            Error_Message_Date.setForeground(Color.red);
+        } else {
+
+            SimpleDateFormat dateFormat = new SimpleDateFormat("MM/yy");
+            dateFormat.setLenient(false);
+            try {
+                Date date = dateFormat.parse(userInput);
+                Error_Message_Date.setText("");
+
+            } catch (ParseException e) {
+                Error_Message_Date.setText(userInput + " is Invalid Date format");
+                Error_Message_Date.setForeground(Color.red);
+            }
+        }
+    
     }//GEN-LAST:event_DateActionPerformed
 
     private void backToprevious_ButtonbackToPrevious(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backToprevious_ButtonbackToPrevious
