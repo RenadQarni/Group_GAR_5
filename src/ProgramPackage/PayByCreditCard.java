@@ -264,6 +264,26 @@ public class PayByCreditCard extends javax.swing.JFrame {
 
     private void CreditCardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreditCardActionPerformed
 
+           String Credit = CreditCard.getText();
+        Error_massage.setText(" ");
+
+        if (Credit.trim().equals("")) {
+
+            Error_massage.setText("Enter a 16-digit card number");
+            Error_massage.setForeground(Color.red);
+
+        } else if (Credit.matches("[0-9]+") && Credit.length() == 16) {
+            Error_massage.setText(" ");
+
+        } else {
+
+            Error_massage.setText("Enter a 16-digit card number");
+
+            Error_massage.setForeground(Color.red);
+
+        }
+
+ 
     }//GEN-LAST:event_CreditCardActionPerformed
 
     private void CVVKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CVVKeyPressed
