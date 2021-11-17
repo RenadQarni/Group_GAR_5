@@ -1,6 +1,7 @@
 package ProgramPackage;
 
 import java.awt.Color;
+import java.awt.Image;
 import java.io.*;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -10,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -20,14 +22,22 @@ public class MakeAppointment extends javax.swing.JFrame {
     static File file;
     static PrintWriter p;
     static FileWriter f;
-    static ArrayList<String> a = new ArrayList<>();
+    public static Appointment a;
+    static ArrayList<String> s = new ArrayList<>();
 
     /**
      * Creates new form VeterinaryClinic
+     * @throws java.io.FileNotFoundException
      */
     public MakeAppointment() throws FileNotFoundException {
         initComponents();
 
+        // set background 
+        ImageIcon background = new ImageIcon("src\\Icons\\b2.jpg");
+        background = new ImageIcon(background.getImage().getScaledInstance(Background.getWidth(), Background.getHeight(), Image.SCALE_DEFAULT));
+        Background.setIcon(background);
+        Background.repaint();
+        
         file = new File("AppointmentInfo.txt");
         p = new PrintWriter(file);
 
@@ -66,6 +76,7 @@ public class MakeAppointment extends javax.swing.JFrame {
     private void initComponents() {
 
         MakeAppointmentBackground_Panel = new javax.swing.JPanel();
+        backToprevious = new javax.swing.JLabel();
         PageTitle_Label = new javax.swing.JLabel();
         Services_Label = new javax.swing.JLabel();
         Health_Care_CheckBox = new javax.swing.JCheckBox();
@@ -76,37 +87,55 @@ public class MakeAppointment extends javax.swing.JFrame {
         pets_Label = new javax.swing.JLabel();
         noOfPets_Spinner = new javax.swing.JSpinner();
         nextStep_Button = new javax.swing.JButton();
-        backToprevious_Button = new javax.swing.JButton();
         time_List = new javax.swing.JComboBox<>();
         appTime_Label = new javax.swing.JLabel();
         errorMessage_Label = new javax.swing.JLabel();
         appoDateChooser = new com.toedter.calendar.JDateChooser();
+        Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(550, 550));
         setResizable(false);
 
         MakeAppointmentBackground_Panel.setBackground(new java.awt.Color(255, 255, 255));
-        MakeAppointmentBackground_Panel.setPreferredSize(new java.awt.Dimension(690, 460));
+        MakeAppointmentBackground_Panel.setPreferredSize(new java.awt.Dimension(550, 550));
+        MakeAppointmentBackground_Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        backToprevious.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back.png"))); // NOI18N
+        backToprevious.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backToPrevious(evt);
+            }
+        });
+        MakeAppointmentBackground_Panel.add(backToprevious, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 50));
 
         PageTitle_Label.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         PageTitle_Label.setText("Make Appointment");
+        MakeAppointmentBackground_Panel.add(PageTitle_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 15, -1, -1));
 
         Services_Label.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         Services_Label.setText("Choose Services :");
+        MakeAppointmentBackground_Panel.add(Services_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 141, -1, -1));
 
         Health_Care_CheckBox.setText("Health Care");
+        MakeAppointmentBackground_Panel.add(Health_Care_CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 178, 190, -1));
 
         Beauty_Services_CheckBox.setText("Beauty Services");
+        MakeAppointmentBackground_Panel.add(Beauty_Services_CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 178, 190, -1));
 
         Insects_Control_CheckBox.setText("Insects Control");
+        MakeAppointmentBackground_Panel.add(Insects_Control_CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 209, 190, -1));
 
         appDate_Label.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         appDate_Label.setText("Choose Appointment Date :");
+        MakeAppointmentBackground_Panel.add(appDate_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 259, -1, -1));
 
         Training_CheckBox.setText("Training");
+        MakeAppointmentBackground_Panel.add(Training_CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 209, 190, -1));
 
         pets_Label.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         pets_Label.setText("How many pets?");
+        MakeAppointmentBackground_Panel.add(pets_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 106, -1, -1));
 
         noOfPets_Spinner.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
         noOfPets_Spinner.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -114,6 +143,7 @@ public class MakeAppointment extends javax.swing.JFrame {
                 noPet(evt);
             }
         });
+        MakeAppointmentBackground_Panel.add(noOfPets_Spinner, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 103, 52, -1));
 
         nextStep_Button.setText("Next Step");
         nextStep_Button.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -121,115 +151,32 @@ public class MakeAppointment extends javax.swing.JFrame {
                 saveAppointmentInfo(evt);
             }
         });
-
-        backToprevious_Button.setBackground(new java.awt.Color(255, 255, 255));
-        backToprevious_Button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back.png"))); // NOI18N
-        backToprevious_Button.setMaximumSize(new java.awt.Dimension(100, 100));
-        backToprevious_Button.setMinimumSize(new java.awt.Dimension(50, 50));
-        backToprevious_Button.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                backToPrevious(evt);
-            }
-        });
+        MakeAppointmentBackground_Panel.add(nextStep_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(257, 368, -1, -1));
 
         time_List.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "    :     AM/PM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM" }));
+        MakeAppointmentBackground_Panel.add(time_List, new org.netbeans.lib.awtextra.AbsoluteConstraints(245, 307, 139, -1));
 
         appTime_Label.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         appTime_Label.setText("Choose Appointment Time :");
+        MakeAppointmentBackground_Panel.add(appTime_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 310, -1, -1));
+        MakeAppointmentBackground_Panel.add(errorMessage_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(151, 335, 350, 21));
+        MakeAppointmentBackground_Panel.add(appoDateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 259, 135, -1));
 
-        javax.swing.GroupLayout MakeAppointmentBackground_PanelLayout = new javax.swing.GroupLayout(MakeAppointmentBackground_Panel);
-        MakeAppointmentBackground_Panel.setLayout(MakeAppointmentBackground_PanelLayout);
-        MakeAppointmentBackground_PanelLayout.setHorizontalGroup(
-            MakeAppointmentBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MakeAppointmentBackground_PanelLayout.createSequentialGroup()
-                .addGroup(MakeAppointmentBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MakeAppointmentBackground_PanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(backToprevious_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(MakeAppointmentBackground_PanelLayout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addGroup(MakeAppointmentBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Services_Label)
-                            .addGroup(MakeAppointmentBackground_PanelLayout.createSequentialGroup()
-                                .addComponent(pets_Label)
-                                .addGap(32, 32, 32)
-                                .addGroup(MakeAppointmentBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(PageTitle_Label)
-                                    .addComponent(noOfPets_Spinner, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(MakeAppointmentBackground_PanelLayout.createSequentialGroup()
-                                .addGroup(MakeAppointmentBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(appTime_Label, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(appDate_Label, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGap(18, 18, 18)
-                                .addGroup(MakeAppointmentBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(time_List, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, MakeAppointmentBackground_PanelLayout.createSequentialGroup()
-                                        .addGap(4, 4, 4)
-                                        .addComponent(appoDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                    .addGroup(MakeAppointmentBackground_PanelLayout.createSequentialGroup()
-                        .addGap(151, 151, 151)
-                        .addComponent(errorMessage_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(MakeAppointmentBackground_PanelLayout.createSequentialGroup()
-                        .addGap(257, 257, 257)
-                        .addComponent(nextStep_Button))
-                    .addGroup(MakeAppointmentBackground_PanelLayout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addGroup(MakeAppointmentBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Insects_Control_CheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Health_Care_CheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(MakeAppointmentBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Beauty_Services_CheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Training_CheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(99, Short.MAX_VALUE))
-        );
-        MakeAppointmentBackground_PanelLayout.setVerticalGroup(
-            MakeAppointmentBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MakeAppointmentBackground_PanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(MakeAppointmentBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(backToprevious_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PageTitle_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(MakeAppointmentBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(noOfPets_Spinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pets_Label))
-                .addGap(12, 12, 12)
-                .addComponent(Services_Label)
-                .addGap(18, 18, 18)
-                .addGroup(MakeAppointmentBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Health_Care_CheckBox)
-                    .addComponent(Beauty_Services_CheckBox))
-                .addGap(7, 7, 7)
-                .addGroup(MakeAppointmentBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Insects_Control_CheckBox)
-                    .addComponent(Training_CheckBox))
-                .addGap(26, 26, 26)
-                .addGroup(MakeAppointmentBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MakeAppointmentBackground_PanelLayout.createSequentialGroup()
-                        .addComponent(appDate_Label)
-                        .addGap(32, 32, 32)
-                        .addComponent(appTime_Label)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(errorMessage_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(nextStep_Button))
-                    .addGroup(MakeAppointmentBackground_PanelLayout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(time_List, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(appoDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(65, Short.MAX_VALUE))
-        );
+        Background.setIconTextGap(0);
+        Background.setPreferredSize(new java.awt.Dimension(550, 550));
+        MakeAppointmentBackground_Panel.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 550));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MakeAppointmentBackground_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(MakeAppointmentBackground_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MakeAppointmentBackground_Panel, javax.swing.GroupLayout.DEFAULT_SIZE, 450, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(MakeAppointmentBackground_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -243,7 +190,7 @@ public class MakeAppointment extends javax.swing.JFrame {
         String spinner = "catch Value";
         Integer myint = (Integer) noOfPets_Spinner.getValue();
         spinner = myint.toString();
-        a.add(spinner);
+        s.add(spinner);
     }//GEN-LAST:event_noPet
 
     // --------- Check if user fill in correctly all the requirements ---------
@@ -315,7 +262,7 @@ public class MakeAppointment extends javax.swing.JFrame {
     private void saveAppointmentInfo(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_saveAppointmentInfo
         if (checkAppoinmentInfo() == true) {
 
-            Appointment a = new Appointment();
+            a = new Appointment();
             a.setNoPet((int) noOfPets_Spinner.getValue());
             a.setDate(appoDateChooser.getDate());
             a.setTime(time_List.getItemAt(time_List.getSelectedIndex()));
@@ -340,7 +287,7 @@ public class MakeAppointment extends javax.swing.JFrame {
             a.setTotalPrice(a.getTotalPrice() * a.getNoPet());
             p.print(a);
 
-            ConfirmAppointment X = new ConfirmAppointment(a);
+            ConfirmAppointment X = new ConfirmAppointment();
             X.setVisible(true);
             this.dispose();
         }
@@ -394,6 +341,7 @@ public class MakeAppointment extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Background;
     private javax.swing.JCheckBox Beauty_Services_CheckBox;
     private javax.swing.JCheckBox Health_Care_CheckBox;
     private javax.swing.JCheckBox Insects_Control_CheckBox;
@@ -404,7 +352,7 @@ public class MakeAppointment extends javax.swing.JFrame {
     private javax.swing.JLabel appDate_Label;
     private javax.swing.JLabel appTime_Label;
     private com.toedter.calendar.JDateChooser appoDateChooser;
-    private javax.swing.JButton backToprevious_Button;
+    private javax.swing.JLabel backToprevious;
     private javax.swing.JLabel errorMessage_Label;
     private javax.swing.JButton nextStep_Button;
     private javax.swing.JSpinner noOfPets_Spinner;

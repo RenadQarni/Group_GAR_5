@@ -6,9 +6,11 @@
 package ProgramPackage;
 
 import java.awt.Color;
+import java.awt.Image;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -21,6 +23,12 @@ public class PayByCreditCard extends javax.swing.JFrame {
      */
     public PayByCreditCard() {
         initComponents();
+
+        // set background 
+        ImageIcon background = new ImageIcon("src\\Icons\\b2.jpg");
+        background = new ImageIcon(background.getImage().getScaledInstance(Background.getWidth(), Background.getHeight(), Image.SCALE_DEFAULT));
+        Background.setIcon(background);
+        Background.repaint();
     }
 
     /**
@@ -48,19 +56,28 @@ public class PayByCreditCard extends javax.swing.JFrame {
         expiration_date = new javax.swing.JLabel();
         Date = new javax.swing.JTextField();
         Credit_card_label = new javax.swing.JLabel();
-        backToprevious_Button = new javax.swing.JButton();
+        backToprevious = new javax.swing.JLabel();
+        Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(550, 550));
+        setResizable(false);
+
+        panel1.setPreferredSize(new java.awt.Dimension(550, 550));
+        panel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Error_Message_Date.setText("date error");
+        panel1.add(Error_Message_Date, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 276, -1, -1));
 
         Name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NameActionPerformed(evt);
             }
         });
+        panel1.add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 194, 257, -1));
 
         Error_Message_Name.setText("name error");
+        panel1.add(Error_Message_Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 224, -1, -1));
 
         nextBtn.setText("Next");
         nextBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -68,148 +85,66 @@ public class PayByCreditCard extends javax.swing.JFrame {
                 nextBtnActionPerformed(evt);
             }
         });
+        panel1.add(nextBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 400, -1, -1));
 
         jLabel3.setText("example: mm/yy");
+        panel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 276, -1, -1));
 
         jLabel1.setText("Card Number ");
+        panel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, -1, -1));
 
         CreditCard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CreditCardActionPerformed(evt);
             }
         });
+        panel1.add(CreditCard, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 261, -1));
 
         Error_massage.setText("error");
+        panel1.add(Error_massage, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, -1, -1));
 
         CVV.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 CVVKeyPressed(evt);
             }
         });
+        panel1.add(CVV, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 321, 136, -1));
 
         jLabel2.setText("CVV Number ");
+        panel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 325, -1, -1));
 
         Error_Message_cvv.setText("cvv error");
+        panel1.add(Error_Message_cvv, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 351, -1, -1));
 
-        Card_Holder.setText("Cardholder Name ");
+        Card_Holder.setText("Card Holder Name ");
+        panel1.add(Card_Holder, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 198, -1, -1));
 
         expiration_date.setText("Expriation Date  ");
+        panel1.add(expiration_date, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 250, -1, -1));
 
         Date.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DateActionPerformed(evt);
             }
         });
+        panel1.add(Date, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 257, -1));
 
         Credit_card_label.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         Credit_card_label.setText("Credit Card Information ");
         Credit_card_label.setToolTipText("");
+        panel1.add(Credit_card_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 37, -1, -1));
 
-        backToprevious_Button.setBackground(new java.awt.Color(255, 255, 255));
-        backToprevious_Button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back.png"))); // NOI18N
-        backToprevious_Button.setMaximumSize(new java.awt.Dimension(100, 100));
-        backToprevious_Button.setMinimumSize(new java.awt.Dimension(50, 50));
-        backToprevious_Button.addMouseListener(new java.awt.event.MouseAdapter() {
+        backToprevious.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back.png"))); // NOI18N
+        backToprevious.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                backToprevious_ButtonbackToPrevious(evt);
+                backToprevious(evt);
             }
         });
-        backToprevious_Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backToprevious_ButtonActionPerformed(evt);
-            }
-        });
+        panel1.add(backToprevious, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 50));
 
-        javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
-        panel1.setLayout(panel1Layout);
-        panel1Layout.setHorizontalGroup(
-            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel1Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(backToprevious_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(panel1Layout.createSequentialGroup()
-                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Credit_card_label)
-                            .addGroup(panel1Layout.createSequentialGroup()
-                                .addComponent(expiration_date)
-                                .addGap(33, 33, 33)
-                                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Date, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Error_Message_Name)
-                                    .addGroup(panel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel3)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Error_Message_Date)))))
-                        .addGap(142, 185, Short.MAX_VALUE))
-                    .addGroup(panel1Layout.createSequentialGroup()
-                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(Card_Holder))
-                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panel1Layout.createSequentialGroup()
-                                .addGap(22, 22, 22)
-                                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(panel1Layout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
-                                        .addComponent(nextBtn))
-                                    .addGroup(panel1Layout.createSequentialGroup()
-                                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(Error_massage)
-                                            .addComponent(CVV, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(Error_Message_cvv))
-                                        .addGap(0, 0, Short.MAX_VALUE))))
-                            .addGroup(panel1Layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(CreditCard, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap())))
-        );
-        panel1Layout.setVerticalGroup(
-            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel1Layout.createSequentialGroup()
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel1Layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(Credit_card_label))
-                    .addGroup(panel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(backToprevious_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(32, 32, 32)
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CreditCard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Error_massage)
-                .addGap(35, 35, 35)
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Card_Holder)
-                    .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Error_Message_Name)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(expiration_date)
-                    .addComponent(Date, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(Error_Message_Date))
-                .addGap(29, 29, 29)
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(CVV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Error_Message_cvv)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
-                .addComponent(nextBtn)
-                .addGap(30, 30, 30))
-        );
+        Background.setIconTextGap(0);
+        Background.setPreferredSize(new java.awt.Dimension(550, 550));
+        panel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -229,8 +164,7 @@ public class PayByCreditCard extends javax.swing.JFrame {
 
     private void NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameActionPerformed
 
-        
-   String Name_Holder = Name.getText();
+        String Name_Holder = Name.getText();
         Error_Message_Name.setText(" ");
 
         if (Name_Holder.matches("[a-zA-Z- ]+") && !"".equals(Name_Holder.trim())) {
@@ -247,15 +181,6 @@ public class PayByCreditCard extends javax.swing.JFrame {
         }
 
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
     }//GEN-LAST:event_NameActionPerformed
 
     private void nextBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextBtnActionPerformed
@@ -264,7 +189,7 @@ public class PayByCreditCard extends javax.swing.JFrame {
 
     private void CreditCardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreditCardActionPerformed
 
-           String Credit = CreditCard.getText();
+        String Credit = CreditCard.getText();
         Error_massage.setText(" ");
 
         if (Credit.trim().equals("")) {
@@ -283,23 +208,16 @@ public class PayByCreditCard extends javax.swing.JFrame {
 
         }
 
- 
+
     }//GEN-LAST:event_CreditCardActionPerformed
 
     private void CVVKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CVVKeyPressed
 
-        
-        
-        
-        
-        
-        
-        
-        
+
     }//GEN-LAST:event_CVVKeyPressed
 
     private void DateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DateActionPerformed
- String userInput = Date.getText();
+        String userInput = Date.getText();
 
         if (userInput.trim().equals("")) {
 
@@ -318,27 +236,15 @@ public class PayByCreditCard extends javax.swing.JFrame {
                 Error_Message_Date.setForeground(Color.red);
             }
         }
-    
+
     }//GEN-LAST:event_DateActionPerformed
 
-    private void backToprevious_ButtonbackToPrevious(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backToprevious_ButtonbackToPrevious
-        // back to browse services interface
-
-        
-        
-        
-        
-        
-        //*** not implemented yet ***
-    }//GEN-LAST:event_backToprevious_ButtonbackToPrevious
-
-    private void backToprevious_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backToprevious_ButtonActionPerformed
-       
-        
-        
-        
-        
-    }//GEN-LAST:event_backToprevious_ButtonActionPerformed
+    private void backToprevious(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backToprevious
+        // back to payment interface
+        Payment X = new Payment();
+        X.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_backToprevious
 
     /**
      * @param args the command line arguments
@@ -376,6 +282,7 @@ public class PayByCreditCard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Background;
     private javax.swing.JTextField CVV;
     private javax.swing.JLabel Card_Holder;
     private javax.swing.JTextField CreditCard;
@@ -386,7 +293,7 @@ public class PayByCreditCard extends javax.swing.JFrame {
     private javax.swing.JLabel Error_Message_cvv;
     private javax.swing.JLabel Error_massage;
     private javax.swing.JTextField Name;
-    private javax.swing.JButton backToprevious_Button;
+    private javax.swing.JLabel backToprevious;
     private javax.swing.JLabel expiration_date;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
