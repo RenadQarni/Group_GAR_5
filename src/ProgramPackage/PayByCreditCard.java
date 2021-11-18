@@ -210,8 +210,26 @@ public class PayByCreditCard extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_CreditCardActionPerformed
+  
+    private boolean checkCVV(String cvv) {
+        if (cvv.matches("[0-9]+") && cvv.length() == 3) {
+            return true;
+        } else {
+            return false;
+        }
 
+    }
+    
     private void CVVKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CVVKeyPressed
+        String Cvv = CVV.getText();
+        Error_Message_cvv.setText(" ");
+
+        if (checkCVV(Cvv) == true) {
+            Error_Message_cvv.setText(" ");
+        } else {
+            Error_Message_cvv.setText("Security code is invalid");
+            Error_Message_cvv.setForeground(Color.red);
+        }
 
 
     }//GEN-LAST:event_CVVKeyPressed
