@@ -1,6 +1,8 @@
 package ProgramPackage;
 
+import java.awt.Image;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 
 public class User {
 
@@ -20,7 +22,17 @@ public class User {
         this.Phone = Phone;
         this.Password = Password;
     }
-
+// ImageIcon background = new ImageIcon("src\\Images\\p.jpg");
+//        background = new ImageIcon(background.getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT));
+//        jLabel1.setIcon(background);
+//        jLabel1.repaint();
+    
+    //menu^
+    
+//    ImageIcon background = new ImageIcon("src\\Images\\p.jpg");
+//        background = new ImageIcon(background.getImage().getScaledInstance(jLabel8.getWidth(), jLabel8.getHeight(), Image.SCALE_DEFAULT));
+//        jLabel8.setIcon(background);
+//        jLabel8.repaint();
     public void setUsernme(String Usernme) {
         this.Usernme = Usernme;
     }

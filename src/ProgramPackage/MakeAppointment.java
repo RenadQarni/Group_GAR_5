@@ -90,11 +90,10 @@ public class MakeAppointment extends javax.swing.JFrame {
         time_List = new javax.swing.JComboBox<>();
         appTime_Label = new javax.swing.JLabel();
         errorMessage_Label = new javax.swing.JLabel();
-        appoDateChooser = new com.toedter.calendar.JDateChooser();
         Background = new javax.swing.JLabel();
+        appoDateChooser = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(550, 550));
         setResizable(false);
 
         MakeAppointmentBackground_Panel.setBackground(new java.awt.Color(255, 255, 255));
@@ -151,6 +150,11 @@ public class MakeAppointment extends javax.swing.JFrame {
                 saveAppointmentInfo(evt);
             }
         });
+        nextStep_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nextStep_ButtonActionPerformed(evt);
+            }
+        });
         MakeAppointmentBackground_Panel.add(nextStep_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(257, 368, -1, -1));
 
         time_List.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "    :     AM/PM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM" }));
@@ -160,11 +164,11 @@ public class MakeAppointment extends javax.swing.JFrame {
         appTime_Label.setText("Choose Appointment Time :");
         MakeAppointmentBackground_Panel.add(appTime_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 310, -1, -1));
         MakeAppointmentBackground_Panel.add(errorMessage_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(151, 335, 350, 21));
-        MakeAppointmentBackground_Panel.add(appoDateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 259, 135, -1));
 
         Background.setIconTextGap(0);
         Background.setPreferredSize(new java.awt.Dimension(550, 550));
         MakeAppointmentBackground_Panel.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 550));
+        MakeAppointmentBackground_Panel.add(appoDateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -299,6 +303,10 @@ public class MakeAppointment extends javax.swing.JFrame {
 
         //*** not implemented yet ***
     }//GEN-LAST:event_backToPrevious
+
+    private void nextStep_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextStep_ButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nextStep_ButtonActionPerformed
 
     /**
      * @param args the command line arguments

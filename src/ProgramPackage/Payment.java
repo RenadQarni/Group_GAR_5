@@ -49,7 +49,7 @@ public class Payment extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panel1 = new java.awt.Panel();
+        BackGr_Panel = new java.awt.Panel();
         Credit_card_label = new javax.swing.JLabel();
         CreditCard = new javax.swing.JLabel();
         Cash = new javax.swing.JLabel();
@@ -58,15 +58,14 @@ public class Payment extends javax.swing.JFrame {
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(550, 550));
         setResizable(false);
 
-        panel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        BackGr_Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Credit_card_label.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         Credit_card_label.setText("Payment");
         Credit_card_label.setToolTipText("");
-        panel1.add(Credit_card_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 10, -1, -1));
+        BackGr_Panel.add(Credit_card_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 10, -1, -1));
 
         CreditCard.setText("jLabel1");
         CreditCard.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -74,7 +73,7 @@ public class Payment extends javax.swing.JFrame {
                 goToPay_byCreditCard(evt);
             }
         });
-        panel1.add(CreditCard, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 100, 100));
+        BackGr_Panel.add(CreditCard, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 100, 100));
 
         Cash.setText("jLabel1");
         Cash.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -82,10 +81,10 @@ public class Payment extends javax.swing.JFrame {
                 goToPay_byCash(evt);
             }
         });
-        panel1.add(Cash, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 100, 100));
+        BackGr_Panel.add(Cash, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 100, 100));
 
         paymentMassage.setText("Pleas choose How to Pay");
-        panel1.add(paymentMassage, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, -1, -1));
+        BackGr_Panel.add(paymentMassage, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, -1, -1));
 
         backToprevious.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back.png"))); // NOI18N
         backToprevious.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -93,23 +92,23 @@ public class Payment extends javax.swing.JFrame {
                 backToprevious(evt);
             }
         });
-        panel1.add(backToprevious, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 50));
+        BackGr_Panel.add(backToprevious, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 50));
 
         Background.setIconTextGap(0);
         Background.setPreferredSize(new java.awt.Dimension(550, 550));
-        panel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        BackGr_Panel.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(BackGr_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(BackGr_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -171,12 +170,12 @@ public class Payment extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Panel BackGr_Panel;
     private javax.swing.JLabel Background;
     private javax.swing.JLabel Cash;
     private javax.swing.JLabel CreditCard;
     private javax.swing.JLabel Credit_card_label;
     private javax.swing.JLabel backToprevious;
-    private java.awt.Panel panel1;
     private javax.swing.JLabel paymentMassage;
     // End of variables declaration//GEN-END:variables
 }
