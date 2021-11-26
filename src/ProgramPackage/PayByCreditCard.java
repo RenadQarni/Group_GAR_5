@@ -58,7 +58,6 @@ public class PayByCreditCard extends javax.swing.JFrame {
         Credit_card_label = new javax.swing.JLabel();
         backToprevious = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
-        Next_ErrorMsg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -68,18 +67,17 @@ public class PayByCreditCard extends javax.swing.JFrame {
 
         Error_Message_Date.setText("date error");
         White_Br_Panel.add(Error_Message_Date, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 280, -1, -1));
-
-        Name.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NameActionPerformed(evt);
-            }
-        });
         White_Br_Panel.add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 194, 257, -1));
 
         Error_Message_Name.setText("name error");
         White_Br_Panel.add(Error_Message_Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 224, -1, -1));
 
         nextBtn.setText("Next");
+        nextBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                goTo_Next(evt);
+            }
+        });
         nextBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nextBtnActionPerformed(evt);
@@ -121,12 +119,6 @@ public class PayByCreditCard extends javax.swing.JFrame {
 
         expiration_date.setText("Expriation Date  ");
         White_Br_Panel.add(expiration_date, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 250, -1, -1));
-
-        Date.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DateActionPerformed(evt);
-            }
-        });
         White_Br_Panel.add(Date, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 257, -1));
 
         Credit_card_label.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
@@ -146,9 +138,6 @@ public class PayByCreditCard extends javax.swing.JFrame {
         Background.setPreferredSize(new java.awt.Dimension(550, 550));
         White_Br_Panel.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        Next_ErrorMsg.setText("ErrorMsg");
-        White_Br_Panel.add(Next_ErrorMsg, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 370, -1, -1));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -165,7 +154,33 @@ public class PayByCreditCard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameActionPerformed
+    private void nextBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextBtnActionPerformed
+
+    }//GEN-LAST:event_nextBtnActionPerformed
+
+    private void CreditCardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreditCardActionPerformed
+
+    }//GEN-LAST:event_CreditCardActionPerformed
+
+    private boolean checkCVV() {
+        boolean valid = true;
+        String Cvv = CVV.getText();
+        Error_Message_cvv.setText(" ");
+        
+        if (Cvv.matches("[0-9]+") && Cvv.length() == 3) {
+            valid = true;
+            Error_Message_cvv.setText(" ");
+        } else {
+            valid = false;
+            Error_Message_cvv.setText("Security code is invalid");
+            Error_Message_cvv.setForeground(Color.red);
+        }
+
+        return valid;
+    }
+
+    private boolean checkName() {
+        boolean valid = true;
 
         String Name_Holder = Name.getText();
         Error_Message_Name.setText(" ");
@@ -174,76 +189,30 @@ public class PayByCreditCard extends javax.swing.JFrame {
 
         } else if (Name_Holder.equals(null) || "".equals(Name_Holder.trim())) {
 
+            valid = false;
             Error_Message_Name.setText("Please Enter Your Name");
             Error_Message_Name.setForeground(Color.red);
 
         } else {
+            valid = false;
             Error_Message_Name.setText("Please Enter Your Name In The Correct Way");
             Error_Message_Name.setForeground(Color.red);
-
         }
-
-
-    }//GEN-LAST:event_NameActionPerformed
-
-    private void nextBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextBtnActionPerformed
-        
-    }//GEN-LAST:event_nextBtnActionPerformed
- 
-    private void CreditCardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreditCardActionPerformed
-
-        String Credit = CreditCard.getText();
-        Error_massage.setText(" ");
-
-        if (Credit.trim().equals("")) {
-
-            Error_massage.setText("Enter a 16-digit card number");
-            Error_massage.setForeground(Color.red);
-
-        } else if (Credit.matches("[0-9]+") && Credit.length() == 16) {
-            Error_massage.setText(" ");
-
-        } else {
-
-            Error_massage.setText("Enter a 16-digit card number");
-
-            Error_massage.setForeground(Color.red);
-
-        }
-
-
-    }//GEN-LAST:event_CreditCardActionPerformed
-  
-    private boolean checkCVV(String cvv) {
-        if (cvv.matches("[0-9]+") && cvv.length() == 3) {
-            return true;
-        } else {
-            return false;
-        }
-
+        return valid;
     }
     
-    private void CVVKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CVVKeyPressed
-        String Cvv = CVV.getText();
-        Error_Message_cvv.setText(" ");
-
-        if (checkCVV(Cvv) == true) {
-            Error_Message_cvv.setText(" ");
-        } else {
-            Error_Message_cvv.setText("Security code is invalid");
-            Error_Message_cvv.setForeground(Color.red);
-        }
-
-
-    }//GEN-LAST:event_CVVKeyPressed
-
-    private void DateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DateActionPerformed
+    private boolean CardDate() {
+        boolean valid = true;
+        
         String userInput = Date.getText();
+        Error_Message_Date.setText(" ");
 
         if (userInput.trim().equals("")) {
 
-            Error_Message_Date.setText("You must enter the expiry date");
+            valid = false;
+            Error_Message_Date.setText("Enter expiry date");
             Error_Message_Date.setForeground(Color.red);
+
         } else {
 
             SimpleDateFormat dateFormat = new SimpleDateFormat("MM/yy");
@@ -253,12 +222,43 @@ public class PayByCreditCard extends javax.swing.JFrame {
                 Error_Message_Date.setText("");
 
             } catch (ParseException e) {
+                valid = false;
                 Error_Message_Date.setText(userInput + " is Invalid Date format");
                 Error_Message_Date.setForeground(Color.red);
             }
         }
 
-    }//GEN-LAST:event_DateActionPerformed
+        return valid;
+    }
+    
+    private boolean checkCreditNumber() {
+        boolean valid = true;
+        
+        String Credit = CreditCard.getText();
+        Error_massage.setText(" ");
+
+        if (Credit.trim().equals("")) {
+
+            valid = false;
+            Error_massage.setText("Enter your card number");
+            Error_massage.setForeground(Color.red);
+
+        } else if (Credit.matches("[0-9]+") && Credit.length() == 16) {
+            Error_massage.setText(" ");
+
+        } else {
+
+            valid = false;
+            Error_massage.setText("Enter a 16-digit card number");
+            Error_massage.setForeground(Color.red);
+
+        }
+        return valid;
+    }
+    
+    private void CVVKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CVVKeyPressed
+
+    }//GEN-LAST:event_CVVKeyPressed
 
     private void backToprevious(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backToprevious
         // back to payment interface
@@ -266,6 +266,20 @@ public class PayByCreditCard extends javax.swing.JFrame {
         X.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_backToprevious
+
+    private void goTo_Next(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_goTo_Next
+        
+        boolean validCardNum = checkCreditNumber();
+        boolean validName = checkName();
+        boolean validCvv = checkCVV();
+        boolean validDate = CardDate();
+        boolean validInfo = validCardNum && validName && validCvv && validDate;
+
+        if (validInfo == true) {
+            // go to bill
+        }
+        
+    }//GEN-LAST:event_goTo_Next
 
     /**
      * @param args the command line arguments
@@ -317,7 +331,6 @@ public class PayByCreditCard extends javax.swing.JFrame {
     private javax.swing.JLabel Error_massage;
     private javax.swing.JLabel Example_Label;
     private javax.swing.JTextField Name;
-    private javax.swing.JLabel Next_ErrorMsg;
     private java.awt.Panel White_Br_Panel;
     private javax.swing.JLabel backToprevious;
     private javax.swing.JLabel expiration_date;
