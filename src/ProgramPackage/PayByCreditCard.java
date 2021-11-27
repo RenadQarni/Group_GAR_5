@@ -63,14 +63,10 @@ public class PayByCreditCard extends javax.swing.JFrame {
         setResizable(false);
 
         White_Br_Panel.setPreferredSize(new java.awt.Dimension(550, 550));
-        White_Br_Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Error_Message_Date.setText("date error");
-        White_Br_Panel.add(Error_Message_Date, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 280, -1, -1));
-        White_Br_Panel.add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 194, 257, -1));
 
         Error_Message_Name.setText("name error");
-        White_Br_Panel.add(Error_Message_Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 224, -1, -1));
 
         nextBtn.setText("Next");
         nextBtn.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -83,48 +79,36 @@ public class PayByCreditCard extends javax.swing.JFrame {
                 nextBtnActionPerformed(evt);
             }
         });
-        White_Br_Panel.add(nextBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 400, -1, -1));
 
         Example_Label.setText("example: mm/yy");
-        White_Br_Panel.add(Example_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, -1, -1));
 
         CardNum_Label.setText("Card Number ");
-        White_Br_Panel.add(CardNum_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, -1, -1));
 
         CreditCard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CreditCardActionPerformed(evt);
             }
         });
-        White_Br_Panel.add(CreditCard, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 261, -1));
 
         Error_massage.setText("error");
-        White_Br_Panel.add(Error_massage, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, -1, -1));
 
         CVV.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 CVVKeyPressed(evt);
             }
         });
-        White_Br_Panel.add(CVV, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 321, 136, -1));
 
         CVV_Label.setText("CVV Number ");
-        White_Br_Panel.add(CVV_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 325, -1, -1));
 
         Error_Message_cvv.setText("cvv error");
-        White_Br_Panel.add(Error_Message_cvv, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 351, -1, -1));
 
         Card_Holder_Label.setText("Card Holder Name ");
-        White_Br_Panel.add(Card_Holder_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 198, -1, -1));
 
         expiration_date.setText("Expriation Date  ");
-        White_Br_Panel.add(expiration_date, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 250, -1, -1));
-        White_Br_Panel.add(Date, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 257, -1));
 
         Credit_card_label.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         Credit_card_label.setText("Credit Card Information ");
         Credit_card_label.setToolTipText("");
-        White_Br_Panel.add(Credit_card_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 37, -1, -1));
 
         backToprevious.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back.png"))); // NOI18N
         backToprevious.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -132,11 +116,111 @@ public class PayByCreditCard extends javax.swing.JFrame {
                 backToprevious(evt);
             }
         });
-        White_Br_Panel.add(backToprevious, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 50));
 
         Background.setIconTextGap(0);
         Background.setPreferredSize(new java.awt.Dimension(550, 550));
-        White_Br_Panel.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        javax.swing.GroupLayout White_Br_PanelLayout = new javax.swing.GroupLayout(White_Br_Panel);
+        White_Br_Panel.setLayout(White_Br_PanelLayout);
+        White_Br_PanelLayout.setHorizontalGroup(
+            White_Br_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(backToprevious)
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(200, 200, 200)
+                .addComponent(CreditCard, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addGroup(White_Br_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                        .addGap(129, 129, 129)
+                        .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Card_Holder_Label)))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(200, 200, 200)
+                .addComponent(Date, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addComponent(CVV_Label))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(CardNum_Label))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(210, 210, 210)
+                .addComponent(Error_Message_Name))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(200, 200, 200)
+                .addComponent(Example_Label))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(400, 400, 400)
+                .addComponent(nextBtn))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addComponent(expiration_date))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(210, 210, 210)
+                .addComponent(Error_massage))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(370, 370, 370)
+                .addComponent(Error_Message_Date))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(210, 210, 210)
+                .addComponent(Error_Message_cvv))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(200, 200, 200)
+                .addComponent(CVV, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addComponent(Credit_card_label))
+            .addComponent(Background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        White_Br_PanelLayout.setVerticalGroup(
+            White_Br_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addComponent(backToprevious)
+                .addGap(80, 80, 80)
+                .addComponent(CreditCard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
+                .addGroup(White_Br_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addComponent(Card_Holder_Label)))
+                .addGap(30, 30, 30)
+                .addComponent(Date, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49)
+                .addComponent(CVV_Label))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(130, 130, 130)
+                .addComponent(CardNum_Label))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(224, 224, 224)
+                .addComponent(Error_Message_Name))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(280, 280, 280)
+                .addComponent(Example_Label))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(400, 400, 400)
+                .addComponent(nextBtn))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(250, 250, 250)
+                .addComponent(expiration_date))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(Error_massage))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(280, 280, 280)
+                .addComponent(Error_Message_Date))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(351, 351, 351)
+                .addComponent(Error_Message_cvv))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(321, 321, 321)
+                .addComponent(CVV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(White_Br_PanelLayout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(Credit_card_label))
+            .addComponent(Background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

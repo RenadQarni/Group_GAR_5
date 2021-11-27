@@ -60,12 +60,9 @@ public class Payment extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        BackGr_Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         Credit_card_label.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         Credit_card_label.setText("Payment");
         Credit_card_label.setToolTipText("");
-        BackGr_Panel.add(Credit_card_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 10, -1, -1));
 
         CreditCard.setText("jLabel1");
         CreditCard.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -73,7 +70,6 @@ public class Payment extends javax.swing.JFrame {
                 goToPay_byCreditCard(evt);
             }
         });
-        BackGr_Panel.add(CreditCard, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 100, 100));
 
         Cash.setText("jLabel1");
         Cash.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -81,10 +77,8 @@ public class Payment extends javax.swing.JFrame {
                 goToPay_byCash(evt);
             }
         });
-        BackGr_Panel.add(Cash, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 100, 100));
 
         paymentMassage.setText("Pleas choose How to Pay");
-        BackGr_Panel.add(paymentMassage, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, -1, -1));
 
         backToprevious.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back.png"))); // NOI18N
         backToprevious.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -92,11 +86,46 @@ public class Payment extends javax.swing.JFrame {
                 backToprevious(evt);
             }
         });
-        BackGr_Panel.add(backToprevious, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 50));
 
         Background.setIconTextGap(0);
         Background.setPreferredSize(new java.awt.Dimension(550, 550));
-        BackGr_Panel.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        javax.swing.GroupLayout BackGr_PanelLayout = new javax.swing.GroupLayout(BackGr_Panel);
+        BackGr_Panel.setLayout(BackGr_PanelLayout);
+        BackGr_PanelLayout.setHorizontalGroup(
+            BackGr_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BackGr_PanelLayout.createSequentialGroup()
+                .addGap(170, 170, 170)
+                .addComponent(paymentMassage))
+            .addGroup(BackGr_PanelLayout.createSequentialGroup()
+                .addGap(180, 180, 180)
+                .addComponent(Credit_card_label))
+            .addGroup(BackGr_PanelLayout.createSequentialGroup()
+                .addGap(200, 200, 200)
+                .addComponent(CreditCard, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(BackGr_PanelLayout.createSequentialGroup()
+                .addGap(200, 200, 200)
+                .addComponent(Cash, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(backToprevious)
+            .addComponent(Background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        BackGr_PanelLayout.setVerticalGroup(
+            BackGr_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BackGr_PanelLayout.createSequentialGroup()
+                .addGap(100, 100, 100)
+                .addComponent(paymentMassage))
+            .addGroup(BackGr_PanelLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(Credit_card_label))
+            .addGroup(BackGr_PanelLayout.createSequentialGroup()
+                .addGap(130, 130, 130)
+                .addComponent(CreditCard, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(BackGr_PanelLayout.createSequentialGroup()
+                .addGap(260, 260, 260)
+                .addComponent(Cash, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(backToprevious)
+            .addComponent(Background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

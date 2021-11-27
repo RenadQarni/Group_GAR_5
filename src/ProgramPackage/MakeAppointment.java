@@ -91,14 +91,14 @@ public class MakeAppointment extends javax.swing.JFrame {
         appTime_Label = new javax.swing.JLabel();
         errorMessage_Label = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
-        appoDateChooser = new com.toedter.calendar.JDateChooser();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         MakeAppointmentBackground_Panel.setBackground(new java.awt.Color(255, 255, 255));
         MakeAppointmentBackground_Panel.setPreferredSize(new java.awt.Dimension(550, 550));
-        MakeAppointmentBackground_Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        MakeAppointmentBackground_Panel.setLayout(null);
 
         backToprevious.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back.png"))); // NOI18N
         backToprevious.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -106,35 +106,44 @@ public class MakeAppointment extends javax.swing.JFrame {
                 backToPrevious(evt);
             }
         });
-        MakeAppointmentBackground_Panel.add(backToprevious, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 50));
+        MakeAppointmentBackground_Panel.add(backToprevious);
+        backToprevious.setBounds(0, 0, 50, 50);
 
         PageTitle_Label.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         PageTitle_Label.setText("Make Appointment");
-        MakeAppointmentBackground_Panel.add(PageTitle_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 15, -1, -1));
+        MakeAppointmentBackground_Panel.add(PageTitle_Label);
+        PageTitle_Label.setBounds(182, 15, 164, 24);
 
         Services_Label.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         Services_Label.setText("Choose Services :");
-        MakeAppointmentBackground_Panel.add(Services_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 141, -1, -1));
+        MakeAppointmentBackground_Panel.add(Services_Label);
+        Services_Label.setBounds(39, 141, 128, 19);
 
         Health_Care_CheckBox.setText("Health Care");
-        MakeAppointmentBackground_Panel.add(Health_Care_CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 178, 190, -1));
+        MakeAppointmentBackground_Panel.add(Health_Care_CheckBox);
+        Health_Care_CheckBox.setBounds(69, 178, 190, 29);
 
         Beauty_Services_CheckBox.setText("Beauty Services");
-        MakeAppointmentBackground_Panel.add(Beauty_Services_CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 178, 190, -1));
+        MakeAppointmentBackground_Panel.add(Beauty_Services_CheckBox);
+        Beauty_Services_CheckBox.setBounds(265, 178, 190, 29);
 
         Insects_Control_CheckBox.setText("Insects Control");
-        MakeAppointmentBackground_Panel.add(Insects_Control_CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 209, 190, -1));
+        MakeAppointmentBackground_Panel.add(Insects_Control_CheckBox);
+        Insects_Control_CheckBox.setBounds(69, 209, 190, 29);
 
         appDate_Label.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         appDate_Label.setText("Choose Appointment Date :");
-        MakeAppointmentBackground_Panel.add(appDate_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 259, -1, -1));
+        MakeAppointmentBackground_Panel.add(appDate_Label);
+        appDate_Label.setBounds(39, 259, 191, 19);
 
         Training_CheckBox.setText("Training");
-        MakeAppointmentBackground_Panel.add(Training_CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 209, 190, -1));
+        MakeAppointmentBackground_Panel.add(Training_CheckBox);
+        Training_CheckBox.setBounds(265, 209, 190, 29);
 
         pets_Label.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         pets_Label.setText("How many pets?");
-        MakeAppointmentBackground_Panel.add(pets_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 106, -1, -1));
+        MakeAppointmentBackground_Panel.add(pets_Label);
+        pets_Label.setBounds(39, 106, 114, 19);
 
         noOfPets_Spinner.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
         noOfPets_Spinner.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -142,7 +151,8 @@ public class MakeAppointment extends javax.swing.JFrame {
                 noPet(evt);
             }
         });
-        MakeAppointmentBackground_Panel.add(noOfPets_Spinner, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 103, 52, -1));
+        MakeAppointmentBackground_Panel.add(noOfPets_Spinner);
+        noOfPets_Spinner.setBounds(182, 103, 52, 26);
 
         nextStep_Button.setText("Next Step");
         nextStep_Button.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -155,20 +165,26 @@ public class MakeAppointment extends javax.swing.JFrame {
                 nextStep_ButtonActionPerformed(evt);
             }
         });
-        MakeAppointmentBackground_Panel.add(nextStep_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(257, 368, -1, -1));
+        MakeAppointmentBackground_Panel.add(nextStep_Button);
+        nextStep_Button.setBounds(260, 400, 101, 29);
 
         time_List.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "    :     AM/PM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM" }));
-        MakeAppointmentBackground_Panel.add(time_List, new org.netbeans.lib.awtextra.AbsoluteConstraints(245, 307, 139, -1));
+        MakeAppointmentBackground_Panel.add(time_List);
+        time_List.setBounds(245, 307, 139, 26);
 
         appTime_Label.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         appTime_Label.setText("Choose Appointment Time :");
-        MakeAppointmentBackground_Panel.add(appTime_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 310, -1, -1));
-        MakeAppointmentBackground_Panel.add(errorMessage_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(151, 335, 350, 21));
+        MakeAppointmentBackground_Panel.add(appTime_Label);
+        appTime_Label.setBounds(39, 310, 192, 19);
+        MakeAppointmentBackground_Panel.add(errorMessage_Label);
+        errorMessage_Label.setBounds(150, 350, 350, 21);
 
         Background.setIconTextGap(0);
         Background.setPreferredSize(new java.awt.Dimension(550, 550));
-        MakeAppointmentBackground_Panel.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 550));
-        MakeAppointmentBackground_Panel.add(appoDateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, -1, -1));
+        MakeAppointmentBackground_Panel.add(Background);
+        Background.setBounds(0, 0, 550, 550);
+        MakeAppointmentBackground_Panel.add(jDateChooser1);
+        jDateChooser1.setBounds(250, 260, 130, 26);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -215,11 +231,11 @@ public class MakeAppointment extends javax.swing.JFrame {
                 validInfo = false;
             }
 
-            if (appoDateChooser.getDate() == null) {
+            if (jDateChooser1.getDate() == null) {
                 appDate_Label.setForeground(Color.red);
                 displayErrorMassage();
                 validInfo = false;
-            } else if (checkDate(appoDateChooser.getDate()) == false) {
+            } else if (checkDate(jDateChooser1.getDate()) == false) {
                 appDate_Label.setForeground(Color.red);
                 errorMessage_Label.setText("Date must not be in the past, please choose different date");
                 errorMessage_Label.setForeground(Color.red);
@@ -244,12 +260,12 @@ public class MakeAppointment extends javax.swing.JFrame {
         int currentDay = today.getDate();
         int currentMonth = today.getMonth();
 
-        int selectedDay = appoDateChooser.getDate().getDate();
-        int selectedMonth = appoDateChooser.getDate().getMonth();
+        int selectedDay = jDateChooser1.getDate().getDate();
+        int selectedMonth = jDateChooser1.getDate().getMonth();
 
         if (currentDay == selectedDay && currentMonth == selectedMonth) {
             checker = true;
-        } else if (appoDateChooser.getDate().before(today)) {
+        } else if (jDateChooser1.getDate().before(today)) {
             checker = false;
         }
 
@@ -268,7 +284,7 @@ public class MakeAppointment extends javax.swing.JFrame {
 
             a = new Appointment();
             a.setNoPet((int) noOfPets_Spinner.getValue());
-            a.setDate(appoDateChooser.getDate());
+            a.setDate(jDateChooser1.getDate());
             a.setTime(time_List.getItemAt(time_List.getSelectedIndex()));
 
             if (Health_Care_CheckBox.isSelected()) {
@@ -359,9 +375,9 @@ public class MakeAppointment extends javax.swing.JFrame {
     private javax.swing.JCheckBox Training_CheckBox;
     private javax.swing.JLabel appDate_Label;
     private javax.swing.JLabel appTime_Label;
-    private com.toedter.calendar.JDateChooser appoDateChooser;
     private javax.swing.JLabel backToprevious;
     private javax.swing.JLabel errorMessage_Label;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JButton nextStep_Button;
     private javax.swing.JSpinner noOfPets_Spinner;
     private javax.swing.JLabel pets_Label;
