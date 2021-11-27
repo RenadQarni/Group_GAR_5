@@ -82,7 +82,7 @@ public class MakeAppointment extends javax.swing.JFrame {
         Health_Care_CheckBox = new javax.swing.JCheckBox();
         Beauty_Services_CheckBox = new javax.swing.JCheckBox();
         Insects_Control_CheckBox = new javax.swing.JCheckBox();
-        appDate_Label = new javax.swing.JLabel();
+        jDateChooser1 = new javax.swing.JLabel();
         Training_CheckBox = new javax.swing.JCheckBox();
         pets_Label = new javax.swing.JLabel();
         noOfPets_Spinner = new javax.swing.JSpinner();
@@ -91,7 +91,6 @@ public class MakeAppointment extends javax.swing.JFrame {
         appTime_Label = new javax.swing.JLabel();
         errorMessage_Label = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -121,24 +120,24 @@ public class MakeAppointment extends javax.swing.JFrame {
 
         Health_Care_CheckBox.setText("Health Care");
         MakeAppointmentBackground_Panel.add(Health_Care_CheckBox);
-        Health_Care_CheckBox.setBounds(69, 178, 190, 29);
+        Health_Care_CheckBox.setBounds(69, 178, 190, 25);
 
         Beauty_Services_CheckBox.setText("Beauty Services");
         MakeAppointmentBackground_Panel.add(Beauty_Services_CheckBox);
-        Beauty_Services_CheckBox.setBounds(265, 178, 190, 29);
+        Beauty_Services_CheckBox.setBounds(265, 178, 190, 25);
 
         Insects_Control_CheckBox.setText("Insects Control");
         MakeAppointmentBackground_Panel.add(Insects_Control_CheckBox);
-        Insects_Control_CheckBox.setBounds(69, 209, 190, 29);
+        Insects_Control_CheckBox.setBounds(69, 209, 190, 25);
 
-        appDate_Label.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        appDate_Label.setText("Choose Appointment Date :");
-        MakeAppointmentBackground_Panel.add(appDate_Label);
-        appDate_Label.setBounds(39, 259, 191, 19);
+        jDateChooser1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jDateChooser1.setText("Choose Appointment Date :");
+        MakeAppointmentBackground_Panel.add(jDateChooser1);
+        jDateChooser1.setBounds(39, 259, 191, 19);
 
         Training_CheckBox.setText("Training");
         MakeAppointmentBackground_Panel.add(Training_CheckBox);
-        Training_CheckBox.setBounds(265, 209, 190, 29);
+        Training_CheckBox.setBounds(265, 209, 190, 25);
 
         pets_Label.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         pets_Label.setText("How many pets?");
@@ -152,7 +151,7 @@ public class MakeAppointment extends javax.swing.JFrame {
             }
         });
         MakeAppointmentBackground_Panel.add(noOfPets_Spinner);
-        noOfPets_Spinner.setBounds(182, 103, 52, 26);
+        noOfPets_Spinner.setBounds(182, 103, 52, 22);
 
         nextStep_Button.setText("Next Step");
         nextStep_Button.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -166,11 +165,16 @@ public class MakeAppointment extends javax.swing.JFrame {
             }
         });
         MakeAppointmentBackground_Panel.add(nextStep_Button);
-        nextStep_Button.setBounds(260, 400, 101, 29);
+        nextStep_Button.setBounds(260, 400, 87, 25);
 
         time_List.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "    :     AM/PM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM" }));
+        time_List.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                time_ListActionPerformed(evt);
+            }
+        });
         MakeAppointmentBackground_Panel.add(time_List);
-        time_List.setBounds(245, 307, 139, 26);
+        time_List.setBounds(245, 307, 139, 22);
 
         appTime_Label.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         appTime_Label.setText("Choose Appointment Time :");
@@ -183,8 +187,6 @@ public class MakeAppointment extends javax.swing.JFrame {
         Background.setPreferredSize(new java.awt.Dimension(550, 550));
         MakeAppointmentBackground_Panel.add(Background);
         Background.setBounds(0, 0, 550, 550);
-        MakeAppointmentBackground_Panel.add(jDateChooser1);
-        jDateChooser1.setBounds(250, 260, 130, 26);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -216,7 +218,7 @@ public class MakeAppointment extends javax.swing.JFrame {
     // --------- Check if user fill in correctly all the requirements ---------
     private boolean checkAppoinmentInfo() {
         Services_Label.setForeground(Color.black);
-        appDate_Label.setForeground(Color.black);
+        jDateChooser1.setForeground(Color.black);
         appTime_Label.setForeground(Color.black);
         errorMessage_Label.setText(" ");
 
@@ -232,11 +234,11 @@ public class MakeAppointment extends javax.swing.JFrame {
             }
 
             if (jDateChooser1.getDate() == null) {
-                appDate_Label.setForeground(Color.red);
+                jDateChooser1.setForeground(Color.red);
                 displayErrorMassage();
                 validInfo = false;
             } else if (checkDate(jDateChooser1.getDate()) == false) {
-                appDate_Label.setForeground(Color.red);
+                jDateChooser1.setForeground(Color.red);
                 errorMessage_Label.setText("Date must not be in the past, please choose different date");
                 errorMessage_Label.setForeground(Color.red);
                 validInfo = false;
@@ -324,6 +326,10 @@ public class MakeAppointment extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nextStep_ButtonActionPerformed
 
+    private void time_ListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_time_ListActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_time_ListActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -373,11 +379,10 @@ public class MakeAppointment extends javax.swing.JFrame {
     private javax.swing.JLabel PageTitle_Label;
     private javax.swing.JLabel Services_Label;
     private javax.swing.JCheckBox Training_CheckBox;
-    private javax.swing.JLabel appDate_Label;
     private javax.swing.JLabel appTime_Label;
     private javax.swing.JLabel backToprevious;
     private javax.swing.JLabel errorMessage_Label;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
+    private javax.swing.JLabel jDateChooser1;
     private javax.swing.JButton nextStep_Button;
     private javax.swing.JSpinner noOfPets_Spinner;
     private javax.swing.JLabel pets_Label;
