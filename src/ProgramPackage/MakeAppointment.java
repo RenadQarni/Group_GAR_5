@@ -87,7 +87,7 @@ public class MakeAppointment extends javax.swing.JFrame {
         pets_Label = new javax.swing.JLabel();
         noOfPets_Spinner = new javax.swing.JSpinner();
         nextStep_Button = new javax.swing.JButton();
-        time_List = new javax.swing.JComboBox<>();
+        timeL = new javax.swing.JComboBox<>();
         appTime_Label = new javax.swing.JLabel();
         errorMessage_Label = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
@@ -167,14 +167,14 @@ public class MakeAppointment extends javax.swing.JFrame {
         MakeAppointmentBackground_Panel.add(nextStep_Button);
         nextStep_Button.setBounds(260, 400, 87, 25);
 
-        time_List.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "    :     AM/PM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM" }));
-        time_List.addActionListener(new java.awt.event.ActionListener() {
+        timeL.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "    :     AM/PM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM" }));
+        timeL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                time_ListActionPerformed(evt);
+                timeLActionPerformed(evt);
             }
         });
-        MakeAppointmentBackground_Panel.add(time_List);
-        time_List.setBounds(245, 307, 139, 22);
+        MakeAppointmentBackground_Panel.add(timeL);
+        timeL.setBounds(245, 307, 139, 22);
 
         appTime_Label.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         appTime_Label.setText("Choose Appointment Time :");
@@ -244,7 +244,7 @@ public class MakeAppointment extends javax.swing.JFrame {
                 validInfo = false;
             }
 
-            if (time_List.getSelectedIndex() == 0) {
+            if (timeL.getSelectedIndex() == 0) {
                 appTime_Label.setForeground(Color.red);
                 displayErrorMassage();
                 validInfo = false;
@@ -287,7 +287,7 @@ public class MakeAppointment extends javax.swing.JFrame {
             a = new Appointment();
             a.setNoPet((int) noOfPets_Spinner.getValue());
             a.setDate(jDateChooser1.getDate());
-            a.setTime(time_List.getItemAt(time_List.getSelectedIndex()));
+            a.setTime(timeL.getItemAt(timeL.getSelectedIndex()));
 
             if (Health_Care_CheckBox.isSelected()) {
                 a.addService(Service.services.get(0));
@@ -326,9 +326,9 @@ public class MakeAppointment extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nextStep_ButtonActionPerformed
 
-    private void time_ListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_time_ListActionPerformed
+    private void timeLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timeLActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_time_ListActionPerformed
+    }//GEN-LAST:event_timeLActionPerformed
 
     /**
      * @param args the command line arguments
@@ -386,6 +386,6 @@ public class MakeAppointment extends javax.swing.JFrame {
     private javax.swing.JButton nextStep_Button;
     private javax.swing.JSpinner noOfPets_Spinner;
     private javax.swing.JLabel pets_Label;
-    private javax.swing.JComboBox<String> time_List;
+    private javax.swing.JComboBox<String> timeL;
     // End of variables declaration//GEN-END:variables
 }
