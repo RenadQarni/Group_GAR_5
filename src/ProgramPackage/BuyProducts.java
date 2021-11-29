@@ -37,13 +37,7 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        backToprevious = new javax.swing.JLabel();
-        PageTitle_Label = new javax.swing.JLabel();
-        water = new javax.swing.JLabel();
         foodcount = new javax.swing.JLabel();
-        bed = new javax.swing.JLabel();
-        coller = new javax.swing.JLabel();
-        food = new javax.swing.JLabel();
         addfood = new javax.swing.JButton();
         lessfood = new javax.swing.JButton();
         addwater = new javax.swing.JButton();
@@ -55,49 +49,35 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
         addcoller = new javax.swing.JButton();
         collercount = new javax.swing.JLabel();
         lesscoller = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        PageTitle_Label = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(330, 700));
+        setPreferredSize(new java.awt.Dimension(349, 514));
         setResizable(false);
         setSize(new java.awt.Dimension(0, 0));
-        getContentPane().setLayout(null);
-
-        backToprevious.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back.png"))); // NOI18N
-        backToprevious.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                backTopreviousbackToPrevious(evt);
-            }
-        });
-        getContentPane().add(backToprevious);
-        backToprevious.setBounds(0, 0, 50, 50);
-
-        PageTitle_Label.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        PageTitle_Label.setText("STORE");
-        getContentPane().add(PageTitle_Label);
-        PageTitle_Label.setBounds(140, 30, 70, 24);
-
-        water.setText("Auto Pet Water");
-        getContentPane().add(water);
-        water.setBounds(30, 140, 220, 16);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         foodcount.setText("0");
-        getContentPane().add(foodcount);
-        foodcount.setBounds(320, 90, 20, 20);
-
-        bed.setText("Super Soft Bed");
-        getContentPane().add(bed);
-        bed.setBounds(30, 180, 220, 16);
-
-        coller.setText("Smart Pet Coller");
-        getContentPane().add(coller);
-        coller.setBounds(30, 220, 220, 16);
-
-        food.setText("Auto food Dispenser");
-        getContentPane().add(food);
-        food.setBounds(30, 100, 220, 16);
+        getContentPane().add(foodcount, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 20, 20));
 
         addfood.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/plus.png"))); // NOI18N
         addfood.setContentAreaFilled(false);
@@ -106,8 +86,7 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
                 addfoodActionPerformed(evt);
             }
         });
-        getContentPane().add(addfood);
-        addfood.setBounds(280, 80, 30, 30);
+        getContentPane().add(addfood, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 30, 30));
 
         lessfood.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/minus.png"))); // NOI18N
         lessfood.setContentAreaFilled(false);
@@ -116,9 +95,10 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
                 lessfoodActionPerformed(evt);
             }
         });
-        getContentPane().add(lessfood);
-        lessfood.setBounds(340, 80, 30, 30);
+        getContentPane().add(lessfood, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 30, 30));
 
+        addwater.setBackground(new java.awt.Color(255, 255, 255));
+        addwater.setForeground(new java.awt.Color(255, 255, 255));
         addwater.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/plus.png"))); // NOI18N
         addwater.setContentAreaFilled(false);
         addwater.addActionListener(new java.awt.event.ActionListener() {
@@ -126,12 +106,10 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
                 addwaterActionPerformed(evt);
             }
         });
-        getContentPane().add(addwater);
-        addwater.setBounds(280, 120, 30, 30);
+        getContentPane().add(addwater, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 30, 30));
 
         watercount.setText("0");
-        getContentPane().add(watercount);
-        watercount.setBounds(320, 130, 20, 20);
+        getContentPane().add(watercount, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 260, 20, 20));
 
         lesswater.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/minus.png"))); // NOI18N
         lesswater.setContentAreaFilled(false);
@@ -140,8 +118,7 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
                 lesswaterActionPerformed(evt);
             }
         });
-        getContentPane().add(lesswater);
-        lesswater.setBounds(340, 120, 30, 30);
+        getContentPane().add(lesswater, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 30, 30));
 
         addbed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/plus.png"))); // NOI18N
         addbed.setContentAreaFilled(false);
@@ -150,12 +127,10 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
                 addbedActionPerformed(evt);
             }
         });
-        getContentPane().add(addbed);
-        addbed.setBounds(280, 160, 30, 30);
+        getContentPane().add(addbed, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 30, 30));
 
         bedcount.setText("0");
-        getContentPane().add(bedcount);
-        bedcount.setBounds(320, 170, 20, 20);
+        getContentPane().add(bedcount, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, 20, 20));
 
         lessbed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/minus.png"))); // NOI18N
         lessbed.setContentAreaFilled(false);
@@ -164,8 +139,7 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
                 lessbedActionPerformed(evt);
             }
         });
-        getContentPane().add(lessbed);
-        lessbed.setBounds(340, 160, 30, 30);
+        getContentPane().add(lessbed, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 360, 30, 30));
 
         addcoller.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/plus.png"))); // NOI18N
         addcoller.setContentAreaFilled(false);
@@ -174,12 +148,10 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
                 addcollerActionPerformed(evt);
             }
         });
-        getContentPane().add(addcoller);
-        addcoller.setBounds(280, 200, 30, 30);
+        getContentPane().add(addcoller, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 440, 30, 30));
 
         collercount.setText("0");
-        getContentPane().add(collercount);
-        collercount.setBounds(320, 210, 20, 20);
+        getContentPane().add(collercount, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 450, 20, 20));
 
         lesscoller.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/minus.png"))); // NOI18N
         lesscoller.setContentAreaFilled(false);
@@ -188,10 +160,76 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
                 lesscollerActionPerformed(evt);
             }
         });
-        getContentPane().add(lesscoller);
-        lesscoller.setBounds(340, 200, 30, 30);
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(30, 260, 520, 30);
+        getContentPane().add(lesscoller, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 440, 30, 30));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Auto food dispenser");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Auto Water Fountain");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Super Soft Bed");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, -1, -1));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/bed.png"))); // NOI18N
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/collar.png"))); // NOI18N
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, -1, -1));
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Smart Pet Collar");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 410, -1, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Orange_Br.png"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, -1, -1));
+
+        jPanel1.setBackground(new java.awt.Color(249, 249, 249));
+
+        PageTitle_Label.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        PageTitle_Label.setForeground(new java.awt.Color(51, 0, 102));
+        PageTitle_Label.setText("Products");
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cart_dark.png"))); // NOI18N
+
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/home.png"))); // NOI18N
+
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/help.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jLabel15)
+                .addGap(44, 44, 44)
+                .addComponent(jLabel16)
+                .addGap(45, 45, 45)
+                .addComponent(jLabel17)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel15)
+                    .addComponent(jLabel16)
+                    .addComponent(jLabel17))
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        jLabel2.setText("total");
 
         jButton1.setText("cart");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -199,95 +237,76 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(240, 380, 52, 32);
 
-        jLabel2.setText("total");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(30, 420, 520, 30);
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/food.png"))); // NOI18N
+        jLabel10.setPreferredSize(new java.awt.Dimension(70, 70));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Orange_Br.png"))); // NOI18N
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/water.png"))); // NOI18N
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Orange_Br.png"))); // NOI18N
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Orange_Br.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(PageTitle_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel11)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(170, 170, 170)
+                        .addComponent(jButton1)))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(PageTitle_Label)
+                .addGap(31, 31, 31)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(5, 5, 5)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(5, 5, 5)
+                .addComponent(jLabel4)
+                .addGap(145, 145, 145)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
+                .addGap(35, 35, 35)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 710));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void backTopreviousbackToPrevious(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backTopreviousbackToPrevious
-        // back to browse services interface
-
-        //*** not implemented yet ***
-    }//GEN-LAST:event_backTopreviousbackToPrevious
-
-    private void addfoodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addfoodActionPerformed
-        //adding
-        count += 1;
-        foodcount.setText(count + "");
-        products_list[0] = new Product("Auto food Dispenser", 100 * count, false, count);
-        jLabel11.setText(products_list[0] + "");
-    }//GEN-LAST:event_addfoodActionPerformed
-
-    private void lessfoodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lessfoodActionPerformed
-        //less 
-        if (count > 0) {
-            count -= 1;
-        }
-        foodcount.setText(count + "");
-        products_list[0] = new Product("Auto food Dispenser", 100 * count, false, count);
-        jLabel11.setText(products_list[0] + "");
-    }//GEN-LAST:event_lessfoodActionPerformed
-
-    private void addwaterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addwaterActionPerformed
-        //adding
-
-        watcount += 1;
-        watercount.setText(watcount + "");
-        products_list[1] = new Product("Auto Pet Water", 100 * watcount, false, watcount);
-        jLabel11.setText(products_list[1] + "");
-
-    }//GEN-LAST:event_addwaterActionPerformed
-
-    private void lesswaterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lesswaterActionPerformed
-        //less 
-        if (watcount > 0) {
-            watcount -= 1;
-        }
-        watercount.setText(watcount + "");
-        products_list[1] = new Product("Auto Pet Water", 100 * watcount, false, watcount);
-        jLabel11.setText(products_list[1] + "");
-    }//GEN-LAST:event_lesswaterActionPerformed
-
-    private void addbedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addbedActionPerformed
-        //adding
-        beddcount += 1;
-        bedcount.setText(beddcount + "");
-        products_list[2] = new Product("Super Soft Bed", 150 * beddcount, false, beddcount);
-        jLabel11.setText(products_list[2] + "");
-    }//GEN-LAST:event_addbedActionPerformed
-
-    private void lessbedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lessbedActionPerformed
-        //less 
-        if (beddcount > 0) {
-            beddcount -= 1;
-        }
-        bedcount.setText(beddcount + "");
-        products_list[2] = new Product("Super Soft Bed", 150 * beddcount, false, beddcount);
-        jLabel11.setText(products_list[2] + "");
-    }//GEN-LAST:event_lessbedActionPerformed
-
-    private void addcollerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addcollerActionPerformed
-        //adding
-        colllercount += 1;
-        collercount.setText(colllercount + "");
-        products_list[3] = new Product("Smart Pet Coller", 250 * colllercount, false, colllercount);
-        jLabel11.setText(products_list[3] + "");
-    }//GEN-LAST:event_addcollerActionPerformed
-
-    private void lesscollerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lesscollerActionPerformed
-        //less 
-        if (colllercount > 0) {
-            colllercount -= 1;
-        }
-        collercount.setText(colllercount + "");
-        products_list[3] = new Product("Smart Pet Coller", 250 * colllercount, false, colllercount);
-        jLabel11.setText(products_list[3] + "");
-    }//GEN-LAST:event_lesscollerActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         int total = products_list[0].getPrice() + products_list[1].getPrice() + products_list[2].getPrice() + products_list[3].getPrice();
@@ -300,6 +319,79 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
         X.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void lesscollerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lesscollerActionPerformed
+        //less
+        if (colllercount > 0) {
+            colllercount -= 1;
+        }
+        collercount.setText(colllercount + "");
+        products_list[3] = new Product("Smart Pet Coller", 250 * colllercount, false, colllercount);
+        jLabel11.setText(products_list[3] + "");
+    }//GEN-LAST:event_lesscollerActionPerformed
+
+    private void addcollerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addcollerActionPerformed
+        //adding
+        colllercount += 1;
+        collercount.setText(colllercount + "");
+        products_list[3] = new Product("Smart Pet Coller", 250 * colllercount, false, colllercount);
+        jLabel11.setText(products_list[3] + "");
+    }//GEN-LAST:event_addcollerActionPerformed
+
+    private void lessbedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lessbedActionPerformed
+        //less
+        if (beddcount > 0) {
+            beddcount -= 1;
+        }
+        bedcount.setText(beddcount + "");
+        products_list[2] = new Product("Super Soft Bed", 150 * beddcount, false, beddcount);
+        jLabel11.setText(products_list[2] + "");
+    }//GEN-LAST:event_lessbedActionPerformed
+
+    private void addbedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addbedActionPerformed
+        //adding
+        beddcount += 1;
+        bedcount.setText(beddcount + "");
+        products_list[2] = new Product("Super Soft Bed", 150 * beddcount, false, beddcount);
+        jLabel11.setText(products_list[2] + "");
+    }//GEN-LAST:event_addbedActionPerformed
+
+    private void lesswaterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lesswaterActionPerformed
+        //less
+        if (watcount > 0) {
+            watcount -= 1;
+        }
+        watercount.setText(watcount + "");
+        products_list[1] = new Product("Auto Pet Water", 100 * watcount, false, watcount);
+        jLabel11.setText(products_list[1] + "");
+    }//GEN-LAST:event_lesswaterActionPerformed
+
+    private void addwaterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addwaterActionPerformed
+        //adding
+
+        watcount += 1;
+        watercount.setText(watcount + "");
+        products_list[1] = new Product("Auto Pet Water", 100 * watcount, false, watcount);
+        jLabel11.setText(products_list[1] + "");
+    }//GEN-LAST:event_addwaterActionPerformed
+
+    private void lessfoodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lessfoodActionPerformed
+        //less
+        if (count > 0) {
+            count -= 1;
+        }
+        foodcount.setText(count + "");
+        products_list[0] = new Product("Auto food Dispenser", 100 * count, false, count);
+        jLabel11.setText(products_list[0] + "");
+    }//GEN-LAST:event_lessfoodActionPerformed
+
+    private void addfoodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addfoodActionPerformed
+        //adding
+        count += 1;
+        foodcount.setText(count + "");
+        products_list[0] = new Product("Auto food Dispenser", 100 * count, false, count);
+        jLabel11.setText(products_list[0] + "");
+    }//GEN-LAST:event_addfoodActionPerformed
 
     /**
      * @param args the command line arguments
@@ -342,21 +434,32 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
     private javax.swing.JButton addcoller;
     private javax.swing.JButton addfood;
     private javax.swing.JButton addwater;
-    private javax.swing.JLabel backToprevious;
-    private javax.swing.JLabel bed;
     private javax.swing.JLabel bedcount;
-    private javax.swing.JLabel coller;
     private javax.swing.JLabel collercount;
-    private javax.swing.JLabel food;
     private javax.swing.JLabel foodcount;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JButton lessbed;
     private javax.swing.JButton lesscoller;
     private javax.swing.JButton lessfood;
     private javax.swing.JButton lesswater;
-    private javax.swing.JLabel water;
     private javax.swing.JLabel watercount;
     // End of variables declaration//GEN-END:variables
 
