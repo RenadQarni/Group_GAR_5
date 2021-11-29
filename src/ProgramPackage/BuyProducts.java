@@ -11,6 +11,8 @@ import javax.swing.ImageIcon;
 
 public class BuyProducts extends javax.swing.JFrame implements MouseListener {
 
+    public static Order o;
+
     ImageIcon redcart, blackcart;
     private int count = 0;
     private int watcount = 0;
@@ -58,6 +60,8 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(330, 700));
+        setResizable(false);
         setSize(new java.awt.Dimension(0, 0));
         getContentPane().setLayout(null);
 
@@ -77,7 +81,7 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
 
         water.setText("Auto Pet Water");
         getContentPane().add(water);
-        water.setBounds(30, 140, 220, 14);
+        water.setBounds(30, 140, 220, 16);
 
         foodcount.setText("0");
         getContentPane().add(foodcount);
@@ -85,19 +89,18 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
 
         bed.setText("Super Soft Bed");
         getContentPane().add(bed);
-        bed.setBounds(30, 180, 220, 14);
+        bed.setBounds(30, 180, 220, 16);
 
         coller.setText("Smart Pet Coller");
         getContentPane().add(coller);
-        coller.setBounds(30, 220, 220, 14);
+        coller.setBounds(30, 220, 220, 16);
 
         food.setText("Auto food Dispenser");
         getContentPane().add(food);
-        food.setBounds(30, 100, 220, 14);
+        food.setBounds(30, 100, 220, 16);
 
         addfood.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/plus.png"))); // NOI18N
         addfood.setContentAreaFilled(false);
-        addfood.setOpaque(false);
         addfood.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addfoodActionPerformed(evt);
@@ -197,7 +200,7 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(240, 380, 51, 23);
+        jButton1.setBounds(240, 380, 52, 32);
 
         jLabel2.setText("total");
         getContentPane().add(jLabel2);
@@ -232,12 +235,12 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
 
     private void addwaterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addwaterActionPerformed
         //adding
-   
-            watcount += 1;
-            watercount.setText(watcount + "");
-            products_list[1] = new Product("Auto Pet Water", 100 * watcount, false, watcount);
-            jLabel11.setText(products_list[1] + "");
-        
+
+        watcount += 1;
+        watercount.setText(watcount + "");
+        products_list[1] = new Product("Auto Pet Water", 100 * watcount, false, watcount);
+        jLabel11.setText(products_list[1] + "");
+
     }//GEN-LAST:event_addwaterActionPerformed
 
     private void lesswaterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lesswaterActionPerformed
@@ -288,7 +291,14 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         int total = products_list[0].getPrice() + products_list[1].getPrice() + products_list[2].getPrice() + products_list[3].getPrice();
-        jLabel2.setText("total: "+total + "");
+        jLabel2.setText("total: " + total + "");
+
+        o = new Order();
+        o.addProduct(products_list[0]);
+
+        Date_Time X = new Date_Time();
+        X.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

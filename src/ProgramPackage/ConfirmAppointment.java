@@ -70,6 +70,9 @@ public class ConfirmAppointment extends javax.swing.JFrame {
         Page_Title_Label.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Page_Title_Label.setText("Confirm Appointment");
 
+        Confirmation_Button.setBackground(new java.awt.Color(121, 99, 175));
+        Confirmation_Button.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Confirmation_Button.setForeground(new java.awt.Color(255, 255, 255));
         Confirmation_Button.setText("Confirm");
         Confirmation_Button.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

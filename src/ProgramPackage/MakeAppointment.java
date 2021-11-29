@@ -27,6 +27,7 @@ public class MakeAppointment extends javax.swing.JFrame {
 
     /**
      * Creates new form VeterinaryClinic
+     *
      * @throws java.io.FileNotFoundException
      */
     public MakeAppointment() throws FileNotFoundException {
@@ -37,7 +38,7 @@ public class MakeAppointment extends javax.swing.JFrame {
         background = new ImageIcon(background.getImage().getScaledInstance(Background.getWidth(), Background.getHeight(), Image.SCALE_DEFAULT));
         Background.setIcon(background);
         Background.repaint();
-        
+
         file = new File("AppointmentInfo.txt");
         p = new PrintWriter(file);
 
@@ -82,13 +83,10 @@ public class MakeAppointment extends javax.swing.JFrame {
         Health_Care_CheckBox = new javax.swing.JCheckBox();
         Beauty_Services_CheckBox = new javax.swing.JCheckBox();
         Insects_Control_CheckBox = new javax.swing.JCheckBox();
-        jDateChooser1 = new javax.swing.JLabel();
         Training_CheckBox = new javax.swing.JCheckBox();
         pets_Label = new javax.swing.JLabel();
         noOfPets_Spinner = new javax.swing.JSpinner();
         nextStep_Button = new javax.swing.JButton();
-        timeL = new javax.swing.JComboBox<>();
-        appTime_Label = new javax.swing.JLabel();
         errorMessage_Label = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
 
@@ -111,38 +109,33 @@ public class MakeAppointment extends javax.swing.JFrame {
         PageTitle_Label.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         PageTitle_Label.setText("Make Appointment");
         MakeAppointmentBackground_Panel.add(PageTitle_Label);
-        PageTitle_Label.setBounds(182, 15, 164, 24);
+        PageTitle_Label.setBounds(182, 15, 166, 24);
 
         Services_Label.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         Services_Label.setText("Choose Services :");
         MakeAppointmentBackground_Panel.add(Services_Label);
-        Services_Label.setBounds(39, 141, 128, 19);
+        Services_Label.setBounds(39, 141, 129, 19);
 
         Health_Care_CheckBox.setText("Health Care");
         MakeAppointmentBackground_Panel.add(Health_Care_CheckBox);
-        Health_Care_CheckBox.setBounds(69, 178, 190, 25);
+        Health_Care_CheckBox.setBounds(69, 178, 190, 24);
 
         Beauty_Services_CheckBox.setText("Beauty Services");
         MakeAppointmentBackground_Panel.add(Beauty_Services_CheckBox);
-        Beauty_Services_CheckBox.setBounds(265, 178, 190, 25);
+        Beauty_Services_CheckBox.setBounds(265, 178, 190, 24);
 
         Insects_Control_CheckBox.setText("Insects Control");
         MakeAppointmentBackground_Panel.add(Insects_Control_CheckBox);
-        Insects_Control_CheckBox.setBounds(69, 209, 190, 25);
-
-        jDateChooser1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jDateChooser1.setText("Choose Appointment Date :");
-        MakeAppointmentBackground_Panel.add(jDateChooser1);
-        jDateChooser1.setBounds(39, 259, 191, 19);
+        Insects_Control_CheckBox.setBounds(69, 209, 190, 24);
 
         Training_CheckBox.setText("Training");
         MakeAppointmentBackground_Panel.add(Training_CheckBox);
-        Training_CheckBox.setBounds(265, 209, 190, 25);
+        Training_CheckBox.setBounds(265, 209, 190, 24);
 
         pets_Label.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         pets_Label.setText("How many pets?");
         MakeAppointmentBackground_Panel.add(pets_Label);
-        pets_Label.setBounds(39, 106, 114, 19);
+        pets_Label.setBounds(39, 106, 118, 19);
 
         noOfPets_Spinner.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
         noOfPets_Spinner.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -151,7 +144,7 @@ public class MakeAppointment extends javax.swing.JFrame {
             }
         });
         MakeAppointmentBackground_Panel.add(noOfPets_Spinner);
-        noOfPets_Spinner.setBounds(182, 103, 52, 22);
+        noOfPets_Spinner.setBounds(182, 103, 52, 26);
 
         nextStep_Button.setText("Next Step");
         nextStep_Button.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -165,21 +158,7 @@ public class MakeAppointment extends javax.swing.JFrame {
             }
         });
         MakeAppointmentBackground_Panel.add(nextStep_Button);
-        nextStep_Button.setBounds(260, 400, 87, 25);
-
-        timeL.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "    :     AM/PM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM" }));
-        timeL.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                timeLActionPerformed(evt);
-            }
-        });
-        MakeAppointmentBackground_Panel.add(timeL);
-        timeL.setBounds(245, 307, 139, 22);
-
-        appTime_Label.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        appTime_Label.setText("Choose Appointment Time :");
-        MakeAppointmentBackground_Panel.add(appTime_Label);
-        appTime_Label.setBounds(39, 310, 192, 19);
+        nextStep_Button.setBounds(260, 400, 86, 32);
         MakeAppointmentBackground_Panel.add(errorMessage_Label);
         errorMessage_Label.setBounds(150, 350, 350, 21);
 
@@ -218,61 +197,20 @@ public class MakeAppointment extends javax.swing.JFrame {
     // --------- Check if user fill in correctly all the requirements ---------
     private boolean checkAppoinmentInfo() {
         Services_Label.setForeground(Color.black);
-        jDateChooser1.setForeground(Color.black);
-        appTime_Label.setForeground(Color.black);
         errorMessage_Label.setText(" ");
 
         boolean validInfo = true;
 
-        if (validInfo == true) {
-
-            if (!Health_Care_CheckBox.isSelected() && !Beauty_Services_CheckBox.isSelected()
-                    && !Insects_Control_CheckBox.isSelected() && !Training_CheckBox.isSelected()) {
-                Services_Label.setForeground(Color.red);
-                displayErrorMassage();
-                validInfo = false;
-            }
-
-            if (jDateChooser1.getDate() == null) {
-                jDateChooser1.setForeground(Color.red);
-                displayErrorMassage();
-                validInfo = false;
-            } else if (checkDate(jDateChooser1.getDate()) == false) {
-                jDateChooser1.setForeground(Color.red);
-                errorMessage_Label.setText("Date must not be in the past, please choose different date");
-                errorMessage_Label.setForeground(Color.red);
-                validInfo = false;
-            }
-
-            if (timeL.getSelectedIndex() == 0) {
-                appTime_Label.setForeground(Color.red);
-                displayErrorMassage();
-                validInfo = false;
-            }
+        if (!Health_Care_CheckBox.isSelected() && !Beauty_Services_CheckBox.isSelected()
+                && !Insects_Control_CheckBox.isSelected() && !Training_CheckBox.isSelected()) {
+            Services_Label.setForeground(Color.red);
+            displayErrorMassage();
+            validInfo = false;
         }
 
         return validInfo;
     }
 
-    // --------- check if selected date in past ---------
-    private boolean checkDate(Date selectedDate) {
-        boolean checker = true;
-
-        Date today = new Date();
-        int currentDay = today.getDate();
-        int currentMonth = today.getMonth();
-
-        int selectedDay = jDateChooser1.getDate().getDate();
-        int selectedMonth = jDateChooser1.getDate().getMonth();
-
-        if (currentDay == selectedDay && currentMonth == selectedMonth) {
-            checker = true;
-        } else if (jDateChooser1.getDate().before(today)) {
-            checker = false;
-        }
-
-        return checker;
-    }
 
     // --------- display the error massage for empty feild ---------
     private void displayErrorMassage() {
@@ -286,8 +224,6 @@ public class MakeAppointment extends javax.swing.JFrame {
 
             a = new Appointment();
             a.setNoPet((int) noOfPets_Spinner.getValue());
-            a.setDate(jDateChooser1.getDate());
-            a.setTime(timeL.getItemAt(timeL.getSelectedIndex()));
 
             if (Health_Care_CheckBox.isSelected()) {
                 a.addService(Service.services.get(0));
@@ -309,7 +245,7 @@ public class MakeAppointment extends javax.swing.JFrame {
             a.setTotalPrice(a.getTotalPrice() * a.getNoPet());
             p.print(a);
 
-            ConfirmAppointment X = new ConfirmAppointment();
+            Date_Time X = new Date_Time();
             X.setVisible(true);
             this.dispose();
         }
@@ -325,10 +261,6 @@ public class MakeAppointment extends javax.swing.JFrame {
     private void nextStep_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextStep_ButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nextStep_ButtonActionPerformed
-
-    private void timeLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timeLActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_timeLActionPerformed
 
     /**
      * @param args the command line arguments
@@ -379,13 +311,10 @@ public class MakeAppointment extends javax.swing.JFrame {
     private javax.swing.JLabel PageTitle_Label;
     private javax.swing.JLabel Services_Label;
     private javax.swing.JCheckBox Training_CheckBox;
-    private javax.swing.JLabel appTime_Label;
     private javax.swing.JLabel backToprevious;
     private javax.swing.JLabel errorMessage_Label;
-    private javax.swing.JLabel jDateChooser1;
     private javax.swing.JButton nextStep_Button;
     private javax.swing.JSpinner noOfPets_Spinner;
     private javax.swing.JLabel pets_Label;
-    private javax.swing.JComboBox<String> timeL;
     // End of variables declaration//GEN-END:variables
 }
