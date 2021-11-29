@@ -66,9 +66,9 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
         Food_IconLabel = new javax.swing.JLabel();
         Food_OrangeSquareLabel = new javax.swing.JLabel();
         Water_IconLabel = new javax.swing.JLabel();
-        Water_OrangeSquareLabel = new javax.swing.JLabel();
         Bed_IconLabel = new javax.swing.JLabel();
         Bed_OrangeSquareLabel = new javax.swing.JLabel();
+        Water_OrangeSquareLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -190,11 +190,11 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
         Background_Gray.setBackground(new java.awt.Color(249, 249, 249));
         Background_Gray.setLayout(null);
 
-        PageTitle_Label.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        PageTitle_Label.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         PageTitle_Label.setForeground(new java.awt.Color(51, 0, 102));
         PageTitle_Label.setText("Products");
         Background_Gray.add(PageTitle_Label);
-        PageTitle_Label.setBounds(30, 50, 120, 29);
+        PageTitle_Label.setBounds(20, 30, 190, 37);
 
         Background_White.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -257,10 +257,6 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
         Background_Gray.add(Water_IconLabel);
         Water_IconLabel.setBounds(10, 210, 68, 90);
 
-        Water_OrangeSquareLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Orange_Br.png"))); // NOI18N
-        Background_Gray.add(Water_OrangeSquareLabel);
-        Water_OrangeSquareLabel.setBounds(10, 210, 310, 95);
-
         Bed_IconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Bed_1.png"))); // NOI18N
         Background_Gray.add(Bed_IconLabel);
         Bed_IconLabel.setBounds(30, 320, 60, 61);
@@ -268,6 +264,10 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
         Bed_OrangeSquareLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Orange_Br.png"))); // NOI18N
         Background_Gray.add(Bed_OrangeSquareLabel);
         Bed_OrangeSquareLabel.setBounds(10, 310, 310, 95);
+
+        Water_OrangeSquareLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Orange_Br.png"))); // NOI18N
+        Background_Gray.add(Water_OrangeSquareLabel);
+        Water_OrangeSquareLabel.setBounds(10, 210, 310, 95);
 
         getContentPane().add(Background_Gray, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 700));
 
