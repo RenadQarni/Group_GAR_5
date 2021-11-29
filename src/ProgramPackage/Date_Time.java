@@ -36,19 +36,19 @@ public class Date_Time extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel3 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        Background = new javax.swing.JPanel();
+        Cart_label = new javax.swing.JLabel();
+        Home_label = new javax.swing.JLabel();
+        Help_Label = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         time_Label = new javax.swing.JLabel();
         date_Label = new javax.swing.JLabel();
-        timeL = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
+        Time_Label = new javax.swing.JComboBox<>();
+        ConfirmButton = new javax.swing.JButton();
         timeError = new javax.swing.JLabel();
         dateError = new javax.swing.JLabel();
         DateChooser = new com.toedter.calendar.JDateChooser();
-        jLabel1 = new javax.swing.JLabel();
+        Back_label = new javax.swing.JLabel();
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cart_dark.png"))); // NOI18N
 
@@ -57,13 +57,13 @@ public class Date_Time extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        Background.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cart_dark.png"))); // NOI18N
+        Cart_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cart_dark.png"))); // NOI18N
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/home.png"))); // NOI18N
+        Home_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/home.png"))); // NOI18N
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/help.png"))); // NOI18N
+        Help_Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/help.png"))); // NOI18N
 
         jPanel1.setBackground(new java.awt.Color(249, 249, 249));
 
@@ -75,14 +75,14 @@ public class Date_Time extends javax.swing.JFrame {
         date_Label.setForeground(new java.awt.Color(91, 74, 132));
         date_Label.setText("Select Day");
 
-        timeL.setBackground(new java.awt.Color(192, 179, 242));
-        timeL.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "    :     AM/PM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM" }));
+        Time_Label.setBackground(new java.awt.Color(192, 179, 242));
+        Time_Label.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "    :     AM/PM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM" }));
 
-        jButton1.setBackground(new java.awt.Color(121, 99, 175));
-        jButton1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Confirm");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        ConfirmButton.setBackground(new java.awt.Color(121, 99, 175));
+        ConfirmButton.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        ConfirmButton.setForeground(new java.awt.Color(255, 255, 255));
+        ConfirmButton.setText("Confirm");
+        ConfirmButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 confirm(evt);
             }
@@ -107,21 +107,21 @@ public class Date_Time extends javax.swing.JFrame {
                                 .addComponent(date_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(213, 213, 213))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(timeL, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Time_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(timeError, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(ConfirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(27, 27, 27))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(dateError, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap())))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(34, 34, 34)
-                .addComponent(DateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(DateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -134,20 +134,20 @@ public class Date_Time extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addComponent(date_Label)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addComponent(DateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(dateError)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(190, 190, 190)
-                        .addComponent(timeL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Time_Label, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                 .addComponent(timeError)
                 .addGap(57, 57, 57)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ConfirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -156,53 +156,53 @@ public class Date_Time extends javax.swing.JFrame {
                     .addContainerGap(195, Short.MAX_VALUE)))
         );
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back_arrow.png"))); // NOI18N
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        Back_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back_arrow.png"))); // NOI18N
+        Back_label.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 backTo_pre(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout BackgroundLayout = new javax.swing.GroupLayout(Background);
+        Background.setLayout(BackgroundLayout);
+        BackgroundLayout.setHorizontalGroup(
+            BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+            .addGroup(BackgroundLayout.createSequentialGroup()
+                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(BackgroundLayout.createSequentialGroup()
                         .addGap(61, 61, 61)
-                        .addComponent(jLabel2)
+                        .addComponent(Cart_label)
                         .addGap(40, 40, 40)
-                        .addComponent(jLabel4)
+                        .addComponent(Home_label)
                         .addGap(43, 43, 43)
-                        .addComponent(jLabel6))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(Help_Label))
+                    .addGroup(BackgroundLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel1)))
+                        .addComponent(Back_label)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        BackgroundLayout.setVerticalGroup(
+            BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(jLabel1)
+                .addComponent(Back_label)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Cart_label)
+                    .addGroup(BackgroundLayout.createSequentialGroup()
                         .addGap(2, 2, 2)
-                        .addComponent(jLabel4))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(Home_label))
+                    .addGroup(BackgroundLayout.createSequentialGroup()
                         .addGap(3, 3, 3)
-                        .addComponent(jLabel6)))
+                        .addComponent(Help_Label)))
                 .addGap(58, 58, 58))
         );
 
-        getContentPane().add(jPanel2);
-        jPanel2.setBounds(0, 0, 349, 700);
+        getContentPane().add(Background);
+        Background.setBounds(0, 0, 331, 700);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -211,7 +211,7 @@ public class Date_Time extends javax.swing.JFrame {
         if (checkInfo()) {
             if (a != null) {
                 a.setDate(DateChooser.getDate());
-                a.setTime(timeL.getItemAt(timeL.getSelectedIndex()));
+                a.setTime(Time_Label.getItemAt(Time_Label.getSelectedIndex()));
 
                 ConfirmAppointment x = new ConfirmAppointment();
                 x.setVisible(true);
@@ -220,7 +220,7 @@ public class Date_Time extends javax.swing.JFrame {
 
             if (o != null) {
                 o.setDate(DateChooser.getDate());
-                o.setTime(timeL.getItemAt(timeL.getSelectedIndex()));
+                o.setTime(Time_Label.getItemAt(Time_Label.getSelectedIndex()));
 
                 Payment x = new Payment();
                 x.setVisible(true);
@@ -266,7 +266,7 @@ public class Date_Time extends javax.swing.JFrame {
             valid = false;
         }
 
-        if (timeL.getSelectedIndex() == 0) {
+        if (Time_Label.getSelectedIndex() == 0) {
             timeError.setForeground(Color.red);
             timeError.setText("You most choose time");
             valid = false;
@@ -331,19 +331,19 @@ public class Date_Time extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Back_label;
+    private javax.swing.JPanel Background;
+    private javax.swing.JLabel Cart_label;
+    private javax.swing.JButton ConfirmButton;
     private com.toedter.calendar.JDateChooser DateChooser;
+    private javax.swing.JLabel Help_Label;
+    private javax.swing.JLabel Home_label;
+    private javax.swing.JComboBox<String> Time_Label;
     private javax.swing.JLabel dateError;
     private javax.swing.JLabel date_Label;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel timeError;
-    private javax.swing.JComboBox<String> timeL;
     private javax.swing.JLabel time_Label;
     // End of variables declaration//GEN-END:variables
 }

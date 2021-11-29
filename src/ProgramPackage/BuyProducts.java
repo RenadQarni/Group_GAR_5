@@ -226,7 +226,7 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
                     .addComponent(jLabel15)
                     .addComponent(jLabel16)
                     .addComponent(jLabel17))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         jLabel2.setText("total");
@@ -303,7 +303,7 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 710));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 700));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
