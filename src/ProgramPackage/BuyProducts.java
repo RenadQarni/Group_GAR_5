@@ -5,21 +5,15 @@
  */
 package ProgramPackage;
 
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import javax.swing.JOptionPane;
 
-public class BuyProducts extends javax.swing.JFrame implements MouseListener {
+public class BuyProducts extends javax.swing.JFrame {
 
     public static Order o;
 
     Product[] products_list = new Product[4];
 
     public BuyProducts() {
-       jPanel2.setBackground(jPanel1.getBackground());
-
-      //  jPanel1.setVisible(true);
-    //    full_cart.setVisible(false);
 
         initComponents();
         products_list[0] = new Product("Auto food Dispenser", 0, false, 0);
@@ -35,11 +29,11 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
 
         Background_Gray = new javax.swing.JPanel();
         Background_White = new javax.swing.JPanel();
-        Home_Icon_Label = new javax.swing.JLabel();
-        Help_Icon_Label = new javax.swing.JLabel();
         dot_cart_panel = new java.awt.Panel();
         cart1 = new javax.swing.JButton();
         carttttt = new java.awt.Panel();
+        Home_Icon_Label = new javax.swing.JLabel();
+        Help_Icon_Label = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         cart_panle = new javax.swing.JButton();
@@ -63,7 +57,7 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
         Bed_OrangeSquareLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(500, 700));
+        setPreferredSize(new java.awt.Dimension(345, 750));
         setResizable(false);
         setSize(new java.awt.Dimension(0, 0));
         getContentPane().setLayout(null);
@@ -72,10 +66,6 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
         Background_Gray.setLayout(null);
 
         Background_White.setBackground(new java.awt.Color(255, 255, 255));
-
-        Home_Icon_Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/home.png"))); // NOI18N
-
-        Help_Icon_Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/help.png"))); // NOI18N
 
         dot_cart_panel.setLayout(null);
 
@@ -88,6 +78,12 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
         carttttt.setLayout(null);
         dot_cart_panel.add(carttttt);
         carttttt.setBounds(0, 0, 60, 50);
+
+        Home_Icon_Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/home.png"))); // NOI18N
+
+        Help_Icon_Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/help.png"))); // NOI18N
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -103,15 +99,16 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(cart_panle, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 20, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(cart_panle, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(cart_panle, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 10, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addComponent(cart_panle, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         full_cart.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/dot_cart.png"))); // NOI18N
@@ -127,15 +124,18 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(full_cart, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(full_cart, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 4, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(full_cart, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(full_cart)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout Background_WhiteLayout = new javax.swing.GroupLayout(Background_White);
@@ -144,31 +144,35 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
             Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Background_WhiteLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addGroup(Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Background_WhiteLayout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(Home_Icon_Label)
-                        .addGap(61, 61, 61)
-                        .addComponent(Help_Icon_Label))
-                    .addComponent(dot_cart_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addComponent(dot_cart_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(364, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Background_WhiteLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(Home_Icon_Label)
+                .addGap(62, 62, 62)
+                .addComponent(Help_Icon_Label)
+                .addGap(103, 103, 103))
         );
         Background_WhiteLayout.setVerticalGroup(
             Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Background_WhiteLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(12, 12, 12)
                 .addGroup(Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Home_Icon_Label)
-                    .addComponent(Help_Icon_Label)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(Background_WhiteLayout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addGroup(Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(Help_Icon_Label)
+                            .addComponent(Home_Icon_Label))))
+                .addGap(16, 16, 16)
                 .addComponent(dot_cart_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
 
         Background_Gray.add(Background_White);
-        Background_White.setBounds(0, 620, 390, 182);
+        Background_White.setBounds(0, 620, 390, 248);
 
         FoodCart_Button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/add-cart.png"))); // NOI18N
         FoodCart_Button.setContentAreaFilled(false);
@@ -285,6 +289,8 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
             products_list[1].setPrice(150);
             products_list[1].setSelected(true);
             products_list[1].setAmount(1);
+            // jPanel2.setBackground(FoodCart_Button.getBackground());
+
             full_cart.setVisible(true);
             jPanel1.setVisible(false);
         }
@@ -333,18 +339,17 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
 
     }//GEN-LAST:event_FoodCart_ButtonActionPerformed
 
-    private void full_cartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_full_cartActionPerformed
-        // TODO add your handling code here:
-        if (products_list[0].isSelected() == true || products_list[1].isSelected() == true || products_list[2].isSelected() == true || products_list[3].isSelected() == true) {
-            Date_Time X = new Date_Time();
-            X.setVisible(true);
-            this.dispose();
-        }
-    }//GEN-LAST:event_full_cartActionPerformed
-
     private void cart_panleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cart_panleActionPerformed
         JOptionPane.showMessageDialog(null, "No Product have been Selected the cart is empty!", "Error", JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_cart_panleActionPerformed
+
+    private void full_cartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_full_cartActionPerformed
+ //       if (products_list[0].isSelected() == true || products_list[1].isSelected() == true || products_list[2].isSelected() == true || products_list[3].isSelected() == true) {
+            Date_Time X = new Date_Time();
+            X.setVisible(true);
+            this.dispose();
+ //       }
+    }//GEN-LAST:event_full_cartActionPerformed
 
     /**
      * @param args the command line arguments
@@ -412,28 +417,4 @@ public class BuyProducts extends javax.swing.JFrame implements MouseListener {
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 
-    @Override
-    public void mouseClicked(MouseEvent me) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void mousePressed(MouseEvent me) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent me) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent me) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void mouseExited(MouseEvent me) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
