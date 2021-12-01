@@ -56,12 +56,12 @@ public class BuyProducts extends javax.swing.JFrame {
         Bed_IconLabel = new javax.swing.JLabel();
         Bed_OrangeSquareLabel = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        Back_label = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(380, 700));
         setResizable(false);
         setSize(new java.awt.Dimension(0, 0));
-        getContentPane().setLayout(null);
 
         Background_Gray.setBackground(new java.awt.Color(249, 249, 249));
         Background_Gray.setLayout(null);
@@ -111,19 +111,19 @@ public class BuyProducts extends javax.swing.JFrame {
         PageTitle_Label.setForeground(new java.awt.Color(51, 0, 102));
         PageTitle_Label.setText("Products");
         Background_Gray.add(PageTitle_Label);
-        PageTitle_Label.setBounds(30, 30, 190, 37);
+        PageTitle_Label.setBounds(20, 40, 190, 37);
 
         Food_Label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         Food_Label.setForeground(new java.awt.Color(255, 255, 255));
         Food_Label.setText("Auto food dispenser");
         Background_Gray.add(Food_Label);
-        Food_Label.setBounds(90, 120, 201, 25);
+        Food_Label.setBounds(90, 120, 202, 25);
 
         Water_Label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         Water_Label.setForeground(new java.awt.Color(255, 255, 255));
         Water_Label.setText("Auto Water Fountain");
         Background_Gray.add(Water_Label);
-        Water_Label.setBounds(90, 220, 208, 25);
+        Water_Label.setBounds(90, 220, 210, 25);
 
         Bed_Label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         Bed_Label.setForeground(new java.awt.Color(255, 255, 255));
@@ -215,10 +215,27 @@ public class BuyProducts extends javax.swing.JFrame {
             }
         });
         Background_Gray.add(jButton1);
-        jButton1.setBounds(217, 540, 110, 50);
+        jButton1.setBounds(180, 530, 150, 50);
 
-        getContentPane().add(Background_Gray);
-        Background_Gray.setBounds(0, 0, 380, 700);
+        Back_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back_arrow.png"))); // NOI18N
+        Back_label.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Back_labelbackTo_pre(evt);
+            }
+        });
+        Background_Gray.add(Back_label);
+        Back_label.setBounds(10, 10, 14, 24);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Background_Gray, javax.swing.GroupLayout.DEFAULT_SIZE, 334, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Background_Gray, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -274,6 +291,12 @@ public class BuyProducts extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_goTo_cart
 
+    private void Back_labelbackTo_pre(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Back_labelbackTo_pre
+        Browse_Services X = new Browse_Services();
+        X.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Back_labelbackTo_pre
+
     /**
      * @param args the command line arguments
      */
@@ -310,6 +333,7 @@ public class BuyProducts extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Back_label;
     private javax.swing.JPanel Background_Gray;
     private javax.swing.JPanel Background_White;
     private javax.swing.JLabel Bed_IconLabel;

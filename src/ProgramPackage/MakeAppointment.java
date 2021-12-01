@@ -253,9 +253,9 @@ public class MakeAppointment extends javax.swing.JFrame {
     }//GEN-LAST:event_saveAppointmentInfo
 
     private void backToPrevious(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backToPrevious
-        // back to browse services interface
-
-        //*** not implemented yet ***
+        Browse_Services X = new Browse_Services();
+        X.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_backToPrevious
 
     private void nextStep_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextStep_ButtonActionPerformed

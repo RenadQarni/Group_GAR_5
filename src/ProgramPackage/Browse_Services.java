@@ -134,9 +134,7 @@ public class Browse_Services extends javax.swing.JFrame {
 
     private void View_ServicesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_View_ServicesMouseClicked
         // TODO add your handling code here:
-        ConfirmAppointment X = new ConfirmAppointment();
-        X.setVisible(true);
-        this.dispose();
+        //Not implemented yet
 
     }//GEN-LAST:event_View_ServicesMouseClicked
 
