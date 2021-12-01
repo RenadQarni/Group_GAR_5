@@ -31,45 +31,45 @@ public class Browse_Services extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        background_interface = new javax.swing.JPanel();
+        Hello_label = new javax.swing.JLabel();
+        chooses_label = new javax.swing.JLabel();
+        ViewServices_label = new javax.swing.JLabel();
+        icon_ = new javax.swing.JLabel();
         View_Services = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        product_label = new javax.swing.JLabel();
+        icon3 = new javax.swing.JLabel();
+        MakeAppointment_label = new javax.swing.JLabel();
+        icon = new javax.swing.JLabel();
         Products = new javax.swing.JLabel();
         Make_Appointment = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(249, 249, 249));
-        jPanel1.setLayout(null);
+        background_interface.setBackground(new java.awt.Color(249, 249, 249));
+        background_interface.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 0, 102));
-        jLabel1.setText("Hello, ");
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(10, 60, 136, 75);
+        Hello_label.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        Hello_label.setForeground(new java.awt.Color(51, 0, 102));
+        Hello_label.setText("Hello, ");
+        background_interface.add(Hello_label);
+        Hello_label.setBounds(10, 60, 136, 75);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(51, 0, 102));
-        jLabel3.setText("choose what you want");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(10, 130, 340, 37);
+        chooses_label.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        chooses_label.setForeground(new java.awt.Color(51, 0, 102));
+        chooses_label.setText("choose what you want");
+        background_interface.add(chooses_label);
+        chooses_label.setBounds(10, 130, 340, 37);
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("View Services");
-        jPanel1.add(jLabel7);
-        jLabel7.setBounds(20, 360, 124, 22);
+        ViewServices_label.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        ViewServices_label.setForeground(new java.awt.Color(255, 255, 255));
+        ViewServices_label.setText("View Services");
+        background_interface.add(ViewServices_label);
+        ViewServices_label.setBounds(20, 360, 124, 22);
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Service_Icon.png"))); // NOI18N
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(30, 230, 96, 120);
+        icon_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Service_Icon.png"))); // NOI18N
+        background_interface.add(icon_);
+        icon_.setBounds(30, 230, 96, 120);
 
         View_Services.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/square_purple.png"))); // NOI18N
         View_Services.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -77,28 +77,28 @@ public class Browse_Services extends javax.swing.JFrame {
                 View_ServicesMouseClicked(evt);
             }
         });
-        jPanel1.add(View_Services);
+        background_interface.add(View_Services);
         View_Services.setBounds(10, 230, 149, 194);
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Product");
-        jPanel1.add(jLabel9);
-        jLabel9.setBounds(220, 360, 90, 22);
+        product_label.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        product_label.setForeground(new java.awt.Color(255, 255, 255));
+        product_label.setText("Product");
+        background_interface.add(product_label);
+        product_label.setBounds(220, 360, 90, 22);
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/App_Icon.png"))); // NOI18N
-        jPanel1.add(jLabel10);
-        jLabel10.setBounds(110, 450, 96, 130);
+        icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/App_Icon.png"))); // NOI18N
+        background_interface.add(icon3);
+        icon3.setBounds(110, 450, 96, 130);
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Make Appointment ");
-        jPanel1.add(jLabel11);
-        jLabel11.setBounds(80, 580, 175, 22);
+        MakeAppointment_label.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        MakeAppointment_label.setForeground(new java.awt.Color(255, 255, 255));
+        MakeAppointment_label.setText("Make Appointment ");
+        background_interface.add(MakeAppointment_label);
+        MakeAppointment_label.setBounds(80, 580, 175, 22);
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Product_Icon.png"))); // NOI18N
-        jPanel1.add(jLabel8);
-        jLabel8.setBounds(210, 240, 92, 93);
+        icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Product_Icon.png"))); // NOI18N
+        background_interface.add(icon);
+        icon.setBounds(210, 240, 92, 93);
 
         Products.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Square_Pink.png"))); // NOI18N
         Products.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -106,7 +106,7 @@ public class Browse_Services extends javax.swing.JFrame {
                 ProductsMouseClicked(evt);
             }
         });
-        jPanel1.add(Products);
+        background_interface.add(Products);
         Products.setBounds(180, 230, 150, 190);
 
         Make_Appointment.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/App_Box.png"))); // NOI18N
@@ -115,18 +115,18 @@ public class Browse_Services extends javax.swing.JFrame {
                 Make_AppointmentMouseClicked(evt);
             }
         });
-        jPanel1.add(Make_Appointment);
+        background_interface.add(Make_Appointment);
         Make_Appointment.setBounds(10, 460, 330, 170);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(background_interface, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(background_interface, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -193,17 +193,17 @@ public class Browse_Services extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Hello_label;
+    private javax.swing.JLabel MakeAppointment_label;
     private javax.swing.JLabel Make_Appointment;
     private javax.swing.JLabel Products;
+    private javax.swing.JLabel ViewServices_label;
     private javax.swing.JLabel View_Services;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel background_interface;
+    private javax.swing.JLabel chooses_label;
+    private javax.swing.JLabel icon;
+    private javax.swing.JLabel icon3;
+    private javax.swing.JLabel icon_;
+    private javax.swing.JLabel product_label;
     // End of variables declaration//GEN-END:variables
 }
