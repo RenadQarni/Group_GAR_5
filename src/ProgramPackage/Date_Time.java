@@ -283,7 +283,7 @@ public class Date_Time extends javax.swing.JFrame {
     }
 
     // --------- check if selected date in past ---------
-    private boolean checkDate(Date selectedDate) {
+    public boolean checkDate(Date selectedDate) {
         boolean checker = true;
 
         Date today = new Date();
