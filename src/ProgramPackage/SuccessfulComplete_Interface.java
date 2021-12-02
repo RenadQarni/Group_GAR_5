@@ -27,8 +27,8 @@ public class SuccessfulComplete_Interface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        Background_Panel = new javax.swing.JPanel();
+        Background_white_Panel = new javax.swing.JPanel();
         Home_label = new javax.swing.JLabel();
         Success_Icon = new javax.swing.JLabel();
         Success_Label = new javax.swing.JLabel();
@@ -36,9 +36,9 @@ public class SuccessfulComplete_Interface extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(249, 249, 249));
+        Background_Panel.setBackground(new java.awt.Color(249, 249, 249));
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        Background_white_Panel.setBackground(new java.awt.Color(255, 255, 255));
 
         Home_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/home.png"))); // NOI18N
         Home_label.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -47,18 +47,18 @@ public class SuccessfulComplete_Interface extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout Background_white_PanelLayout = new javax.swing.GroupLayout(Background_white_Panel);
+        Background_white_Panel.setLayout(Background_white_PanelLayout);
+        Background_white_PanelLayout.setHorizontalGroup(
+            Background_white_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Background_white_PanelLayout.createSequentialGroup()
                 .addGap(163, 163, 163)
                 .addComponent(Home_label)
                 .addContainerGap(182, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        Background_white_PanelLayout.setVerticalGroup(
+            Background_white_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Background_white_PanelLayout.createSequentialGroup()
                 .addContainerGap(35, Short.MAX_VALUE)
                 .addComponent(Home_label)
                 .addGap(32, 32, 32))
@@ -74,27 +74,27 @@ public class SuccessfulComplete_Interface extends javax.swing.JFrame {
         SuccessMsg_Label.setForeground(new java.awt.Color(91, 74, 132));
         SuccessMsg_Label.setText("Your request has been completed");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout Background_PanelLayout = new javax.swing.GroupLayout(Background_Panel);
+        Background_Panel.setLayout(Background_PanelLayout);
+        Background_PanelLayout.setHorizontalGroup(
+            Background_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Background_PanelLayout.createSequentialGroup()
+                .addGroup(Background_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Background_PanelLayout.createSequentialGroup()
                         .addGap(80, 80, 80)
                         .addComponent(Success_Icon))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(Background_PanelLayout.createSequentialGroup()
                         .addGap(100, 100, 100)
                         .addComponent(Success_Label))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(Background_PanelLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(SuccessMsg_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Background_white_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        Background_PanelLayout.setVerticalGroup(
+            Background_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Background_PanelLayout.createSequentialGroup()
                 .addGap(170, 170, 170)
                 .addComponent(Success_Icon)
                 .addGap(17, 17, 17)
@@ -102,18 +102,18 @@ public class SuccessfulComplete_Interface extends javax.swing.JFrame {
                 .addGap(56, 56, 56)
                 .addComponent(SuccessMsg_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(Background_white_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Background_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Background_Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -162,11 +162,11 @@ public class SuccessfulComplete_Interface extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Background_Panel;
+    private javax.swing.JPanel Background_white_Panel;
     private javax.swing.JLabel Home_label;
     private javax.swing.JLabel SuccessMsg_Label;
     private javax.swing.JLabel Success_Icon;
     private javax.swing.JLabel Success_Label;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
