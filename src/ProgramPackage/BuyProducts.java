@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package ProgramPackage;
-
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 
@@ -240,7 +239,7 @@ public class BuyProducts extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void addProduct(Product p){
+    public void addProduct(Product p){
         p.setSelected(true);
         p.setAmount(1);
         addedProducts.add(p);
@@ -249,7 +248,6 @@ public class BuyProducts extends javax.swing.JFrame {
     private void setCartIcon (javax.swing.JLabel b){
         b.setIcon(null);
         b.setIcon(added_cart);
-        
         Cart_Icon.setIcon(dot_cart);
     }
     
@@ -284,7 +282,6 @@ public class BuyProducts extends javax.swing.JFrame {
     private void goTo_cart(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_goTo_cart
         o = new Order();
         o.setSelectedProducts(addedProducts);
-        
         // go to cart interface
         Cart c = new Cart();
         c.setVisible(true);
