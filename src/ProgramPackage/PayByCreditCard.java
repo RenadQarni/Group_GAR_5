@@ -239,7 +239,9 @@ public class PayByCreditCard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void nextBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextBtnActionPerformed
-
+        SuccessfulComplete_Interface X = new SuccessfulComplete_Interface();
+        X.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_nextBtnActionPerformed
 
     private void CreditCardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreditCardActionPerformed

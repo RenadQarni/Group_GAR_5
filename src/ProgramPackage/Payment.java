@@ -152,7 +152,9 @@ public class Payment extends javax.swing.JFrame {
 
     private void goToPay_byCash(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_goToPay_byCash
         // go to bill interface
-        
+        SuccessfulComplete_Interface X = new SuccessfulComplete_Interface();
+        X.setVisible(true);
+        this.dispose();
         //*** not implemented yet ***
     }//GEN-LAST:event_goToPay_byCash
 
