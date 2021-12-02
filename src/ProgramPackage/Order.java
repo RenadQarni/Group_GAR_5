@@ -57,8 +57,11 @@ public class Order {
     }
 
     public void setTotalPrice() {
+        totalPrice = 0 ; 
         for (Product p : selectedProducts) {
+            
             totalPrice += p.getPrice() * p.getAmount();
+           
         }
 
     }

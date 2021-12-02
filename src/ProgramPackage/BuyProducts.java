@@ -35,7 +35,6 @@ public class BuyProducts extends javax.swing.JFrame {
         Background_Gray = new javax.swing.JPanel();
         Background_White = new javax.swing.JPanel();
         Home_Icon_Label = new javax.swing.JLabel();
-        Help_Icon_Label = new javax.swing.JLabel();
         Cart_Icon = new javax.swing.JLabel();
         PageTitle_Label = new javax.swing.JLabel();
         Food_Label = new javax.swing.JLabel();
@@ -69,8 +68,6 @@ public class BuyProducts extends javax.swing.JFrame {
 
         Home_Icon_Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/home.png"))); // NOI18N
 
-        Help_Icon_Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/help.png"))); // NOI18N
-
         Cart_Icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cart_dark.png"))); // NOI18N
         Cart_Icon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -85,11 +82,9 @@ public class BuyProducts extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Background_WhiteLayout.createSequentialGroup()
                 .addContainerGap(74, Short.MAX_VALUE)
                 .addComponent(Cart_Icon)
-                .addGap(50, 50, 50)
+                .addGap(45, 45, 45)
                 .addComponent(Home_Icon_Label)
-                .addGap(62, 62, 62)
-                .addComponent(Help_Icon_Label)
-                .addGap(92, 92, 92))
+                .addGap(190, 190, 190))
         );
         Background_WhiteLayout.setVerticalGroup(
             Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -97,9 +92,7 @@ public class BuyProducts extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addGroup(Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Cart_Icon)
-                    .addGroup(Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(Help_Icon_Label)
-                        .addComponent(Home_Icon_Label)))
+                    .addComponent(Home_Icon_Label))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
@@ -343,7 +336,6 @@ public class BuyProducts extends javax.swing.JFrame {
     private javax.swing.JLabel Food_IconLabel;
     private javax.swing.JLabel Food_Label;
     private javax.swing.JLabel Food_OrangeSquareLabel;
-    private javax.swing.JLabel Help_Icon_Label;
     private javax.swing.JLabel Home_Icon_Label;
     private javax.swing.JLabel PageTitle_Label;
     private javax.swing.JLabel Water_IconLabel;

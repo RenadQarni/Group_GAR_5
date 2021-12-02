@@ -23,12 +23,7 @@ public class ConfirmAppointment extends javax.swing.JFrame {
     public ConfirmAppointment() {
         initComponents();
 
-        // set background 
-        ImageIcon background = new ImageIcon("src\\Icons\\b2.jpg");
-        background = new ImageIcon(background.getImage().getScaledInstance(Background.getWidth(), Background.getHeight(), Image.SCALE_DEFAULT));
-        Background.setIcon(background);
-        Background.repaint();
-
+       
         // display appointment informations
         Appointment a = MakeAppointment.a;
         BetsNo_Label.setText(a.PetsNo());
@@ -48,8 +43,8 @@ public class ConfirmAppointment extends javax.swing.JFrame {
     private void initComponents() {
 
         ConfirmationBackground_Panel = new javax.swing.JPanel();
-        Page_Title_Label = new javax.swing.JLabel();
         Confirmation_Button = new javax.swing.JButton();
+        Page_Title_Label = new javax.swing.JLabel();
         Appointment_Info_Label = new javax.swing.JLabel();
         BetsNo_Label = new javax.swing.JLabel();
         Date_Label = new javax.swing.JLabel();
@@ -57,7 +52,6 @@ public class ConfirmAppointment extends javax.swing.JFrame {
         Services_Label = new javax.swing.JLabel();
         TotalPrice_Label = new javax.swing.JLabel();
         backToprevious = new javax.swing.JLabel();
-        Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -66,9 +60,6 @@ public class ConfirmAppointment extends javax.swing.JFrame {
         ConfirmationBackground_Panel.setEnabled(false);
         ConfirmationBackground_Panel.setMinimumSize(new java.awt.Dimension(690, 450));
         ConfirmationBackground_Panel.setPreferredSize(new java.awt.Dimension(550, 550));
-
-        Page_Title_Label.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        Page_Title_Label.setText("Confirm Appointment");
 
         Confirmation_Button.setBackground(new java.awt.Color(121, 99, 175));
         Confirmation_Button.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -79,6 +70,9 @@ public class ConfirmAppointment extends javax.swing.JFrame {
                 goToPayment(evt);
             }
         });
+
+        Page_Title_Label.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        Page_Title_Label.setText("Confirm Appointment");
 
         Appointment_Info_Label.setText("Appointment Information:");
 
@@ -99,68 +93,69 @@ public class ConfirmAppointment extends javax.swing.JFrame {
             }
         });
 
-        Background.setIconTextGap(0);
-        Background.setPreferredSize(new java.awt.Dimension(550, 550));
-
         javax.swing.GroupLayout ConfirmationBackground_PanelLayout = new javax.swing.GroupLayout(ConfirmationBackground_Panel);
         ConfirmationBackground_Panel.setLayout(ConfirmationBackground_PanelLayout);
         ConfirmationBackground_PanelLayout.setHorizontalGroup(
             ConfirmationBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(backToprevious)
             .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(TotalPrice_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                .addGap(160, 160, 160)
-                .addComponent(Page_Title_Label))
-            .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(BetsNo_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(Date_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(Time_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(Services_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                .addGap(172, 172, 172)
-                .addComponent(Appointment_Info_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(Background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                .addGap(220, 220, 220)
-                .addComponent(Confirmation_Button))
+                .addGroup(ConfirmationBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(backToprevious)
+                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(TotalPrice_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
+                        .addGap(160, 160, 160)
+                        .addComponent(Page_Title_Label))
+                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(BetsNo_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(Date_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(Time_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(Services_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
+                        .addGap(172, 172, 172)
+                        .addComponent(Appointment_Info_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
+                        .addGap(220, 220, 220)
+                        .addComponent(Confirmation_Button)))
+                .addGap(187, 187, 187))
         );
         ConfirmationBackground_PanelLayout.setVerticalGroup(
             ConfirmationBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(backToprevious)
             .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                .addGap(230, 230, 230)
-                .addComponent(TotalPrice_Label))
-            .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(Page_Title_Label))
-            .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                .addGap(110, 110, 110)
-                .addComponent(BetsNo_Label))
-            .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                .addGap(140, 140, 140)
-                .addComponent(Date_Label))
-            .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                .addGap(170, 170, 170)
-                .addComponent(Time_Label))
-            .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                .addGap(200, 200, 200)
-                .addComponent(Services_Label))
-            .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addComponent(Appointment_Info_Label))
-            .addComponent(Background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                .addGap(287, 287, 287)
-                .addComponent(Confirmation_Button))
+                .addGroup(ConfirmationBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(backToprevious)
+                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
+                        .addGap(230, 230, 230)
+                        .addComponent(TotalPrice_Label))
+                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(Page_Title_Label))
+                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
+                        .addGap(110, 110, 110)
+                        .addComponent(BetsNo_Label))
+                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
+                        .addGap(140, 140, 140)
+                        .addComponent(Date_Label))
+                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
+                        .addGap(170, 170, 170)
+                        .addComponent(Time_Label))
+                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
+                        .addGap(200, 200, 200)
+                        .addComponent(Services_Label))
+                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addComponent(Appointment_Info_Label))
+                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
+                        .addGap(287, 287, 287)
+                        .addComponent(Confirmation_Button)))
+                .addGap(236, 236, 236))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -236,7 +231,6 @@ public class ConfirmAppointment extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Appointment_Info_Label;
-    private javax.swing.JLabel Background;
     private javax.swing.JLabel BetsNo_Label;
     private javax.swing.JPanel ConfirmationBackground_Panel;
     private javax.swing.JButton Confirmation_Button;
