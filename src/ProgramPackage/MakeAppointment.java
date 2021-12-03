@@ -1,17 +1,13 @@
 package ProgramPackage;
 
 import java.awt.Color;
-import java.awt.Image;
 import java.io.*;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.time.LocalDate;
+
 import java.util.ArrayList;
-import java.util.Date;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.ImageIcon;
+
 
 /**
  *
@@ -19,10 +15,7 @@ import javax.swing.ImageIcon;
  */
 public class MakeAppointment extends javax.swing.JFrame {
 
-    static File file;
-    static PrintWriter p;
-    static FileWriter f;
-    public static Appointment a;
+    public static Appointment client_appointment;
     static ArrayList<String> s = new ArrayList<>();
 
     /**
@@ -30,15 +23,10 @@ public class MakeAppointment extends javax.swing.JFrame {
      *
      * @throws java.io.FileNotFoundException
      */
-    public MakeAppointment() throws FileNotFoundException {
+    public MakeAppointment() {
         initComponents();
 
         // set background 
-     
-
-        file = new File("AppointmentInfo.txt");
-        p = new PrintWriter(file);
-
         // initialize clinic services
         Service.services.add(new Service("Health Care", 100, true));
         Service.services.add(new Service("Beauty Services", 150, true));
@@ -49,18 +37,6 @@ public class MakeAppointment extends javax.swing.JFrame {
         Beauty_Services_CheckBox.setText(Beauty_Services_CheckBox.getText() + " " + Service.services.get(1).getPrice() + "SR");
         Insects_Control_CheckBox.setText(Insects_Control_CheckBox.getText() + " " + Service.services.get(2).getPrice() + "SR");
         Training_CheckBox.setText(Training_CheckBox.getText() + " " + Service.services.get(3).getPrice() + "SR");
-
-    }
-
-    static void file() throws IOException {
-        //f = null;
-        try {
-            f = new FileWriter(file);
-        } catch (IOException ex) {
-            Logger.getLogger(MakeAppointment.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        p = new PrintWriter(f);
-        p.print(a);
 
     }
 
@@ -221,7 +197,6 @@ public class MakeAppointment extends javax.swing.JFrame {
         return validInfo;
     }
 
-
     // --------- display the error massage for empty feild ---------
     private void displayErrorMassage() {
         errorMessage_Label.setText("Please fill in all the requirements to confirm the appointment");
@@ -232,28 +207,28 @@ public class MakeAppointment extends javax.swing.JFrame {
     private void saveAppointmentInfo(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_saveAppointmentInfo
         if (checkAppoinmentInfo() == true) {
 
-            a = new Appointment();
-            a.setNoPet((int) noOfPets_Spinner.getValue());
+            client_appointment = new Appointment();
+            client_appointment.setNoPet((int) noOfPets_Spinner.getValue());
 
             if (Health_Care_CheckBox.isSelected()) {
-                a.addService(Service.services.get(0));
-                a.setTotalPrice(a.getTotalPrice() + Service.services.get(0).getPrice());
+                client_appointment.addService(Service.services.get(0));
+                client_appointment.setTotalPrice(client_appointment.getTotalPrice() + Service.services.get(0).getPrice());
             }
             if (Beauty_Services_CheckBox.isSelected()) {
-                a.addService(Service.services.get(1));
-                a.setTotalPrice(a.getTotalPrice() + Service.services.get(1).getPrice());
+                client_appointment.addService(Service.services.get(1));
+                client_appointment.setTotalPrice(client_appointment.getTotalPrice() + Service.services.get(1).getPrice());
             }
             if (Insects_Control_CheckBox.isSelected()) {
-                a.addService(Service.services.get(2));
-                a.setTotalPrice(a.getTotalPrice() + (Service.services.get(2).getPrice()));
+                client_appointment.addService(Service.services.get(2));
+                client_appointment.setTotalPrice(client_appointment.getTotalPrice() + (Service.services.get(2).getPrice()));
             }
             if (Training_CheckBox.isSelected()) {
-                a.addService(Service.services.get(3));
-                a.setTotalPrice(a.getTotalPrice() + Service.services.get(3).getPrice());
+                client_appointment.addService(Service.services.get(3));
+                client_appointment.setTotalPrice(client_appointment.getTotalPrice() + Service.services.get(3).getPrice());
             }
 
-            a.setTotalPrice(a.getTotalPrice() * a.getNoPet());
-            p.print(a);
+            client_appointment.setTotalPrice(client_appointment.getTotalPrice() * client_appointment.getNoPet());
+        
 
             Date_Time X = new Date_Time();
             X.setVisible(true);
@@ -267,8 +242,8 @@ public class MakeAppointment extends javax.swing.JFrame {
     }//GEN-LAST:event_nextStep_ButtonActionPerformed
 
     private void Back_labelbackTo_pre(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Back_labelbackTo_pre
-       PetCareServices go_to_PetCareServices = new PetCareServices();
-       go_to_PetCareServices.setVisible(true);
+        PetCareServices go_to_PetCareServices = new PetCareServices();
+        go_to_PetCareServices.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_Back_labelbackTo_pre
 
@@ -303,11 +278,7 @@ public class MakeAppointment extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                try {
-                    new MakeAppointment().setVisible(true);
-                } catch (FileNotFoundException ex) {
-                    Logger.getLogger(MakeAppointment.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                new MakeAppointment().setVisible(true);
             }
         });
     }

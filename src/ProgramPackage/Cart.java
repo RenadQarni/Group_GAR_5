@@ -49,30 +49,30 @@ public class Cart extends javax.swing.JFrame {
         AmountTitle = new javax.swing.JLabel();
         ProductTitle = new javax.swing.JLabel();
         errorr_empty = new javax.swing.JLabel();
-        p1 = new javax.swing.JLabel();
-        p2 = new javax.swing.JLabel();
-        p3 = new javax.swing.JLabel();
-        p4 = new javax.swing.JLabel();
+        First_product_added = new javax.swing.JLabel();
+        sec_product_added = new javax.swing.JLabel();
+        Third_product_added = new javax.swing.JLabel();
+        Fourth_product_added = new javax.swing.JLabel();
         PriceTitle = new javax.swing.JLabel();
         totalPrice = new javax.swing.JLabel();
         ConfirmButton = new javax.swing.JButton();
         Back_label = new javax.swing.JLabel();
-        inc_1 = new javax.swing.JLabel();
+        inc_first_product = new javax.swing.JLabel();
         Amount_1 = new javax.swing.JLabel();
         Amount_2 = new javax.swing.JLabel();
         Amount_3 = new javax.swing.JLabel();
         Amount_4 = new javax.swing.JLabel();
-        inc_2 = new javax.swing.JLabel();
-        dec_1 = new javax.swing.JLabel();
-        dec_2 = new javax.swing.JLabel();
-        inc_3 = new javax.swing.JLabel();
-        inc_4 = new javax.swing.JLabel();
-        dec_3 = new javax.swing.JLabel();
-        dec_4 = new javax.swing.JLabel();
-        del_1 = new javax.swing.JLabel();
-        del_2 = new javax.swing.JLabel();
-        del_3 = new javax.swing.JLabel();
-        del_4 = new javax.swing.JLabel();
+        inc_second_product = new javax.swing.JLabel();
+        dec_first_product = new javax.swing.JLabel();
+        dec_second_product = new javax.swing.JLabel();
+        inc_third_product = new javax.swing.JLabel();
+        inc_fourth_product = new javax.swing.JLabel();
+        dec_third_product = new javax.swing.JLabel();
+        dec_fourth_product = new javax.swing.JLabel();
+        delete_product_1 = new javax.swing.JLabel();
+        delete_product_2 = new javax.swing.JLabel();
+        delete_product_3 = new javax.swing.JLabel();
+        delete_product_4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(380, 700));
@@ -136,29 +136,29 @@ public class Cart extends javax.swing.JFrame {
         Background_Gray.add(errorr_empty);
         errorr_empty.setBounds(0, 350, 380, 24);
 
-        p1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        p1.setForeground(new java.awt.Color(51, 51, 51));
-        p1.setText("Prouduct 1");
-        Background_Gray.add(p1);
-        p1.setBounds(30, 200, 220, 17);
+        First_product_added.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        First_product_added.setForeground(new java.awt.Color(51, 51, 51));
+        First_product_added.setText("Prouduct 1");
+        Background_Gray.add(First_product_added);
+        First_product_added.setBounds(30, 200, 220, 17);
 
-        p2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        p2.setForeground(new java.awt.Color(51, 51, 51));
-        p2.setText("Prouduct 2");
-        Background_Gray.add(p2);
-        p2.setBounds(30, 240, 220, 17);
+        sec_product_added.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        sec_product_added.setForeground(new java.awt.Color(51, 51, 51));
+        sec_product_added.setText("Prouduct 2");
+        Background_Gray.add(sec_product_added);
+        sec_product_added.setBounds(30, 240, 220, 17);
 
-        p3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        p3.setForeground(new java.awt.Color(51, 51, 51));
-        p3.setText("Prouduct 3");
-        Background_Gray.add(p3);
-        p3.setBounds(30, 280, 220, 17);
+        Third_product_added.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Third_product_added.setForeground(new java.awt.Color(51, 51, 51));
+        Third_product_added.setText("Prouduct 3");
+        Background_Gray.add(Third_product_added);
+        Third_product_added.setBounds(30, 280, 220, 17);
 
-        p4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        p4.setForeground(new java.awt.Color(51, 51, 51));
-        p4.setText("Prouduct 4");
-        Background_Gray.add(p4);
-        p4.setBounds(30, 320, 220, 17);
+        Fourth_product_added.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Fourth_product_added.setForeground(new java.awt.Color(51, 51, 51));
+        Fourth_product_added.setText("Prouduct 4");
+        Background_Gray.add(Fourth_product_added);
+        Fourth_product_added.setBounds(30, 320, 220, 17);
 
         PriceTitle.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         PriceTitle.setForeground(new java.awt.Color(91, 74, 132));
@@ -193,16 +193,16 @@ public class Cart extends javax.swing.JFrame {
         Background_Gray.add(Back_label);
         Back_label.setBounds(10, 20, 14, 24);
 
-        inc_1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        inc_1.setForeground(new java.awt.Color(91, 74, 132));
-        inc_1.setText("+");
-        inc_1.addMouseListener(new java.awt.event.MouseAdapter() {
+        inc_first_product.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        inc_first_product.setForeground(new java.awt.Color(91, 74, 132));
+        inc_first_product.setText("+");
+        inc_first_product.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                inc_1MouseClicked(evt);
+                inc_first_productMouseClicked(evt);
             }
         });
-        Background_Gray.add(inc_1);
-        inc_1.setBounds(280, 200, 15, 17);
+        Background_Gray.add(inc_first_product);
+        inc_first_product.setBounds(280, 200, 15, 17);
 
         Amount_1.setText("1");
         Amount_1.setPreferredSize(new java.awt.Dimension(6, 17));
@@ -224,118 +224,118 @@ public class Cart extends javax.swing.JFrame {
         Background_Gray.add(Amount_4);
         Amount_4.setBounds(310, 320, 16, 17);
 
-        inc_2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        inc_2.setForeground(new java.awt.Color(91, 74, 132));
-        inc_2.setText("+");
-        inc_2.addMouseListener(new java.awt.event.MouseAdapter() {
+        inc_second_product.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        inc_second_product.setForeground(new java.awt.Color(91, 74, 132));
+        inc_second_product.setText("+");
+        inc_second_product.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                inc_2MouseClicked(evt);
+                inc_second_productMouseClicked(evt);
             }
         });
-        Background_Gray.add(inc_2);
-        inc_2.setBounds(280, 240, 15, 17);
+        Background_Gray.add(inc_second_product);
+        inc_second_product.setBounds(280, 240, 15, 17);
 
-        dec_1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        dec_1.setForeground(new java.awt.Color(91, 74, 132));
-        dec_1.setText("-");
-        dec_1.addMouseListener(new java.awt.event.MouseAdapter() {
+        dec_first_product.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        dec_first_product.setForeground(new java.awt.Color(91, 74, 132));
+        dec_first_product.setText("-");
+        dec_first_product.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                dec_1MouseClicked(evt);
+                dec_first_productMouseClicked(evt);
             }
         });
-        Background_Gray.add(dec_1);
-        dec_1.setBounds(340, 200, 15, 17);
+        Background_Gray.add(dec_first_product);
+        dec_first_product.setBounds(340, 200, 15, 17);
 
-        dec_2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        dec_2.setForeground(new java.awt.Color(91, 74, 132));
-        dec_2.setText("-");
-        dec_2.addMouseListener(new java.awt.event.MouseAdapter() {
+        dec_second_product.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        dec_second_product.setForeground(new java.awt.Color(91, 74, 132));
+        dec_second_product.setText("-");
+        dec_second_product.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                dec_2MouseClicked(evt);
+                dec_second_productMouseClicked(evt);
             }
         });
-        Background_Gray.add(dec_2);
-        dec_2.setBounds(340, 240, 15, 17);
+        Background_Gray.add(dec_second_product);
+        dec_second_product.setBounds(340, 240, 15, 17);
 
-        inc_3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        inc_3.setForeground(new java.awt.Color(91, 74, 132));
-        inc_3.setText("+");
-        inc_3.addMouseListener(new java.awt.event.MouseAdapter() {
+        inc_third_product.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        inc_third_product.setForeground(new java.awt.Color(91, 74, 132));
+        inc_third_product.setText("+");
+        inc_third_product.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                inc_3MouseClicked(evt);
+                inc_third_productMouseClicked(evt);
             }
         });
-        Background_Gray.add(inc_3);
-        inc_3.setBounds(280, 280, 15, 17);
+        Background_Gray.add(inc_third_product);
+        inc_third_product.setBounds(280, 280, 15, 17);
 
-        inc_4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        inc_4.setForeground(new java.awt.Color(91, 74, 132));
-        inc_4.setText("+");
-        inc_4.addMouseListener(new java.awt.event.MouseAdapter() {
+        inc_fourth_product.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        inc_fourth_product.setForeground(new java.awt.Color(91, 74, 132));
+        inc_fourth_product.setText("+");
+        inc_fourth_product.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                inc_4MouseClicked(evt);
+                inc_fourth_productMouseClicked(evt);
             }
         });
-        Background_Gray.add(inc_4);
-        inc_4.setBounds(280, 320, 15, 17);
+        Background_Gray.add(inc_fourth_product);
+        inc_fourth_product.setBounds(280, 320, 15, 17);
 
-        dec_3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        dec_3.setForeground(new java.awt.Color(91, 74, 132));
-        dec_3.setText("-");
-        dec_3.addMouseListener(new java.awt.event.MouseAdapter() {
+        dec_third_product.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        dec_third_product.setForeground(new java.awt.Color(91, 74, 132));
+        dec_third_product.setText("-");
+        dec_third_product.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                dec_3MouseClicked(evt);
+                dec_third_productMouseClicked(evt);
             }
         });
-        Background_Gray.add(dec_3);
-        dec_3.setBounds(340, 280, 15, 17);
+        Background_Gray.add(dec_third_product);
+        dec_third_product.setBounds(340, 280, 15, 17);
 
-        dec_4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        dec_4.setForeground(new java.awt.Color(91, 74, 132));
-        dec_4.setText("-");
-        dec_4.addMouseListener(new java.awt.event.MouseAdapter() {
+        dec_fourth_product.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        dec_fourth_product.setForeground(new java.awt.Color(91, 74, 132));
+        dec_fourth_product.setText("-");
+        dec_fourth_product.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                dec_4MouseClicked(evt);
+                dec_fourth_productMouseClicked(evt);
             }
         });
-        Background_Gray.add(dec_4);
-        dec_4.setBounds(340, 320, 15, 17);
+        Background_Gray.add(dec_fourth_product);
+        dec_fourth_product.setBounds(340, 320, 15, 17);
 
-        del_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/delete.png"))); // NOI18N
-        del_1.addMouseListener(new java.awt.event.MouseAdapter() {
+        delete_product_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/delete.png"))); // NOI18N
+        delete_product_1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                del_1MouseClicked(evt);
+                delete_product_1MouseClicked(evt);
             }
         });
-        Background_Gray.add(del_1);
-        del_1.setBounds(10, 200, 10, 20);
+        Background_Gray.add(delete_product_1);
+        delete_product_1.setBounds(10, 200, 10, 20);
 
-        del_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/delete.png"))); // NOI18N
-        del_2.addMouseListener(new java.awt.event.MouseAdapter() {
+        delete_product_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/delete.png"))); // NOI18N
+        delete_product_2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                del_2MouseClicked(evt);
+                delete_product_2MouseClicked(evt);
             }
         });
-        Background_Gray.add(del_2);
-        del_2.setBounds(10, 240, 10, 20);
+        Background_Gray.add(delete_product_2);
+        delete_product_2.setBounds(10, 240, 10, 20);
 
-        del_3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/delete.png"))); // NOI18N
-        del_3.addMouseListener(new java.awt.event.MouseAdapter() {
+        delete_product_3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/delete.png"))); // NOI18N
+        delete_product_3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                del_3MouseClicked(evt);
+                delete_product_3MouseClicked(evt);
             }
         });
-        Background_Gray.add(del_3);
-        del_3.setBounds(10, 280, 10, 20);
+        Background_Gray.add(delete_product_3);
+        delete_product_3.setBounds(10, 280, 10, 20);
 
-        del_4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/delete.png"))); // NOI18N
-        del_4.addMouseListener(new java.awt.event.MouseAdapter() {
+        delete_product_4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/delete.png"))); // NOI18N
+        delete_product_4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                del_4MouseClicked(evt);
+                delete_product_4MouseClicked(evt);
             }
         });
-        Background_Gray.add(del_4);
-        del_4.setBounds(10, 320, 10, 20);
+        Background_Gray.add(delete_product_4);
+        delete_product_4.setBounds(10, 320, 10, 20);
 
         getContentPane().add(Background_Gray);
         Background_Gray.setBounds(0, 0, 380, 700);
@@ -344,10 +344,10 @@ public class Cart extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void disblayProduct(ArrayList<Product> productList) {
-        javax.swing.JLabel[] p = {p1, p2, p3, p4};
-        javax.swing.JLabel[] del = {del_1, del_2, del_3, del_4};
-        javax.swing.JLabel[] inc = {inc_1, inc_2, inc_3, inc_4};
-        javax.swing.JLabel[] dec = {dec_1, dec_2, dec_3, dec_4};
+        javax.swing.JLabel[] p = {First_product_added, sec_product_added, Third_product_added, Fourth_product_added};
+        javax.swing.JLabel[] del = {delete_product_1, delete_product_2, delete_product_3, delete_product_4};
+        javax.swing.JLabel[] inc = {inc_first_product, inc_second_product, inc_third_product, inc_fourth_product};
+        javax.swing.JLabel[] dec = {dec_first_product, dec_second_product, dec_third_product, dec_fourth_product};
         javax.swing.JLabel[] amount = {Amount_1, Amount_2, Amount_3, Amount_4};
         
         resetLabels(p, del, inc, dec, amount);
@@ -414,7 +414,7 @@ public class Cart extends javax.swing.JFrame {
     }
 
 
-    private void inc_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_inc_1MouseClicked
+    private void inc_first_productMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_inc_first_productMouseClicked
 
         if (o.getSelectedProducts().get(0).getAmount() < 10) {
 
@@ -429,9 +429,9 @@ public class Cart extends javax.swing.JFrame {
         }
 
 
-    }//GEN-LAST:event_inc_1MouseClicked
+    }//GEN-LAST:event_inc_first_productMouseClicked
 
-    private void inc_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_inc_2MouseClicked
+    private void inc_second_productMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_inc_second_productMouseClicked
 
         if (o.getSelectedProducts().get(1).getAmount() < 10) {
 
@@ -446,9 +446,9 @@ public class Cart extends javax.swing.JFrame {
         }
 
 
-    }//GEN-LAST:event_inc_2MouseClicked
+    }//GEN-LAST:event_inc_second_productMouseClicked
 
-    private void dec_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dec_1MouseClicked
+    private void dec_first_productMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dec_first_productMouseClicked
         if (o.getSelectedProducts().get(0).getAmount() > 1) {
 
             int total_1 = (decrease_amount(o.getSelectedProducts().get(0)));
@@ -462,9 +462,9 @@ public class Cart extends javax.swing.JFrame {
         }
 
 
-    }//GEN-LAST:event_dec_1MouseClicked
+    }//GEN-LAST:event_dec_first_productMouseClicked
 
-    private void dec_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dec_2MouseClicked
+    private void dec_second_productMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dec_second_productMouseClicked
         if (o.getSelectedProducts().get(1).getAmount() > 1) {
 
             int total_1 = (decrease_amount(o.getSelectedProducts().get(1)));
@@ -476,9 +476,9 @@ public class Cart extends javax.swing.JFrame {
 
             disblayTotal(o.getTotalPrice());
         }
-    }//GEN-LAST:event_dec_2MouseClicked
+    }//GEN-LAST:event_dec_second_productMouseClicked
 
-    private void inc_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_inc_3MouseClicked
+    private void inc_third_productMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_inc_third_productMouseClicked
         if (o.getSelectedProducts().get(2).getAmount() < 10) {
 
             int total_1 = (increment_amount(o.getSelectedProducts().get(2)));
@@ -490,9 +490,9 @@ public class Cart extends javax.swing.JFrame {
 
             disblayTotal(o.getTotalPrice());
         }
-    }//GEN-LAST:event_inc_3MouseClicked
+    }//GEN-LAST:event_inc_third_productMouseClicked
 
-    private void inc_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_inc_4MouseClicked
+    private void inc_fourth_productMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_inc_fourth_productMouseClicked
         if (o.getSelectedProducts().get(3).getAmount() < 10) {
 
             int total_1 = (increment_amount(o.getSelectedProducts().get(3)));
@@ -504,9 +504,9 @@ public class Cart extends javax.swing.JFrame {
 
             disblayTotal(o.getTotalPrice());
         }
-    }//GEN-LAST:event_inc_4MouseClicked
+    }//GEN-LAST:event_inc_fourth_productMouseClicked
 
-    private void dec_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dec_3MouseClicked
+    private void dec_third_productMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dec_third_productMouseClicked
         if (o.getSelectedProducts().get(2).getAmount() > 1) {
 
             int total_1 = (decrease_amount(o.getSelectedProducts().get(2)));
@@ -518,9 +518,9 @@ public class Cart extends javax.swing.JFrame {
 
             disblayTotal(o.getTotalPrice());
         }
-    }//GEN-LAST:event_dec_3MouseClicked
+    }//GEN-LAST:event_dec_third_productMouseClicked
 
-    private void dec_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dec_4MouseClicked
+    private void dec_fourth_productMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dec_fourth_productMouseClicked
         if (o.getSelectedProducts().get(3).getAmount() > 1) {
 
             int total_1 = (decrease_amount(o.getSelectedProducts().get(3)));
@@ -532,31 +532,31 @@ public class Cart extends javax.swing.JFrame {
 
             disblayTotal(o.getTotalPrice());
         }
-    }//GEN-LAST:event_dec_4MouseClicked
+    }//GEN-LAST:event_dec_fourth_productMouseClicked
 
-    private void del_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_del_1MouseClicked
+    private void delete_product_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_delete_product_1MouseClicked
         delete_product(o.getSelectedProducts().get(0));
         disblayProduct(o.getSelectedProducts());
         disblayTotal(o.getTotalPrice());
-    }//GEN-LAST:event_del_1MouseClicked
+    }//GEN-LAST:event_delete_product_1MouseClicked
 
-    private void del_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_del_2MouseClicked
+    private void delete_product_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_delete_product_2MouseClicked
         delete_product(o.getSelectedProducts().get(1));
         disblayProduct(o.getSelectedProducts());
         disblayTotal(o.getTotalPrice());
-    }//GEN-LAST:event_del_2MouseClicked
+    }//GEN-LAST:event_delete_product_2MouseClicked
 
-    private void del_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_del_3MouseClicked
+    private void delete_product_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_delete_product_3MouseClicked
         delete_product(o.getSelectedProducts().get(2));
         disblayProduct(o.getSelectedProducts());
         disblayTotal(o.getTotalPrice());
-    }//GEN-LAST:event_del_3MouseClicked
+    }//GEN-LAST:event_delete_product_3MouseClicked
 
-    private void del_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_del_4MouseClicked
+    private void delete_product_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_delete_product_4MouseClicked
         delete_product(o.getSelectedProducts().get(3));
         disblayProduct(o.getSelectedProducts());
         disblayTotal(o.getTotalPrice());
-    }//GEN-LAST:event_del_4MouseClicked
+    }//GEN-LAST:event_delete_product_4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -604,27 +604,27 @@ public class Cart extends javax.swing.JFrame {
     private javax.swing.JPanel Background_White;
     private javax.swing.JLabel Cart_Icon;
     private javax.swing.JButton ConfirmButton;
+    private javax.swing.JLabel First_product_added;
+    private javax.swing.JLabel Fourth_product_added;
     private javax.swing.JLabel Home_Icon_Label;
     private javax.swing.JLabel PageTitle_Label;
     private javax.swing.JLabel PriceTitle;
     private javax.swing.JLabel ProductTitle;
-    private javax.swing.JLabel dec_1;
-    private javax.swing.JLabel dec_2;
-    private javax.swing.JLabel dec_3;
-    private javax.swing.JLabel dec_4;
-    private javax.swing.JLabel del_1;
-    private javax.swing.JLabel del_2;
-    private javax.swing.JLabel del_3;
-    private javax.swing.JLabel del_4;
+    private javax.swing.JLabel Third_product_added;
+    private javax.swing.JLabel dec_first_product;
+    private javax.swing.JLabel dec_fourth_product;
+    private javax.swing.JLabel dec_second_product;
+    private javax.swing.JLabel dec_third_product;
+    private javax.swing.JLabel delete_product_1;
+    private javax.swing.JLabel delete_product_2;
+    private javax.swing.JLabel delete_product_3;
+    private javax.swing.JLabel delete_product_4;
     private javax.swing.JLabel errorr_empty;
-    private javax.swing.JLabel inc_1;
-    private javax.swing.JLabel inc_2;
-    private javax.swing.JLabel inc_3;
-    private javax.swing.JLabel inc_4;
-    private javax.swing.JLabel p1;
-    private javax.swing.JLabel p2;
-    private javax.swing.JLabel p3;
-    private javax.swing.JLabel p4;
+    private javax.swing.JLabel inc_first_product;
+    private javax.swing.JLabel inc_fourth_product;
+    private javax.swing.JLabel inc_second_product;
+    private javax.swing.JLabel inc_third_product;
+    private javax.swing.JLabel sec_product_added;
     private javax.swing.JLabel totalPrice;
     // End of variables declaration//GEN-END:variables
 

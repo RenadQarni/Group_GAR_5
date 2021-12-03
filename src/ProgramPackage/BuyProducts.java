@@ -41,10 +41,14 @@ public class BuyProducts extends javax.swing.JFrame {
         Water_Label = new javax.swing.JLabel();
         Bed_Label = new javax.swing.JLabel();
         collar_cart = new javax.swing.JLabel();
+        Price_Smart_Collar = new javax.swing.JLabel();
         Collar_IconLabel = new javax.swing.JLabel();
         Collar_Label = new javax.swing.JLabel();
         Collar_OrangeSquareLabel = new javax.swing.JLabel();
         food_cart = new javax.swing.JLabel();
+        Price_auto_food = new javax.swing.JLabel();
+        Price_auto_Water = new javax.swing.JLabel();
+        Price_Soft_Bed = new javax.swing.JLabel();
         Food_IconLabel = new javax.swing.JLabel();
         Food_OrangeSquareLabel = new javax.swing.JLabel();
         water_cart = new javax.swing.JLabel();
@@ -131,6 +135,12 @@ public class BuyProducts extends javax.swing.JFrame {
         Background_Gray.add(collar_cart);
         collar_cart.setBounds(250, 440, 40, 40);
 
+        Price_Smart_Collar.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        Price_Smart_Collar.setForeground(new java.awt.Color(255, 255, 255));
+        Price_Smart_Collar.setText("150");
+        Background_Gray.add(Price_Smart_Collar);
+        Price_Smart_Collar.setBounds(110, 440, 51, 20);
+
         Collar_IconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Collar_1.png"))); // NOI18N
         Background_Gray.add(Collar_IconLabel);
         Collar_IconLabel.setBounds(30, 420, 57, 57);
@@ -153,6 +163,24 @@ public class BuyProducts extends javax.swing.JFrame {
         });
         Background_Gray.add(food_cart);
         food_cart.setBounds(250, 140, 40, 40);
+
+        Price_auto_food.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        Price_auto_food.setForeground(new java.awt.Color(255, 255, 255));
+        Price_auto_food.setText("100");
+        Background_Gray.add(Price_auto_food);
+        Price_auto_food.setBounds(110, 150, 51, 20);
+
+        Price_auto_Water.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        Price_auto_Water.setForeground(new java.awt.Color(255, 255, 255));
+        Price_auto_Water.setText("150");
+        Background_Gray.add(Price_auto_Water);
+        Price_auto_Water.setBounds(110, 250, 51, 20);
+
+        Price_Soft_Bed.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        Price_Soft_Bed.setForeground(new java.awt.Color(255, 255, 255));
+        Price_Soft_Bed.setText("200");
+        Background_Gray.add(Price_Soft_Bed);
+        Price_Soft_Bed.setBounds(110, 350, 51, 20);
 
         Food_IconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Food2.png"))); // NOI18N
         Food_IconLabel.setPreferredSize(new java.awt.Dimension(70, 70));
@@ -337,6 +365,10 @@ public class BuyProducts extends javax.swing.JFrame {
     private javax.swing.JLabel Food_OrangeSquareLabel;
     private javax.swing.JLabel Home_Icon_Label;
     private javax.swing.JLabel PageTitle_Label;
+    private javax.swing.JLabel Price_Smart_Collar;
+    private javax.swing.JLabel Price_Soft_Bed;
+    private javax.swing.JLabel Price_auto_Water;
+    private javax.swing.JLabel Price_auto_food;
     private javax.swing.JLabel Water_IconLabel;
     private javax.swing.JLabel Water_Label;
     private javax.swing.JLabel Water_OrangeSquareLabel;

@@ -6,12 +6,12 @@
 package ProgramPackage;
 
 import static ProgramPackage.BuyProducts.o;
-import static ProgramPackage.MakeAppointment.a;
 import java.awt.Color;
 import java.io.FileNotFoundException;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import static ProgramPackage.MakeAppointment.client_appointment;
 
 /**
  *
@@ -37,9 +37,7 @@ public class Date_Time extends javax.swing.JFrame {
 
         jLabel3 = new javax.swing.JLabel();
         Background = new javax.swing.JPanel();
-        Cart_label = new javax.swing.JLabel();
         Home_label = new javax.swing.JLabel();
-        Help_Label = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         time_Label = new javax.swing.JLabel();
         date_Label = new javax.swing.JLabel();
@@ -58,11 +56,7 @@ public class Date_Time extends javax.swing.JFrame {
 
         Background.setBackground(new java.awt.Color(255, 255, 255));
 
-        Cart_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cart_dark.png"))); // NOI18N
-
         Home_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/home.png"))); // NOI18N
-
-        Help_Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/help.png"))); // NOI18N
 
         jPanel1.setBackground(new java.awt.Color(249, 249, 249));
 
@@ -170,12 +164,8 @@ public class Date_Time extends javax.swing.JFrame {
             .addGroup(BackgroundLayout.createSequentialGroup()
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BackgroundLayout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(Cart_label)
-                        .addGap(40, 40, 40)
-                        .addComponent(Home_label)
-                        .addGap(43, 43, 43)
-                        .addComponent(Help_Label))
+                        .addGap(137, 137, 137)
+                        .addComponent(Home_label))
                     .addGroup(BackgroundLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(Back_label)))
@@ -188,15 +178,8 @@ public class Date_Time extends javax.swing.JFrame {
                 .addComponent(Back_label)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Cart_label)
-                    .addGroup(BackgroundLayout.createSequentialGroup()
-                        .addGap(2, 2, 2)
-                        .addComponent(Home_label))
-                    .addGroup(BackgroundLayout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(Help_Label)))
+                .addGap(20, 20, 20)
+                .addComponent(Home_label)
                 .addGap(58, 58, 58))
         );
 
@@ -216,9 +199,9 @@ public class Date_Time extends javax.swing.JFrame {
 
     private void confirm(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_confirm
         if (checkInfo()) {
-            if (a != null) {
-                a.setDate(DateChooser.getDate());
-                a.setTime(Time_Label.getItemAt(Time_Label.getSelectedIndex()));
+            if (client_appointment != null) {
+                client_appointment.setDate(DateChooser.getDate());
+                client_appointment.setTime(Time_Label.getItemAt(Time_Label.getSelectedIndex()));
 
                 ConfirmAppointment x = new ConfirmAppointment();
                 x.setVisible(true);
@@ -237,15 +220,10 @@ public class Date_Time extends javax.swing.JFrame {
     }//GEN-LAST:event_confirm
 
     private void backTo_pre(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backTo_pre
-        if (a != null) {
-            try {
-
-                MakeAppointment x = new MakeAppointment();
-                x.setVisible(true);
-                this.dispose();
-            } catch (FileNotFoundException ex) {
-                Logger.getLogger(Date_Time.class.getName()).log(Level.SEVERE, null, ex);
-            }
+        if (client_appointment != null) {
+            MakeAppointment x = new MakeAppointment();
+            x.setVisible(true);
+            this.dispose();
         }
 
         if (o != null) {
@@ -340,10 +318,8 @@ public class Date_Time extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Back_label;
     private javax.swing.JPanel Background;
-    private javax.swing.JLabel Cart_label;
     private javax.swing.JButton ConfirmButton;
     private com.toedter.calendar.JDateChooser DateChooser;
-    private javax.swing.JLabel Help_Label;
     private javax.swing.JLabel Home_label;
     private javax.swing.JComboBox<String> Time_Label;
     private javax.swing.JLabel dateError;

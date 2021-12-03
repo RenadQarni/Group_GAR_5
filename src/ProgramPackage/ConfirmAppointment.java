@@ -25,12 +25,12 @@ public class ConfirmAppointment extends javax.swing.JFrame {
 
        
         // display appointment informations
-        Appointment a = MakeAppointment.a;
-        BetsNo_Label.setText(a.PetsNo());
-        Date_Label.setText(a.Date());
-        Time_Label.setText(a.time());
-        Services_Label.setText(a.services());
-        TotalPrice_Label.setText("Total Price : " + a.getTotalPrice() + " SR");
+        Appointment appointment = MakeAppointment.client_appointment;
+        BetsNo_Label.setText(appointment.PetsNo());
+        Date_Label.setText(appointment.Date());
+        Time_Label.setText(appointment.time());
+        Services_Label.setText(appointment.services());
+        TotalPrice_Label.setText("Total Price : " + appointment.getTotalPrice() + " SR");
     }
 
     /**
@@ -183,13 +183,9 @@ public class ConfirmAppointment extends javax.swing.JFrame {
 
         // back to browse make appointment interface
         MakeAppointment X;
-        try {
-            X = new MakeAppointment();
-            X.setVisible(true);
-            this.dispose();
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(ConfirmAppointment.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        X = new MakeAppointment();
+        X.setVisible(true);
+        this.dispose();
 
     }//GEN-LAST:event_backToprevious
 

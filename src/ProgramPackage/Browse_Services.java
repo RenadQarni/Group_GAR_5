@@ -179,11 +179,7 @@ public class Browse_Services extends javax.swing.JFrame {
     private void Make_AppointmentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Make_AppointmentMouseClicked
         // TODO add your handling code here:
         MakeAppointment X = null;
-        try {
-            X = new MakeAppointment();
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(Browse_Services.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        X = new MakeAppointment();
         X.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_Make_AppointmentMouseClicked
