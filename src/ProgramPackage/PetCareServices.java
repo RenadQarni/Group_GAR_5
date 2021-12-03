@@ -7,7 +7,7 @@ package ProgramPackage;
 
 /**
  *
- * @author Bushra
+ * @author alano
  */
 public class PetCareServices extends javax.swing.JFrame {
 
@@ -27,21 +27,122 @@ public class PetCareServices extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        PageTitle_Label = new javax.swing.JLabel();
+        Back_label = new javax.swing.JLabel();
+        PageTitle_Label1 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        Food_Label = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        Food_Label1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        Food_Label2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        Food_Label3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 701, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        PageTitle_Label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        PageTitle_Label.setForeground(new java.awt.Color(51, 0, 102));
+        PageTitle_Label.setText("Make Appointment");
+        getContentPane().add(PageTitle_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 220, 60));
+
+        Back_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back_arrow.png"))); // NOI18N
+        Back_label.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Back_labelbackTo_pre(evt);
+            }
+        });
+        getContentPane().add(Back_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
+        PageTitle_Label1.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        PageTitle_Label1.setForeground(new java.awt.Color(51, 0, 102));
+        PageTitle_Label1.setText("Services");
+        getContentPane().add(PageTitle_Label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 190, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/P1.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Pic3.png"))); // NOI18N
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, -1));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Pic4.png"))); // NOI18N
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 100, 80));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Pic5.png"))); // NOI18N
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, -1, -1));
+
+        Food_Label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        Food_Label.setForeground(new java.awt.Color(255, 255, 255));
+        Food_Label.setText("Health Care");
+        getContentPane().add(Food_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, -1, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/BOX_PU.png"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
+
+        Food_Label1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        Food_Label1.setForeground(new java.awt.Color(255, 255, 255));
+        Food_Label1.setText("Beauty Services");
+        getContentPane().add(Food_Label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/BOX_PU.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 199, -1, 100));
+
+        Food_Label2.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        Food_Label2.setForeground(new java.awt.Color(255, 255, 255));
+        Food_Label2.setText("Insect control");
+        getContentPane().add(Food_Label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/BOX_PU.png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 299, -1, 90));
+
+        Food_Label3.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        Food_Label3.setForeground(new java.awt.Color(255, 255, 255));
+        Food_Label3.setText("Training");
+        getContentPane().add(Food_Label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 420, -1, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/BOX_PU.png"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/next.png"))); // NOI18N
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 520, -1, -1));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/home.png"))); // NOI18N
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 610, -1, -1));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cart_dark.png"))); // NOI18N
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 610, -1, -1));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Packground_gray.png"))); // NOI18N
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 670));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Back_labelbackTo_pre(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Back_labelbackTo_pre
+        Browse_Services X = new Browse_Services();
+
+        X.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Back_labelbackTo_pre
+
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+
+
+    }//GEN-LAST:event_jLabel9MouseClicked
 
     /**
      * @param args the command line arguments
@@ -79,5 +180,24 @@ public class PetCareServices extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Back_label;
+    private javax.swing.JLabel Food_Label;
+    private javax.swing.JLabel Food_Label1;
+    private javax.swing.JLabel Food_Label2;
+    private javax.swing.JLabel Food_Label3;
+    private javax.swing.JLabel PageTitle_Label;
+    private javax.swing.JLabel PageTitle_Label1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 }
