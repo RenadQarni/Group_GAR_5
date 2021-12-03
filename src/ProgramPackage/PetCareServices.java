@@ -5,6 +5,10 @@
  */
 package ProgramPackage;
 
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author alano
@@ -27,6 +31,10 @@ public class PetCareServices extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        TrainPrice_Label = new javax.swing.JLabel();
+        InsectPrice_label = new javax.swing.JLabel();
+        BeautyPrice_Label = new javax.swing.JLabel();
+        HealthPrice_label = new javax.swing.JLabel();
         MakeAppointmen_Label = new javax.swing.JLabel();
         Back_label = new javax.swing.JLabel();
         PageTitle_Label1 = new javax.swing.JLabel();
@@ -44,16 +52,35 @@ public class PetCareServices extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         GO_MakeAppointment_Label = new javax.swing.JLabel();
         HomeIcon_label = new javax.swing.JLabel();
-        CartIcon_Label = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        TrainPrice_Label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        TrainPrice_Label.setForeground(new java.awt.Color(255, 255, 255));
+        TrainPrice_Label.setText("250");
+        getContentPane().add(TrainPrice_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 450, -1, -1));
+
+        InsectPrice_label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        InsectPrice_label.setForeground(new java.awt.Color(255, 255, 255));
+        InsectPrice_label.setText("150");
+        getContentPane().add(InsectPrice_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, -1, -1));
+
+        BeautyPrice_Label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        BeautyPrice_Label.setForeground(new java.awt.Color(255, 255, 255));
+        BeautyPrice_Label.setText("80");
+        getContentPane().add(BeautyPrice_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, -1, -1));
+
+        HealthPrice_label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        HealthPrice_label.setForeground(new java.awt.Color(255, 255, 255));
+        HealthPrice_label.setText("100");
+        getContentPane().add(HealthPrice_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, -1, -1));
+
         MakeAppointmen_Label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         MakeAppointmen_Label.setForeground(new java.awt.Color(51, 0, 102));
         MakeAppointmen_Label.setText("Make Appointment");
-        getContentPane().add(MakeAppointmen_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 520, 220, 60));
+        getContentPane().add(MakeAppointmen_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 520, 220, 60));
 
         Back_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back_arrow.png"))); // NOI18N
         Back_label.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -118,13 +145,15 @@ public class PetCareServices extends javax.swing.JFrame {
                 GO_MakeAppointment_LabelMouseClicked(evt);
             }
         });
-        getContentPane().add(GO_MakeAppointment_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 540, -1, -1));
+        getContentPane().add(GO_MakeAppointment_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 540, -1, -1));
 
         HomeIcon_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/home.png"))); // NOI18N
-        getContentPane().add(HomeIcon_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 630, -1, -1));
-
-        CartIcon_Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cart_dark.png"))); // NOI18N
-        getContentPane().add(CartIcon_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 630, -1, -1));
+        HomeIcon_label.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                HomeIcon_labelMouseClicked(evt);
+            }
+        });
+        getContentPane().add(HomeIcon_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 630, -1, -1));
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Packground_gray.png"))); // NOI18N
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, -1));
@@ -140,9 +169,28 @@ public class PetCareServices extends javax.swing.JFrame {
     }//GEN-LAST:event_Back_labelbackTo_pre
 
     private void GO_MakeAppointment_LabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GO_MakeAppointment_LabelMouseClicked
-
+        MakeAppointment GO_MakeAppointment = null;
+        try {
+            GO_MakeAppointment = new MakeAppointment();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(PetCareServices.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        GO_MakeAppointment.setVisible(true);
+        this.dispose();
 
     }//GEN-LAST:event_GO_MakeAppointment_LabelMouseClicked
+
+    private void HomeIcon_labelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeIcon_labelMouseClicked
+        // TODO add your handling code here:
+     
+        Browse_Services X = new Browse_Services();
+        X.setVisible(true);
+        this.dispose();
+
+        
+        
+        
+    }//GEN-LAST:event_HomeIcon_labelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -181,18 +229,21 @@ public class PetCareServices extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Back_label;
+    private javax.swing.JLabel BeautyPrice_Label;
     private javax.swing.JLabel BeautyServices_Label;
     private javax.swing.JLabel BeuatyIcon_Label;
-    private javax.swing.JLabel CartIcon_Label;
     private javax.swing.JLabel GO_MakeAppointment_Label;
     private javax.swing.JLabel HealthCare_label;
     private javax.swing.JLabel HealthIcon_Label;
+    private javax.swing.JLabel HealthPrice_label;
     private javax.swing.JLabel HomeIcon_label;
     private javax.swing.JLabel InsectControl_Label;
     private javax.swing.JLabel InsectIcon_Label;
+    private javax.swing.JLabel InsectPrice_label;
     private javax.swing.JLabel MakeAppointmen_Label;
     private javax.swing.JLabel PageTitle_Label1;
     private javax.swing.JLabel TrainIcon_Label;
+    private javax.swing.JLabel TrainPrice_Label;
     private javax.swing.JLabel Train_label;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
