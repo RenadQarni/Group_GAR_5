@@ -80,7 +80,12 @@ public class PetCareServices extends javax.swing.JFrame {
         MakeAppointmen_Label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         MakeAppointmen_Label.setForeground(new java.awt.Color(51, 0, 102));
         MakeAppointmen_Label.setText("Make Appointment");
-        getContentPane().add(MakeAppointmen_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 520, 220, 60));
+        MakeAppointmen_Label.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                GO_MakeAppointment_LabelMouseClicked(evt);
+            }
+        });
+        getContentPane().add(MakeAppointmen_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 540, 220, 30));
 
         Back_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back_arrow.png"))); // NOI18N
         Back_label.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -163,7 +168,6 @@ public class PetCareServices extends javax.swing.JFrame {
 
     private void Back_labelbackTo_pre(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Back_labelbackTo_pre
         Browse_Services X = new Browse_Services();
-
         X.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_Back_labelbackTo_pre
@@ -181,15 +185,9 @@ public class PetCareServices extends javax.swing.JFrame {
     }//GEN-LAST:event_GO_MakeAppointment_LabelMouseClicked
 
     private void HomeIcon_labelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeIcon_labelMouseClicked
-        // TODO add your handling code here:
-     
         Browse_Services X = new Browse_Services();
         X.setVisible(true);
         this.dispose();
-
-        
-        
-        
     }//GEN-LAST:event_HomeIcon_labelMouseClicked
 
     /**

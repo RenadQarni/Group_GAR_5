@@ -16,8 +16,6 @@ public class Service {
     public Service(String name, int price, boolean available) {
         this.name = name;
         this.price = price;
-        
-        
     }
 
     public Service() {

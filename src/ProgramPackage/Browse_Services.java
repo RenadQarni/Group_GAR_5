@@ -55,21 +55,31 @@ public class Browse_Services extends javax.swing.JFrame {
         background_interface.add(Hello_label);
         Hello_label.setBounds(10, 60, 136, 75);
 
-        chooses_label.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        chooses_label.setFont(new java.awt.Font("Tahoma", 1, 28)); // NOI18N
         chooses_label.setForeground(new java.awt.Color(51, 0, 102));
         chooses_label.setText("choose what you want");
         background_interface.add(chooses_label);
-        chooses_label.setBounds(10, 130, 340, 37);
+        chooses_label.setBounds(10, 130, 316, 34);
 
-        ViewServices_label.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        ViewServices_label.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
         ViewServices_label.setForeground(new java.awt.Color(255, 255, 255));
         ViewServices_label.setText("View Services");
+        ViewServices_label.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                View_ServicesMouseClicked(evt);
+            }
+        });
         background_interface.add(ViewServices_label);
         ViewServices_label.setBounds(20, 360, 124, 22);
 
         icon_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Service_Icon.png"))); // NOI18N
+        icon_.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                View_ServicesMouseClicked(evt);
+            }
+        });
         background_interface.add(icon_);
-        icon_.setBounds(30, 230, 96, 120);
+        icon_.setBounds(30, 250, 96, 110);
 
         View_Services.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/square_purple.png"))); // NOI18N
         View_Services.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -83,20 +93,40 @@ public class Browse_Services extends javax.swing.JFrame {
         product_label.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         product_label.setForeground(new java.awt.Color(255, 255, 255));
         product_label.setText("Product");
+        product_label.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ProductsMouseClicked(evt);
+            }
+        });
         background_interface.add(product_label);
         product_label.setBounds(220, 360, 90, 22);
 
         icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/App_Icon.png"))); // NOI18N
+        icon3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Make_AppointmentMouseClicked(evt);
+            }
+        });
         background_interface.add(icon3);
-        icon3.setBounds(110, 450, 96, 130);
+        icon3.setBounds(130, 470, 96, 110);
 
         MakeAppointment_label.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MakeAppointment_label.setForeground(new java.awt.Color(255, 255, 255));
         MakeAppointment_label.setText("Make Appointment ");
+        MakeAppointment_label.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Make_AppointmentMouseClicked(evt);
+            }
+        });
         background_interface.add(MakeAppointment_label);
-        MakeAppointment_label.setBounds(80, 580, 175, 22);
+        MakeAppointment_label.setBounds(80, 580, 190, 22);
 
         icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Product_Icon.png"))); // NOI18N
+        icon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ProductsMouseClicked(evt);
+            }
+        });
         background_interface.add(icon);
         icon.setBounds(210, 240, 92, 93);
 
