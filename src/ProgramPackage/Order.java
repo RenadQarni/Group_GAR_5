@@ -72,12 +72,14 @@ public class Order {
     }
 
     public void addProduct(Product p) {
+        p.setSelected(true);
         selectedProducts.add(p);
         setTotalPrice();
     }
     
     public void removeProduct(Product p){
         selectedProducts.remove(p);
+        p.setSelected(false);
         setTotalPrice();
     }
 

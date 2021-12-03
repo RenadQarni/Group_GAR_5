@@ -20,12 +20,8 @@ public class Payment extends javax.swing.JFrame {
     public Payment() {
         initComponents();
         
-        // set background 
-        ImageIcon background = new ImageIcon("src\\Icons\\b2.jpg");
-        background = new ImageIcon(background.getImage().getScaledInstance(Background.getWidth(), Background.getHeight(), Image.SCALE_DEFAULT));
-        Background.setIcon(background);
-        Background.repaint();
-        
+    
+       
         ImageIcon icon;
         // set credit card icon
         icon = new ImageIcon("src\\Icons\\credit-card.png");
@@ -80,7 +76,6 @@ public class Payment extends javax.swing.JFrame {
 
         paymentMassage.setText("Pleas choose How to Pay");
 
-        backToprevious.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back.png"))); // NOI18N
         backToprevious.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 backToprevious(evt);

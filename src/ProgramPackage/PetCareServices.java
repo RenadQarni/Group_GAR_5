@@ -196,11 +196,7 @@ public class PetCareServices extends javax.swing.JFrame {
 
     private void GO_MakeAppointment_LabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GO_MakeAppointment_LabelMouseClicked
         MakeAppointment GO_MakeAppointment = null;
-        try {
-            GO_MakeAppointment = new MakeAppointment();
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(PetCareServices.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        GO_MakeAppointment = new MakeAppointment();
         GO_MakeAppointment.setVisible(true);
         this.dispose();
 

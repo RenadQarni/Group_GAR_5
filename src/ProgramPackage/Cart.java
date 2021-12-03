@@ -400,7 +400,7 @@ public class Cart extends javax.swing.JFrame {
         return amount;
     }
 
-    public int decrease_amount(Product p) {
+    public int decrement_amount(Product p) {
         int amount = p.getAmount();
         if (amount > 0) {
             amount--;
@@ -451,7 +451,7 @@ public class Cart extends javax.swing.JFrame {
     private void dec_first_productMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dec_first_productMouseClicked
         if (o.getSelectedProducts().get(0).getAmount() > 1) {
 
-            int total_1 = (decrease_amount(o.getSelectedProducts().get(0)));
+            int total_1 = (decrement_amount(o.getSelectedProducts().get(0)));
 
             o.getSelectedProducts().get(0).setAmount(total_1);
 
@@ -467,7 +467,7 @@ public class Cart extends javax.swing.JFrame {
     private void dec_second_productMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dec_second_productMouseClicked
         if (o.getSelectedProducts().get(1).getAmount() > 1) {
 
-            int total_1 = (decrease_amount(o.getSelectedProducts().get(1)));
+            int total_1 = (decrement_amount(o.getSelectedProducts().get(1)));
 
             o.getSelectedProducts().get(1).setAmount(total_1);
 
@@ -509,7 +509,7 @@ public class Cart extends javax.swing.JFrame {
     private void dec_third_productMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dec_third_productMouseClicked
         if (o.getSelectedProducts().get(2).getAmount() > 1) {
 
-            int total_1 = (decrease_amount(o.getSelectedProducts().get(2)));
+            int total_1 = (decrement_amount(o.getSelectedProducts().get(2)));
 
             o.getSelectedProducts().get(2).setAmount(total_1);
 
@@ -523,7 +523,7 @@ public class Cart extends javax.swing.JFrame {
     private void dec_fourth_productMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dec_fourth_productMouseClicked
         if (o.getSelectedProducts().get(3).getAmount() > 1) {
 
-            int total_1 = (decrease_amount(o.getSelectedProducts().get(3)));
+            int total_1 = (decrement_amount(o.getSelectedProducts().get(3)));
 
             o.getSelectedProducts().get(3).setAmount(total_1);
 

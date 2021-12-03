@@ -47,132 +47,140 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="backToprevious" min="-2" max="-2" attributes="0"/>
               <Group type="102" attributes="0">
-                  <EmptySpace min="200" pref="200" max="-2" attributes="0"/>
-                  <Component id="CreditCard" min="-2" pref="261" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="71" pref="71" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="129" pref="129" max="-2" attributes="0"/>
-                          <Component id="Name" min="-2" pref="257" max="-2" attributes="0"/>
+                          <EmptySpace min="200" pref="200" max="-2" attributes="0"/>
+                          <Component id="CreditCard" min="-2" pref="261" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="Card_Holder_Label" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="71" pref="71" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="129" pref="129" max="-2" attributes="0"/>
+                                  <Component id="Name" min="-2" pref="257" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="Card_Holder_Label" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="200" pref="200" max="-2" attributes="0"/>
+                          <Component id="Date" min="-2" pref="257" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="71" pref="71" max="-2" attributes="0"/>
+                          <Component id="CVV_Label" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
+                          <Component id="CardNum_Label" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="210" pref="210" max="-2" attributes="0"/>
+                          <Component id="Error_Message_Name" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="200" pref="200" max="-2" attributes="0"/>
+                          <Component id="Example_Label" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="400" pref="400" max="-2" attributes="0"/>
+                          <Component id="nextBtn" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="71" pref="71" max="-2" attributes="0"/>
+                          <Component id="expiration_date" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="210" pref="210" max="-2" attributes="0"/>
+                          <Component id="Error_massage" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="370" pref="370" max="-2" attributes="0"/>
+                          <Component id="Error_Message_Date" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="210" pref="210" max="-2" attributes="0"/>
+                          <Component id="Error_Message_cvv" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="200" pref="200" max="-2" attributes="0"/>
+                          <Component id="CVV" min="-2" pref="136" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="71" pref="71" max="-2" attributes="0"/>
+                          <Component id="Credit_card_label" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="backToprevious" alignment="0" min="-2" pref="0" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
               </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="200" pref="200" max="-2" attributes="0"/>
-                  <Component id="Date" min="-2" pref="257" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="71" pref="71" max="-2" attributes="0"/>
-                  <Component id="CVV_Label" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="CardNum_Label" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="210" pref="210" max="-2" attributes="0"/>
-                  <Component id="Error_Message_Name" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="200" pref="200" max="-2" attributes="0"/>
-                  <Component id="Example_Label" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="400" pref="400" max="-2" attributes="0"/>
-                  <Component id="nextBtn" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="71" pref="71" max="-2" attributes="0"/>
-                  <Component id="expiration_date" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="210" pref="210" max="-2" attributes="0"/>
-                  <Component id="Error_massage" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="370" pref="370" max="-2" attributes="0"/>
-                  <Component id="Error_Message_Date" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="210" pref="210" max="-2" attributes="0"/>
-                  <Component id="Error_Message_cvv" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="200" pref="200" max="-2" attributes="0"/>
-                  <Component id="CVV" min="-2" pref="136" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="71" pref="71" max="-2" attributes="0"/>
-                  <Component id="Credit_card_label" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Component id="Background" min="-2" max="-2" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <Component id="backToprevious" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="80" pref="80" max="-2" attributes="0"/>
-                  <Component id="CreditCard" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="38" pref="38" max="-2" attributes="0"/>
+                  <Component id="backToprevious" min="-2" pref="0" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="Name" min="-2" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
-                          <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
-                          <Component id="Card_Holder_Label" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                          <Component id="CreditCard" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="38" pref="38" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="Name" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                                  <Component id="Card_Holder_Label" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
+                          <Component id="Date" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="49" pref="49" max="-2" attributes="0"/>
+                          <Component id="CVV_Label" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="130" pref="130" max="-2" attributes="0"/>
+                          <Component id="CardNum_Label" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="224" pref="224" max="-2" attributes="0"/>
+                          <Component id="Error_Message_Name" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="280" pref="280" max="-2" attributes="0"/>
+                          <Component id="Example_Label" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="400" pref="400" max="-2" attributes="0"/>
+                          <Component id="nextBtn" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="250" pref="250" max="-2" attributes="0"/>
+                          <Component id="expiration_date" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="160" pref="160" max="-2" attributes="0"/>
+                          <Component id="Error_massage" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="280" pref="280" max="-2" attributes="0"/>
+                          <Component id="Error_Message_Date" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="351" pref="351" max="-2" attributes="0"/>
+                          <Component id="Error_Message_cvv" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="321" pref="321" max="-2" attributes="0"/>
+                          <Component id="CVV" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
+                          <Component id="Credit_card_label" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
-                  <Component id="Date" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="49" pref="49" max="-2" attributes="0"/>
-                  <Component id="CVV_Label" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
               </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="130" pref="130" max="-2" attributes="0"/>
-                  <Component id="CardNum_Label" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="224" pref="224" max="-2" attributes="0"/>
-                  <Component id="Error_Message_Name" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="280" pref="280" max="-2" attributes="0"/>
-                  <Component id="Example_Label" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="400" pref="400" max="-2" attributes="0"/>
-                  <Component id="nextBtn" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="250" pref="250" max="-2" attributes="0"/>
-                  <Component id="expiration_date" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="160" pref="160" max="-2" attributes="0"/>
-                  <Component id="Error_massage" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="280" pref="280" max="-2" attributes="0"/>
-                  <Component id="Error_Message_Date" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="351" pref="351" max="-2" attributes="0"/>
-                  <Component id="Error_Message_cvv" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="321" pref="321" max="-2" attributes="0"/>
-                  <Component id="CVV" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                  <Component id="Credit_card_label" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Component id="Background" min="-2" max="-2" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -255,22 +263,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="backToprevious">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Icons/back.png"/>
-            </Property>
-          </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="backToprevious"/>
           </Events>
-        </Component>
-        <Component class="javax.swing.JLabel" name="Background">
-          <Properties>
-            <Property name="iconTextGap" type="int" value="0"/>
-            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[550, 550]"/>
-            </Property>
-          </Properties>
         </Component>
       </SubComponents>
     </Container>
