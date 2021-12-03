@@ -55,27 +55,31 @@ public class PetCareServices extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(null);
 
         TrainPrice_Label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         TrainPrice_Label.setForeground(new java.awt.Color(255, 255, 255));
         TrainPrice_Label.setText("250");
-        getContentPane().add(TrainPrice_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 450, -1, -1));
+        getContentPane().add(TrainPrice_Label);
+        TrainPrice_Label.setBounds(170, 450, 39, 25);
 
         InsectPrice_label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         InsectPrice_label.setForeground(new java.awt.Color(255, 255, 255));
         InsectPrice_label.setText("150");
-        getContentPane().add(InsectPrice_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, -1, -1));
+        getContentPane().add(InsectPrice_label);
+        InsectPrice_label.setBounds(170, 350, 39, 25);
 
         BeautyPrice_Label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         BeautyPrice_Label.setForeground(new java.awt.Color(255, 255, 255));
         BeautyPrice_Label.setText("80");
-        getContentPane().add(BeautyPrice_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, -1, -1));
+        getContentPane().add(BeautyPrice_Label);
+        BeautyPrice_Label.setBounds(180, 250, 26, 25);
 
         HealthPrice_label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         HealthPrice_label.setForeground(new java.awt.Color(255, 255, 255));
         HealthPrice_label.setText("100");
-        getContentPane().add(HealthPrice_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, -1, -1));
+        getContentPane().add(HealthPrice_label);
+        HealthPrice_label.setBounds(170, 160, 39, 25);
 
         MakeAppointmen_Label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         MakeAppointmen_Label.setForeground(new java.awt.Color(51, 0, 102));
@@ -85,7 +89,8 @@ public class PetCareServices extends javax.swing.JFrame {
                 GO_MakeAppointment_LabelMouseClicked(evt);
             }
         });
-        getContentPane().add(MakeAppointmen_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 540, 220, 30));
+        getContentPane().add(MakeAppointmen_Label);
+        MakeAppointmen_Label.setBounds(80, 540, 220, 30);
 
         Back_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back_arrow.png"))); // NOI18N
         Back_label.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -93,56 +98,70 @@ public class PetCareServices extends javax.swing.JFrame {
                 Back_labelbackTo_pre(evt);
             }
         });
-        getContentPane().add(Back_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        getContentPane().add(Back_label);
+        Back_label.setBounds(10, 10, 14, 24);
 
         PageTitle_Label1.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         PageTitle_Label1.setForeground(new java.awt.Color(51, 0, 102));
         PageTitle_Label1.setText("Services");
-        getContentPane().add(PageTitle_Label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 190, -1));
+        getContentPane().add(PageTitle_Label1);
+        PageTitle_Label1.setBounds(40, 50, 190, 37);
 
         HealthIcon_Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/P1.png"))); // NOI18N
-        getContentPane().add(HealthIcon_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+        getContentPane().add(HealthIcon_Label);
+        HealthIcon_Label.setBounds(40, 110, 82, 81);
 
         BeuatyIcon_Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Pic3.png"))); // NOI18N
-        getContentPane().add(BeuatyIcon_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, -1));
+        getContentPane().add(BeuatyIcon_Label);
+        BeuatyIcon_Label.setBounds(40, 210, 79, 79);
 
         InsectIcon_Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Pic4.png"))); // NOI18N
-        getContentPane().add(InsectIcon_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 100, 80));
+        getContentPane().add(InsectIcon_Label);
+        InsectIcon_Label.setBounds(30, 300, 100, 80);
 
         TrainIcon_Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Pic5.png"))); // NOI18N
-        getContentPane().add(TrainIcon_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, -1, -1));
+        getContentPane().add(TrainIcon_Label);
+        TrainIcon_Label.setBounds(30, 400, 80, 80);
 
         HealthCare_label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         HealthCare_label.setForeground(new java.awt.Color(255, 255, 255));
         HealthCare_label.setText("Health Care");
-        getContentPane().add(HealthCare_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, -1, -1));
+        getContentPane().add(HealthCare_label);
+        HealthCare_label.setBounds(130, 130, 118, 25);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/BOX_PU.png"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(20, 110, 284, 89);
 
         BeautyServices_Label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         BeautyServices_Label.setForeground(new java.awt.Color(255, 255, 255));
         BeautyServices_Label.setText("Beauty Services");
-        getContentPane().add(BeautyServices_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, -1, -1));
+        getContentPane().add(BeautyServices_Label);
+        BeautyServices_Label.setBounds(120, 220, 162, 25);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/BOX_PU.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 199, -1, 100));
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(20, 199, 284, 100);
 
         InsectControl_Label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         InsectControl_Label.setForeground(new java.awt.Color(255, 255, 255));
         InsectControl_Label.setText("Insect control");
-        getContentPane().add(InsectControl_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, -1, -1));
+        getContentPane().add(InsectControl_Label);
+        InsectControl_Label.setBounds(130, 320, 141, 25);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/BOX_PU.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 299, -1, 90));
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(20, 299, 284, 90);
 
         Train_label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         Train_label.setForeground(new java.awt.Color(255, 255, 255));
         Train_label.setText("Training");
-        getContentPane().add(Train_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 420, -1, -1));
+        getContentPane().add(Train_label);
+        Train_label.setBounds(140, 420, 84, 25);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/BOX_PU.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(20, 400, 284, 89);
 
         GO_MakeAppointment_Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/next.png"))); // NOI18N
         GO_MakeAppointment_Label.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -150,7 +169,8 @@ public class PetCareServices extends javax.swing.JFrame {
                 GO_MakeAppointment_LabelMouseClicked(evt);
             }
         });
-        getContentPane().add(GO_MakeAppointment_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 540, -1, -1));
+        getContentPane().add(GO_MakeAppointment_Label);
+        GO_MakeAppointment_Label.setBounds(280, 540, 14, 24);
 
         HomeIcon_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/home.png"))); // NOI18N
         HomeIcon_label.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -158,10 +178,12 @@ public class PetCareServices extends javax.swing.JFrame {
                 HomeIcon_labelMouseClicked(evt);
             }
         });
-        getContentPane().add(HomeIcon_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 630, -1, -1));
+        getContentPane().add(HomeIcon_label);
+        HomeIcon_label.setBounds(140, 630, 35, 33);
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Packground_gray.png"))); // NOI18N
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, -1));
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(0, 0, 330, 700);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
