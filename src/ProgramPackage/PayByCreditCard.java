@@ -22,7 +22,6 @@ public class PayByCreditCard extends javax.swing.JFrame {
     public PayByCreditCard() {
         initComponents();
 
-     
     }
 
     /**
@@ -53,6 +52,7 @@ public class PayByCreditCard extends javax.swing.JFrame {
         CVV = new javax.swing.JTextField();
         Error_Message_cvv = new javax.swing.JLabel();
         Card_Holder_Label1 = new javax.swing.JLabel();
+        Error_Message_name = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(350, 730));
@@ -81,9 +81,9 @@ public class PayByCreditCard extends javax.swing.JFrame {
         Background_WhiteLayout.setHorizontalGroup(
             Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Background_WhiteLayout.createSequentialGroup()
-                .addGap(126, 126, 126)
+                .addGap(112, 112, 112)
                 .addComponent(nextBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(149, Short.MAX_VALUE))
+                .addContainerGap(163, Short.MAX_VALUE))
         );
         Background_WhiteLayout.setVerticalGroup(
             Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,28 +125,26 @@ public class PayByCreditCard extends javax.swing.JFrame {
         CreditCard.setBounds(20, 290, 290, 40);
 
         Card_Holder_Label.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Card_Holder_Label.setText("Card Holder Name ");
+        Card_Holder_Label.setText("Enter Card Detalis");
         Background_Gray.add(Card_Holder_Label);
         Card_Holder_Label.setBounds(20, 100, 160, 17);
         Background_Gray.add(Name);
         Name.setBounds(20, 160, 290, 40);
 
-        Error_massage.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Error_massage.setText("error");
+        Error_massage.setFont(new java.awt.Font("Aldhabi", 1, 18)); // NOI18N
         Background_Gray.add(Error_massage);
-        Error_massage.setBounds(20, 340, 90, 17);
+        Error_massage.setBounds(20, 340, 290, 50);
         Background_Gray.add(Date);
         Date.setBounds(20, 430, 110, 40);
 
         CVV_Label.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        CVV_Label.setText("CVV Number ");
+        CVV_Label.setText("CVV  ");
         Background_Gray.add(CVV_Label);
         CVV_Label.setBounds(170, 410, 130, 17);
 
         Error_Message_Name.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Error_Message_Name.setText("name error");
         Background_Gray.add(Error_Message_Name);
-        Error_Message_Name.setBounds(20, 210, 120, 17);
+        Error_Message_Name.setBounds(20, 210, 120, 0);
 
         expiration_date.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         expiration_date.setText("Expriation Date  ");
@@ -158,10 +156,9 @@ public class PayByCreditCard extends javax.swing.JFrame {
         Background_Gray.add(Example_Label);
         Example_Label.setBounds(20, 490, 150, 17);
 
-        Error_Message_Date.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Error_Message_Date.setText("date error");
+        Error_Message_Date.setFont(new java.awt.Font("Aldhabi", 1, 18)); // NOI18N
         Background_Gray.add(Error_Message_Date);
-        Error_Message_Date.setBounds(20, 510, 140, 17);
+        Error_Message_Date.setBounds(20, 510, 310, 50);
 
         CVV.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -171,15 +168,18 @@ public class PayByCreditCard extends javax.swing.JFrame {
         Background_Gray.add(CVV);
         CVV.setBounds(170, 430, 110, 40);
 
-        Error_Message_cvv.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Error_Message_cvv.setText("cvv error");
+        Error_Message_cvv.setFont(new java.awt.Font("Aldhabi", 1, 18)); // NOI18N
         Background_Gray.add(Error_Message_cvv);
-        Error_Message_cvv.setBounds(160, 510, 150, 17);
+        Error_Message_cvv.setBounds(160, 470, 180, 50);
 
         Card_Holder_Label1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Card_Holder_Label1.setText("Card Holder Name ");
+        Card_Holder_Label1.setText("Name on Card ");
         Background_Gray.add(Card_Holder_Label1);
         Card_Holder_Label1.setBounds(20, 140, 160, 17);
+
+        Error_Message_name.setFont(new java.awt.Font("Aldhabi", 1, 18)); // NOI18N
+        Background_Gray.add(Error_Message_name);
+        Error_Message_name.setBounds(20, 210, 290, 50);
 
         getContentPane().add(Background_Gray);
         Background_Gray.setBounds(0, 0, 350, 710);
@@ -196,9 +196,7 @@ public class PayByCreditCard extends javax.swing.JFrame {
     }//GEN-LAST:event_CreditCardActionPerformed
 
     private void nextBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextBtnActionPerformed
-        SuccessfulComplete_Interface X = new SuccessfulComplete_Interface();
-        X.setVisible(true);
-        this.dispose();
+
     }//GEN-LAST:event_nextBtnActionPerformed
 
     private void goTo_Next(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_goTo_Next
@@ -208,7 +206,9 @@ public class PayByCreditCard extends javax.swing.JFrame {
         boolean validDate = CardDate();
         boolean validInfo = validCardNum && validName && validCvv && validDate;
         if (validInfo == true) {
-            // go to bill
+            SuccessfulComplete_Interface X = new SuccessfulComplete_Interface();
+            X.setVisible(true);
+            this.dispose();
         }
     }//GEN-LAST:event_goTo_Next
 
@@ -222,7 +222,7 @@ public class PayByCreditCard extends javax.swing.JFrame {
         boolean valid = true;
         String Cvv = CVV.getText();
         Error_Message_cvv.setText(" ");
-        
+
         if (Cvv.matches("[0-9]+") && Cvv.length() == 3) {
             valid = true;
             Error_Message_cvv.setText(" ");
@@ -239,27 +239,27 @@ public class PayByCreditCard extends javax.swing.JFrame {
         boolean valid = true;
 
         String Name_Holder = Name.getText();
-        Error_Message_Name.setText(" ");
+        Error_Message_name.setText(" ");
 
         if (Name_Holder.matches("[a-zA-Z- ]+") && !"".equals(Name_Holder.trim())) {
 
         } else if (Name_Holder.equals(null) || "".equals(Name_Holder.trim())) {
 
             valid = false;
-            Error_Message_Name.setText("Please Enter Your Name");
-            Error_Message_Name.setForeground(Color.red);
+            Error_Message_name.setText("Please Enter Your Name");
+            Error_Message_name.setForeground(Color.red);
 
         } else {
             valid = false;
-            Error_Message_Name.setText("Please Enter Your Name In The Correct Way");
-            Error_Message_Name.setForeground(Color.red);
+            Error_Message_name.setText("Please Enter Your Name In The Correct Way");
+            Error_Message_name.setForeground(Color.red);
         }
         return valid;
     }
-    
+
     private boolean CardDate() {
         boolean valid = true;
-        
+
         String userInput = Date.getText();
         Error_Message_Date.setText(" ");
 
@@ -286,10 +286,10 @@ public class PayByCreditCard extends javax.swing.JFrame {
 
         return valid;
     }
-    
+
     private boolean checkCreditNumber() {
         boolean valid = true;
-        
+
         String Credit = CreditCard.getText();
         Error_massage.setText(" ");
 
@@ -311,7 +311,7 @@ public class PayByCreditCard extends javax.swing.JFrame {
         }
         return valid;
     }
-    
+
     /**
      * @param args the command line arguments
      */
@@ -367,6 +367,7 @@ public class PayByCreditCard extends javax.swing.JFrame {
     private javax.swing.JLabel Error_Message_Date;
     private javax.swing.JLabel Error_Message_Name;
     private javax.swing.JLabel Error_Message_cvv;
+    private javax.swing.JLabel Error_Message_name;
     private javax.swing.JLabel Error_massage;
     private javax.swing.JLabel Example_Label;
     private javax.swing.JTextField Name;
