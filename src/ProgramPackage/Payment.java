@@ -168,7 +168,6 @@ public class Payment extends javax.swing.JFrame {
     }//GEN-LAST:event_Back_labelbackTo_pre
 
     private void Home_Icon_LabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Home_Icon_LabelMouseClicked
-
         Browse_Services X = new Browse_Services();
         X.setVisible(true);
         this.dispose();    }//GEN-LAST:event_Home_Icon_LabelMouseClicked
