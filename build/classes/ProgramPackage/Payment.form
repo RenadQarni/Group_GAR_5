@@ -182,9 +182,12 @@
               <Image iconType="3" name="/Icons/square_purple.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="goToPay_byCash"/>
+          </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="90" y="350" width="-1" height="240"/>
+              <AbsoluteConstraints x="90" y="370" width="-1" height="200"/>
             </Constraint>
           </Constraints>
         </Component>

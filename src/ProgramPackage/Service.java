@@ -1,7 +1,6 @@
 package ProgramPackage;
 
 import java.util.ArrayList;
-import static ProgramPackage.MakeAppointment.*;
 /**
  *
  * @author renad

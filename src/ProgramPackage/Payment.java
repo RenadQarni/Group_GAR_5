@@ -5,8 +5,6 @@
  */
 package ProgramPackage;
 
-import java.awt.Image;
-import javax.swing.ImageIcon;
 
 /**
  *
@@ -42,7 +40,6 @@ public class Payment extends javax.swing.JFrame {
         Collar_OrangeSquareLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(340, 720));
         setSize(new java.awt.Dimension(0, 0));
         getContentPane().setLayout(null);
 
@@ -122,8 +119,13 @@ public class Payment extends javax.swing.JFrame {
         Cash.setBounds(130, 420, 70, 100);
 
         Collar_OrangeSquareLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/square_purple.png"))); // NOI18N
+        Collar_OrangeSquareLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                goToPay_byCash(evt);
+            }
+        });
         Background_Gray.add(Collar_OrangeSquareLabel);
-        Collar_OrangeSquareLabel.setBounds(90, 350, 149, 240);
+        Collar_OrangeSquareLabel.setBounds(90, 370, 149, 200);
 
         getContentPane().add(Background_Gray);
         Background_Gray.setBounds(0, 0, 390, 740);
@@ -139,11 +141,10 @@ public class Payment extends javax.swing.JFrame {
     }//GEN-LAST:event_goToPay_byCreditCard
 
     private void goToPay_byCash(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_goToPay_byCash
-        // go to bill interface
+        
         SuccessfulComplete_Interface X = new SuccessfulComplete_Interface();
         X.setVisible(true);
         this.dispose();
-        //*** not implemented yet ***
     }//GEN-LAST:event_goToPay_byCash
 
     private void Back_labelbackTo_pre(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Back_labelbackTo_pre
@@ -155,7 +156,8 @@ public class Payment extends javax.swing.JFrame {
     private void Home_Icon_LabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Home_Icon_LabelMouseClicked
         Browse_Services X = new Browse_Services();
         X.setVisible(true);
-        this.dispose();    }//GEN-LAST:event_Home_Icon_LabelMouseClicked
+        this.dispose();
+    }//GEN-LAST:event_Home_Icon_LabelMouseClicked
 
     /**
      * @param args the command line arguments
