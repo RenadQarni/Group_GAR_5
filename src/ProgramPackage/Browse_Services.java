@@ -5,9 +5,6 @@
  */
 package ProgramPackage;
 
-import java.io.FileNotFoundException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -55,11 +52,11 @@ public class Browse_Services extends javax.swing.JFrame {
         background_interface.add(Hello_label);
         Hello_label.setBounds(10, 60, 136, 75);
 
-        chooses_label.setFont(new java.awt.Font("Tahoma", 1, 28)); // NOI18N
+        chooses_label.setFont(new java.awt.Font("Tahoma", 1, 26)); // NOI18N
         chooses_label.setForeground(new java.awt.Color(51, 0, 102));
         chooses_label.setText("choose what you want");
         background_interface.add(chooses_label);
-        chooses_label.setBounds(10, 130, 316, 34);
+        chooses_label.setBounds(10, 130, 297, 32);
 
         ViewServices_label.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
         ViewServices_label.setForeground(new java.awt.Color(255, 255, 255));

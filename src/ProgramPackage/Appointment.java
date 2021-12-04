@@ -1,7 +1,8 @@
 package ProgramPackage;
 
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
 
 /**
  *
@@ -60,6 +61,11 @@ public class Appointment {
         return totalPrice;
     }
 
+    public ArrayList<Service> getServices() {
+        return services;
+    }
+    
+
     // ------- Method -------
     public void addService(Service s) {
         services.add(s);
@@ -93,7 +99,7 @@ public class Appointment {
     }
 
     public String services() {
-        return "The selected services is: " + printServices(services);
+        return "" + printServices(services);
     }
 
 }

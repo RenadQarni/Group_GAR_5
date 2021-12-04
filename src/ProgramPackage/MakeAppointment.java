@@ -1,10 +1,6 @@
 package ProgramPackage;
 
 import java.awt.Color;
-import java.io.*;
-import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 /**
  *
  * @author renad
@@ -12,22 +8,18 @@ import java.util.logging.Logger;
 public class MakeAppointment extends javax.swing.JFrame {
 
     public static Appointment client_appointment;
-    static ArrayList<String> s = new ArrayList<>();
-
     /**
      * Creates new form VeterinaryClinic
      *
-     * @throws java.io.FileNotFoundException
      */
     public MakeAppointment() {
         initComponents();
 
-        // set background 
         // initialize clinic services
-        Service.services.add(new Service("Health Care", 100, true));
-        Service.services.add(new Service("Beauty Services", 150, true));
-        Service.services.add(new Service("Insects Control", 80, true));
-        Service.services.add(new Service("Training", 250, true));
+        Service.services.add(new Service("Health Care", 100));
+        Service.services.add(new Service("Beauty Services", 150));
+        Service.services.add(new Service("Insects Control", 80));
+        Service.services.add(new Service("Training", 250));
 
         Health_Care_CheckBox.setText(Health_Care_CheckBox.getText() + " " + Service.services.get(0).getPrice() + "SR");
         Beauty_Services_CheckBox.setText(Beauty_Services_CheckBox.getText() + " " + Service.services.get(1).getPrice() + "SR");
@@ -81,25 +73,25 @@ public class MakeAppointment extends javax.swing.JFrame {
         Health_Care_CheckBox.setForeground(new java.awt.Color(91, 74, 132));
         Health_Care_CheckBox.setText("Health Care");
         MakeAppointmentBackground_Panel.add(Health_Care_CheckBox);
-        Health_Care_CheckBox.setBounds(40, 200, 190, 29);
+        Health_Care_CheckBox.setBounds(40, 200, 190, 24);
 
         Beauty_Services_CheckBox.setBackground(new java.awt.Color(226, 221, 240));
         Beauty_Services_CheckBox.setForeground(new java.awt.Color(91, 74, 132));
         Beauty_Services_CheckBox.setText("Beauty Services");
         MakeAppointmentBackground_Panel.add(Beauty_Services_CheckBox);
-        Beauty_Services_CheckBox.setBounds(40, 280, 190, 29);
+        Beauty_Services_CheckBox.setBounds(40, 280, 190, 24);
 
         Insects_Control_CheckBox.setBackground(new java.awt.Color(226, 221, 240));
         Insects_Control_CheckBox.setForeground(new java.awt.Color(91, 74, 132));
         Insects_Control_CheckBox.setText("Insects Control");
         MakeAppointmentBackground_Panel.add(Insects_Control_CheckBox);
-        Insects_Control_CheckBox.setBounds(40, 240, 190, 29);
+        Insects_Control_CheckBox.setBounds(40, 240, 190, 24);
 
         Training_CheckBox.setBackground(new java.awt.Color(226, 221, 240));
         Training_CheckBox.setForeground(new java.awt.Color(91, 74, 132));
         Training_CheckBox.setText("Training");
         MakeAppointmentBackground_Panel.add(Training_CheckBox);
-        Training_CheckBox.setBounds(40, 320, 190, 29);
+        Training_CheckBox.setBounds(40, 320, 190, 24);
 
         pets_Label.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         pets_Label.setForeground(new java.awt.Color(91, 74, 132));
@@ -108,11 +100,6 @@ public class MakeAppointment extends javax.swing.JFrame {
         pets_Label.setBounds(40, 130, 114, 19);
 
         noOfPets_Spinner.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
-        noOfPets_Spinner.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                noPet(evt);
-            }
-        });
         MakeAppointmentBackground_Panel.add(noOfPets_Spinner);
         noOfPets_Spinner.setBounds(180, 130, 52, 26);
 
@@ -123,11 +110,6 @@ public class MakeAppointment extends javax.swing.JFrame {
         nextStep_Button.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 saveAppointmentInfo(evt);
-            }
-        });
-        nextStep_Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nextStep_ButtonActionPerformed(evt);
             }
         });
         MakeAppointmentBackground_Panel.add(nextStep_Button);
@@ -165,16 +147,6 @@ public class MakeAppointment extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BCboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BCboxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BCboxActionPerformed
-
-    private void noPet(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_noPet
-        String spinner = "catch Value";
-        Integer myint = (Integer) noOfPets_Spinner.getValue();
-        spinner = myint.toString();
-        s.add(spinner);
-    }//GEN-LAST:event_noPet
 
     // --------- Check if user fill in correctly all the requirements ---------
     private boolean checkAppoinmentInfo() {
@@ -232,10 +204,6 @@ public class MakeAppointment extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_saveAppointmentInfo
-
-    private void nextStep_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextStep_ButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nextStep_ButtonActionPerformed
 
     private void Back_labelbackTo_pre(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Back_labelbackTo_pre
         PetCareServices go_to_PetCareServices = new PetCareServices();

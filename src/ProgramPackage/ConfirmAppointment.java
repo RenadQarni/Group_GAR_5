@@ -5,12 +5,6 @@
  */
 package ProgramPackage;
 
-import java.awt.Image;
-import java.io.FileNotFoundException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.ImageIcon;
-
 /**
  *
  * @author renad
@@ -23,13 +17,12 @@ public class ConfirmAppointment extends javax.swing.JFrame {
     public ConfirmAppointment() {
         initComponents();
 
-       
         // display appointment informations
         Appointment appointment = MakeAppointment.client_appointment;
         BetsNo_Label.setText(appointment.PetsNo());
         Date_Label.setText(appointment.Date());
         Time_Label.setText(appointment.time());
-        Services_Label.setText(appointment.services());
+        services.setText(appointment.services());
         TotalPrice_Label.setText("Total Price : " + appointment.getTotalPrice() + " SR");
     }
 
@@ -49,17 +42,20 @@ public class ConfirmAppointment extends javax.swing.JFrame {
         BetsNo_Label = new javax.swing.JLabel();
         Date_Label = new javax.swing.JLabel();
         Time_Label = new javax.swing.JLabel();
-        Services_Label = new javax.swing.JLabel();
         TotalPrice_Label = new javax.swing.JLabel();
         backToprevious = new javax.swing.JLabel();
+        services = new javax.swing.JTextArea();
+        Services_Title = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(380, 700));
         setResizable(false);
 
         ConfirmationBackground_Panel.setBackground(new java.awt.Color(255, 255, 255));
         ConfirmationBackground_Panel.setEnabled(false);
         ConfirmationBackground_Panel.setMinimumSize(new java.awt.Dimension(690, 450));
-        ConfirmationBackground_Panel.setPreferredSize(new java.awt.Dimension(550, 550));
+        ConfirmationBackground_Panel.setPreferredSize(new java.awt.Dimension(380, 700));
+        ConfirmationBackground_Panel.setLayout(null);
 
         Confirmation_Button.setBackground(new java.awt.Color(121, 99, 175));
         Confirmation_Button.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -70,93 +66,69 @@ public class ConfirmAppointment extends javax.swing.JFrame {
                 goToPayment(evt);
             }
         });
+        ConfirmationBackground_Panel.add(Confirmation_Button);
+        Confirmation_Button.setBounds(113, 582, 120, 54);
 
-        Page_Title_Label.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        Page_Title_Label.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        Page_Title_Label.setForeground(new java.awt.Color(91, 74, 132));
         Page_Title_Label.setText("Confirm Appointment");
+        ConfirmationBackground_Panel.add(Page_Title_Label);
+        Page_Title_Label.setBounds(50, 20, 270, 30);
 
+        Appointment_Info_Label.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        Appointment_Info_Label.setForeground(new java.awt.Color(91, 74, 132));
         Appointment_Info_Label.setText("Appointment Information:");
+        ConfirmationBackground_Panel.add(Appointment_Info_Label);
+        Appointment_Info_Label.setBounds(70, 130, 220, 24);
 
+        BetsNo_Label.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        BetsNo_Label.setForeground(new java.awt.Color(91, 74, 132));
         BetsNo_Label.setText("BetsNo");
+        ConfirmationBackground_Panel.add(BetsNo_Label);
+        BetsNo_Label.setBounds(10, 190, 256, 19);
 
+        Date_Label.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Date_Label.setForeground(new java.awt.Color(91, 74, 132));
         Date_Label.setText("Date");
+        ConfirmationBackground_Panel.add(Date_Label);
+        Date_Label.setBounds(10, 240, 275, 19);
 
+        Time_Label.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Time_Label.setForeground(new java.awt.Color(91, 74, 132));
         Time_Label.setText("Time");
+        ConfirmationBackground_Panel.add(Time_Label);
+        Time_Label.setBounds(10, 280, 363, 19);
 
-        Services_Label.setText("Services");
-
+        TotalPrice_Label.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        TotalPrice_Label.setForeground(new java.awt.Color(91, 74, 132));
         TotalPrice_Label.setText("Total Price");
+        ConfirmationBackground_Panel.add(TotalPrice_Label);
+        TotalPrice_Label.setBounds(10, 510, 366, 30);
 
-        backToprevious.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back.png"))); // NOI18N
+        backToprevious.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back_arrow.png"))); // NOI18N
         backToprevious.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 backToprevious(evt);
             }
         });
+        ConfirmationBackground_Panel.add(backToprevious);
+        backToprevious.setBounds(6, 19, 15, 25);
 
-        javax.swing.GroupLayout ConfirmationBackground_PanelLayout = new javax.swing.GroupLayout(ConfirmationBackground_Panel);
-        ConfirmationBackground_Panel.setLayout(ConfirmationBackground_PanelLayout);
-        ConfirmationBackground_PanelLayout.setHorizontalGroup(
-            ConfirmationBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                .addGroup(ConfirmationBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(backToprevious)
-                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(TotalPrice_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                        .addGap(160, 160, 160)
-                        .addComponent(Page_Title_Label))
-                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(BetsNo_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(Date_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(Time_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(Services_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                        .addGap(172, 172, 172)
-                        .addComponent(Appointment_Info_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                        .addGap(220, 220, 220)
-                        .addComponent(Confirmation_Button)))
-                .addGap(187, 187, 187))
-        );
-        ConfirmationBackground_PanelLayout.setVerticalGroup(
-            ConfirmationBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                .addGroup(ConfirmationBackground_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(backToprevious)
-                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                        .addGap(230, 230, 230)
-                        .addComponent(TotalPrice_Label))
-                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(Page_Title_Label))
-                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addComponent(BetsNo_Label))
-                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                        .addGap(140, 140, 140)
-                        .addComponent(Date_Label))
-                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                        .addGap(170, 170, 170)
-                        .addComponent(Time_Label))
-                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                        .addGap(200, 200, 200)
-                        .addComponent(Services_Label))
-                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                        .addGap(68, 68, 68)
-                        .addComponent(Appointment_Info_Label))
-                    .addGroup(ConfirmationBackground_PanelLayout.createSequentialGroup()
-                        .addGap(287, 287, 287)
-                        .addComponent(Confirmation_Button)))
-                .addGap(236, 236, 236))
-        );
+        services.setEditable(false);
+        services.setBackground(new java.awt.Color(255, 255, 255));
+        services.setColumns(20);
+        services.setForeground(new java.awt.Color(91, 74, 132));
+        services.setRows(5);
+        services.setDisabledTextColor(new java.awt.Color(91, 74, 132));
+        services.setFocusable(false);
+        ConfirmationBackground_Panel.add(services);
+        services.setBounds(10, 360, 340, 140);
+
+        Services_Title.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Services_Title.setForeground(new java.awt.Color(91, 74, 132));
+        Services_Title.setText("Services");
+        ConfirmationBackground_Panel.add(Services_Title);
+        Services_Title.setBounds(10, 330, 100, 19);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -232,9 +204,10 @@ public class ConfirmAppointment extends javax.swing.JFrame {
     private javax.swing.JButton Confirmation_Button;
     private javax.swing.JLabel Date_Label;
     private javax.swing.JLabel Page_Title_Label;
-    private javax.swing.JLabel Services_Label;
+    private javax.swing.JLabel Services_Title;
     private javax.swing.JLabel Time_Label;
     private javax.swing.JLabel TotalPrice_Label;
     private javax.swing.JLabel backToprevious;
+    private javax.swing.JTextArea services;
     // End of variables declaration//GEN-END:variables
 }

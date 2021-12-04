@@ -9,10 +9,9 @@ public class Service {
     
     private String name;
     private int price;
-    private boolean available;
-    static ArrayList<Service> services = new ArrayList<>(); // available services
+    static ArrayList<Service> services = new ArrayList<>();
 
-    public Service(String name, int price, boolean available) {
+    public Service(String name, int price) {
         this.name = name;
         this.price = price;
     }
@@ -48,7 +47,7 @@ public class Service {
 
     @Override
     public String toString() {
-        return " " + name + " " + price + "SR";
+        return " " + name + " " + price + "SR\n";
     }
     
     

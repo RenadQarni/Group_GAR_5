@@ -17,7 +17,7 @@ import javax.swing.JLabel;
 public class Cart extends javax.swing.JFrame {
 
     ImageIcon delete = new ImageIcon("src\\Icons\\delete.png");
-    
+
     /**
      * Creates new form Cart
      */
@@ -27,9 +27,9 @@ public class Cart extends javax.swing.JFrame {
         if (o != null) {
             disblayProduct(o.getSelectedProducts());
             disblayTotal(o.getTotalPrice());
-            
+
         }
-        
+
     }
 
     /**
@@ -353,7 +353,7 @@ public class Cart extends javax.swing.JFrame {
         javax.swing.JLabel[] inc = {inc_first_product, inc_second_product, inc_third_product, inc_fourth_product};
         javax.swing.JLabel[] dec = {dec_first_product, dec_second_product, dec_third_product, dec_fourth_product};
         javax.swing.JLabel[] amount = {Amount_1, Amount_2, Amount_3, Amount_4};
-        
+
         resetLabels(p, del, inc, dec, amount);
 
         for (int i = 0; i < productList.size(); i++) {
@@ -412,8 +412,8 @@ public class Cart extends javax.swing.JFrame {
         }
         return amount;
     }
-    
-    public void delete_product(Product p){
+
+    public void delete_product(Product p) {
         o.removeProduct(p);
     }
 
@@ -563,10 +563,7 @@ public class Cart extends javax.swing.JFrame {
     }//GEN-LAST:event_delete_product_4MouseClicked
 
     private void Home_Icon_LabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Home_Icon_LabelMouseClicked
-        // TODO add your handling code here:
-        
-        
-         Browse_Services X = new Browse_Services();
+        Browse_Services X = new Browse_Services();
         X.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_Home_Icon_LabelMouseClicked

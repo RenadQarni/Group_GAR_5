@@ -34,8 +34,6 @@ public class PayByCreditCard extends javax.swing.JFrame {
     private void initComponents() {
 
         Background_Gray = new javax.swing.JPanel();
-        Background_White = new javax.swing.JPanel();
-        nextBtn = new javax.swing.JButton();
         PageTitle_Label = new javax.swing.JLabel();
         Back_label = new javax.swing.JLabel();
         CardNum_Label = new javax.swing.JLabel();
@@ -53,48 +51,17 @@ public class PayByCreditCard extends javax.swing.JFrame {
         Error_Message_cvv = new javax.swing.JLabel();
         Card_Holder_Label1 = new javax.swing.JLabel();
         Error_Message_name = new javax.swing.JLabel();
+        nextBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(350, 730));
+        setPreferredSize(new java.awt.Dimension(380, 700));
+        setResizable(false);
         setSize(new java.awt.Dimension(0, 0));
         getContentPane().setLayout(null);
 
-        Background_Gray.setBackground(new java.awt.Color(249, 249, 249));
+        Background_Gray.setBackground(new java.awt.Color(255, 255, 255));
+        Background_Gray.setPreferredSize(new java.awt.Dimension(380, 700));
         Background_Gray.setLayout(null);
-
-        Background_White.setBackground(new java.awt.Color(255, 255, 255));
-
-        nextBtn.setText("Next");
-        nextBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                goTo_Next(evt);
-            }
-        });
-        nextBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nextBtnActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout Background_WhiteLayout = new javax.swing.GroupLayout(Background_White);
-        Background_White.setLayout(Background_WhiteLayout);
-        Background_WhiteLayout.setHorizontalGroup(
-            Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Background_WhiteLayout.createSequentialGroup()
-                .addGap(112, 112, 112)
-                .addComponent(nextBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(163, Short.MAX_VALUE))
-        );
-        Background_WhiteLayout.setVerticalGroup(
-            Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Background_WhiteLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(nextBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        Background_Gray.add(Background_White);
-        Background_White.setBounds(0, 600, 380, 80);
 
         PageTitle_Label.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         PageTitle_Label.setForeground(new java.awt.Color(51, 0, 102));
@@ -115,12 +82,6 @@ public class PayByCreditCard extends javax.swing.JFrame {
         CardNum_Label.setText("Card Number ");
         Background_Gray.add(CardNum_Label);
         CardNum_Label.setBounds(20, 270, 140, 17);
-
-        CreditCard.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CreditCardActionPerformed(evt);
-            }
-        });
         Background_Gray.add(CreditCard);
         CreditCard.setBounds(20, 290, 290, 40);
 
@@ -159,12 +120,6 @@ public class PayByCreditCard extends javax.swing.JFrame {
         Error_Message_Date.setFont(new java.awt.Font("Aldhabi", 1, 18)); // NOI18N
         Background_Gray.add(Error_Message_Date);
         Error_Message_Date.setBounds(20, 510, 310, 50);
-
-        CVV.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                CVVKeyPressed(evt);
-            }
-        });
         Background_Gray.add(CVV);
         CVV.setBounds(170, 430, 110, 40);
 
@@ -181,23 +136,21 @@ public class PayByCreditCard extends javax.swing.JFrame {
         Background_Gray.add(Error_Message_name);
         Error_Message_name.setBounds(20, 210, 290, 50);
 
+        nextBtn.setBackground(new java.awt.Color(121, 99, 175));
+        nextBtn.setText("Next");
+        nextBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                goTo_Next(evt);
+            }
+        });
+        Background_Gray.add(nextBtn);
+        nextBtn.setBounds(130, 580, 105, 53);
+
         getContentPane().add(Background_Gray);
-        Background_Gray.setBounds(0, 0, 350, 710);
+        Background_Gray.setBounds(0, 0, 380, 700);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void CVVKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CVVKeyPressed
-
-    }//GEN-LAST:event_CVVKeyPressed
-
-    private void CreditCardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreditCardActionPerformed
-
-    }//GEN-LAST:event_CreditCardActionPerformed
-
-    private void nextBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextBtnActionPerformed
-
-    }//GEN-LAST:event_nextBtnActionPerformed
 
     private void goTo_Next(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_goTo_Next
         boolean validCardNum = checkCreditNumber();
@@ -350,13 +303,6 @@ public class PayByCreditCard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Back_label;
     private javax.swing.JPanel Background_Gray;
-    private javax.swing.JPanel Background_Gray2;
-    private javax.swing.JPanel Background_Gray3;
-    private javax.swing.JPanel Background_Gray4;
-    private javax.swing.JPanel Background_White;
-    private javax.swing.JPanel Background_White2;
-    private javax.swing.JPanel Background_White3;
-    private javax.swing.JPanel Background_White4;
     private javax.swing.JTextField CVV;
     private javax.swing.JLabel CVV_Label;
     private javax.swing.JLabel CardNum_Label;
@@ -374,8 +320,5 @@ public class PayByCreditCard extends javax.swing.JFrame {
     private javax.swing.JLabel PageTitle_Label;
     private javax.swing.JLabel expiration_date;
     private javax.swing.JButton nextBtn;
-    private javax.swing.JButton nextBtn2;
-    private javax.swing.JButton nextBtn3;
-    private javax.swing.JButton nextBtn4;
     // End of variables declaration//GEN-END:variables
 }

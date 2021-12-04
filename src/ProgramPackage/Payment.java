@@ -5,7 +5,6 @@
  */
 package ProgramPackage;
 
-
 /**
  *
  * @author renad
@@ -40,10 +39,12 @@ public class Payment extends javax.swing.JFrame {
         Collar_OrangeSquareLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(380, 700));
+        setResizable(false);
         setSize(new java.awt.Dimension(0, 0));
         getContentPane().setLayout(null);
 
-        Background_Gray.setBackground(new java.awt.Color(249, 249, 249));
+        Background_Gray.setBackground(new java.awt.Color(255, 255, 255));
         Background_Gray.setLayout(null);
 
         Background_White.setBackground(new java.awt.Color(255, 255, 255));
@@ -128,7 +129,7 @@ public class Payment extends javax.swing.JFrame {
         Collar_OrangeSquareLabel.setBounds(90, 370, 149, 200);
 
         getContentPane().add(Background_Gray);
-        Background_Gray.setBounds(0, 0, 390, 740);
+        Background_Gray.setBounds(0, 0, 380, 740);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -141,7 +142,7 @@ public class Payment extends javax.swing.JFrame {
     }//GEN-LAST:event_goToPay_byCreditCard
 
     private void goToPay_byCash(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_goToPay_byCash
-        
+
         SuccessfulComplete_Interface X = new SuccessfulComplete_Interface();
         X.setVisible(true);
         this.dispose();
