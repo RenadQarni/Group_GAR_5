@@ -32,7 +32,6 @@ public class PetCareServices extends javax.swing.JFrame {
         InsectPrice_label = new javax.swing.JLabel();
         BeautyPrice_Label = new javax.swing.JLabel();
         HealthPrice_label = new javax.swing.JLabel();
-        MakeAppointmen_Label = new javax.swing.JLabel();
         Back_label = new javax.swing.JLabel();
         PageTitle_Label1 = new javax.swing.JLabel();
         HealthIcon_Label = new javax.swing.JLabel();
@@ -47,9 +46,11 @@ public class PetCareServices extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         Train_label = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        GO_MakeAppointment_Label = new javax.swing.JLabel();
         HomeIcon_label = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        GO_MakeAppointment_Label = new javax.swing.JLabel();
+        MakeAppointmen_Label = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(380, 700));
@@ -79,17 +80,6 @@ public class PetCareServices extends javax.swing.JFrame {
         HealthPrice_label.setText("100 SR");
         getContentPane().add(HealthPrice_label);
         HealthPrice_label.setBounds(170, 160, 80, 25);
-
-        MakeAppointmen_Label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        MakeAppointmen_Label.setForeground(new java.awt.Color(51, 0, 102));
-        MakeAppointmen_Label.setText("Make Appointment");
-        MakeAppointmen_Label.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                GO_MakeAppointment_LabelMouseClicked(evt);
-            }
-        });
-        getContentPane().add(MakeAppointmen_Label);
-        MakeAppointmen_Label.setBounds(80, 540, 220, 30);
 
         Back_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back_arrow.png"))); // NOI18N
         Back_label.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -162,15 +152,6 @@ public class PetCareServices extends javax.swing.JFrame {
         getContentPane().add(jLabel4);
         jLabel4.setBounds(20, 400, 284, 89);
 
-        GO_MakeAppointment_Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/next.png"))); // NOI18N
-        GO_MakeAppointment_Label.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                GO_MakeAppointment_LabelMouseClicked(evt);
-            }
-        });
-        getContentPane().add(GO_MakeAppointment_Label);
-        GO_MakeAppointment_Label.setBounds(280, 540, 14, 24);
-
         HomeIcon_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/home.png"))); // NOI18N
         HomeIcon_label.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -178,11 +159,40 @@ public class PetCareServices extends javax.swing.JFrame {
             }
         });
         getContentPane().add(HomeIcon_label);
-        HomeIcon_label.setBounds(140, 630, 35, 33);
+        HomeIcon_label.setBounds(140, 600, 35, 33);
 
         jPanel1.setBackground(new java.awt.Color(249, 249, 249));
+        jPanel1.setPreferredSize(new java.awt.Dimension(380, 700));
+        jPanel1.setLayout(null);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setPreferredSize(new java.awt.Dimension(380, 100));
+        jPanel2.setLayout(null);
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(0, 590, 380, 110);
+
+        GO_MakeAppointment_Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/next.png"))); // NOI18N
+        GO_MakeAppointment_Label.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                GO_MakeAppointment_LabelMouseClicked(evt);
+            }
+        });
+        jPanel1.add(GO_MakeAppointment_Label);
+        GO_MakeAppointment_Label.setBounds(330, 540, 14, 24);
+
+        MakeAppointmen_Label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        MakeAppointmen_Label.setForeground(new java.awt.Color(51, 0, 102));
+        MakeAppointmen_Label.setText("Make Appointment");
+        MakeAppointmen_Label.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                GO_MakeAppointment_LabelMouseClicked(evt);
+            }
+        });
+        jPanel1.add(MakeAppointmen_Label);
+        MakeAppointmen_Label.setBounds(130, 540, 220, 30);
+
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 390, 700);
+        jPanel1.setBounds(0, 0, 380, 700);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -265,5 +275,6 @@ public class PetCareServices extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
