@@ -19,21 +19,6 @@ public class Payment extends javax.swing.JFrame {
      */
     public Payment() {
         initComponents();
-        
-    
-       
-        ImageIcon icon;
-        // set credit card icon
-        icon = new ImageIcon("src\\Icons\\credit-card.png");
-        icon = new ImageIcon(icon.getImage().getScaledInstance(CreditCard.getWidth(), CreditCard.getHeight(), Image.SCALE_DEFAULT));
-        CreditCard.setIcon(icon);
-        CreditCard.repaint();
-        
-        // set cash icon
-        icon = new ImageIcon("src\\Icons\\cash.png");
-        icon = new ImageIcon(icon.getImage().getScaledInstance(Cash.getWidth(), Cash.getHeight(), Image.SCALE_DEFAULT));
-        Cash.setIcon(icon);
-        Cash.repaint();
     }
 
     /**
