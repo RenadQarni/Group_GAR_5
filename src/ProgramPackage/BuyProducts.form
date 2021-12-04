@@ -92,6 +92,9 @@
                   <Image iconType="3" name="/Icons/home.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Home_Icon_LabelMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="Cart_Icon">
               <Properties>

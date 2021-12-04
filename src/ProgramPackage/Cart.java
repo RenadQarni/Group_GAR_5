@@ -75,7 +75,6 @@ public class Cart extends javax.swing.JFrame {
         delete_product_4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(380, 700));
         getContentPane().setLayout(null);
 
         Background_Gray.setBackground(new java.awt.Color(249, 249, 249));
@@ -84,6 +83,11 @@ public class Cart extends javax.swing.JFrame {
         Background_White.setBackground(new java.awt.Color(255, 255, 255));
 
         Home_Icon_Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/home.png"))); // NOI18N
+        Home_Icon_Label.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Home_Icon_LabelMouseClicked(evt);
+            }
+        });
 
         Cart_Icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cart_dark.png"))); // NOI18N
 
@@ -92,20 +96,20 @@ public class Cart extends javax.swing.JFrame {
         Background_WhiteLayout.setHorizontalGroup(
             Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Background_WhiteLayout.createSequentialGroup()
-                .addContainerGap(89, Short.MAX_VALUE)
+                .addContainerGap(90, Short.MAX_VALUE)
                 .addComponent(Cart_Icon)
-                .addGap(55, 55, 55)
+                .addGap(54, 54, 54)
                 .addComponent(Home_Icon_Label)
                 .addGap(165, 165, 165))
         );
         Background_WhiteLayout.setVerticalGroup(
             Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Background_WhiteLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addContainerGap()
                 .addGroup(Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Cart_Icon)
                     .addComponent(Home_Icon_Label))
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         Background_Gray.add(Background_White);
@@ -557,6 +561,15 @@ public class Cart extends javax.swing.JFrame {
         disblayProduct(o.getSelectedProducts());
         disblayTotal(o.getTotalPrice());
     }//GEN-LAST:event_delete_product_4MouseClicked
+
+    private void Home_Icon_LabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Home_Icon_LabelMouseClicked
+        // TODO add your handling code here:
+        
+        
+         Browse_Services X = new Browse_Services();
+        X.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Home_Icon_LabelMouseClicked
 
     /**
      * @param args the command line arguments

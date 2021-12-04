@@ -70,6 +70,11 @@ public class BuyProducts extends javax.swing.JFrame {
         Background_White.setBackground(new java.awt.Color(255, 255, 255));
 
         Home_Icon_Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/home.png"))); // NOI18N
+        Home_Icon_Label.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Home_Icon_LabelMouseClicked(evt);
+            }
+        });
 
         Cart_Icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cart_dark.png"))); // NOI18N
         Cart_Icon.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -313,6 +318,15 @@ public class BuyProducts extends javax.swing.JFrame {
         X.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_Back_labelbackTo_pre
+
+    private void Home_Icon_LabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Home_Icon_LabelMouseClicked
+        // TODO add your handling code here:
+        
+         Browse_Services X = new Browse_Services();
+        X.setVisible(true);
+        this.dispose();
+        
+    }//GEN-LAST:event_Home_Icon_LabelMouseClicked
 
     /**
      * @param args the command line arguments
