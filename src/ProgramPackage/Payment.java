@@ -45,95 +45,103 @@ public class Payment extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        BackGr_Panel = new java.awt.Panel();
-        Credit_card_label = new javax.swing.JLabel();
-        CreditCard = new javax.swing.JLabel();
-        Cash = new javax.swing.JLabel();
+        Background_Gray = new javax.swing.JPanel();
+        Background_White = new javax.swing.JPanel();
+        Home_Icon_Label = new javax.swing.JLabel();
+        PageTitle_Label = new javax.swing.JLabel();
+        Back_label = new javax.swing.JLabel();
         paymentMassage = new javax.swing.JLabel();
-        backToprevious = new javax.swing.JLabel();
-        Background = new javax.swing.JLabel();
+        CreditCard = new javax.swing.JLabel();
+        Bed_OrangeSquareLabel = new javax.swing.JLabel();
+        Cash = new javax.swing.JLabel();
+        Collar_OrangeSquareLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setResizable(false);
+        setPreferredSize(new java.awt.Dimension(340, 720));
+        setSize(new java.awt.Dimension(0, 0));
+        getContentPane().setLayout(null);
 
-        Credit_card_label.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        Credit_card_label.setText("Payment");
-        Credit_card_label.setToolTipText("");
+        Background_Gray.setBackground(new java.awt.Color(249, 249, 249));
+        Background_Gray.setLayout(null);
 
-        CreditCard.setText("jLabel1");
+        Background_White.setBackground(new java.awt.Color(255, 255, 255));
+
+        Home_Icon_Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/home.png"))); // NOI18N
+        Home_Icon_Label.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Home_Icon_LabelMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Background_WhiteLayout = new javax.swing.GroupLayout(Background_White);
+        Background_White.setLayout(Background_WhiteLayout);
+        Background_WhiteLayout.setHorizontalGroup(
+            Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Background_WhiteLayout.createSequentialGroup()
+                .addContainerGap(155, Short.MAX_VALUE)
+                .addComponent(Home_Icon_Label)
+                .addGap(190, 190, 190))
+        );
+        Background_WhiteLayout.setVerticalGroup(
+            Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Background_WhiteLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(Home_Icon_Label)
+                .addContainerGap(26, Short.MAX_VALUE))
+        );
+
+        Background_Gray.add(Background_White);
+        Background_White.setBounds(0, 600, 380, 80);
+
+        PageTitle_Label.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        PageTitle_Label.setForeground(new java.awt.Color(51, 0, 102));
+        PageTitle_Label.setText("Payment");
+        Background_Gray.add(PageTitle_Label);
+        PageTitle_Label.setBounds(90, 30, 190, 37);
+
+        Back_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back_arrow.png"))); // NOI18N
+        Back_label.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Back_labelbackTo_pre(evt);
+            }
+        });
+        Background_Gray.add(Back_label);
+        Back_label.setBounds(10, 10, 14, 24);
+
+        paymentMassage.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        paymentMassage.setText("Choose Payment Method");
+        Background_Gray.add(paymentMassage);
+        paymentMassage.setBounds(30, 110, 210, 50);
+
+        CreditCard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/creditcard.png"))); // NOI18N
+        CreditCard.setToolTipText("");
         CreditCard.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 goToPay_byCreditCard(evt);
             }
         });
+        Background_Gray.add(CreditCard);
+        CreditCard.setBounds(130, 220, 80, 100);
 
-        Cash.setText("jLabel1");
+        Bed_OrangeSquareLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/square_purple.png"))); // NOI18N
+        Background_Gray.add(Bed_OrangeSquareLabel);
+        Bed_OrangeSquareLabel.setBounds(90, 140, 149, 260);
+
+        Cash.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cash_1.png"))); // NOI18N
         Cash.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 goToPay_byCash(evt);
             }
         });
+        Background_Gray.add(Cash);
+        Cash.setBounds(130, 420, 70, 100);
 
-        paymentMassage.setText("Pleas choose How to Pay");
+        Collar_OrangeSquareLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/square_purple.png"))); // NOI18N
+        Background_Gray.add(Collar_OrangeSquareLabel);
+        Collar_OrangeSquareLabel.setBounds(90, 350, 149, 240);
 
-        backToprevious.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                backToprevious(evt);
-            }
-        });
-
-        Background.setIconTextGap(0);
-        Background.setPreferredSize(new java.awt.Dimension(550, 550));
-
-        javax.swing.GroupLayout BackGr_PanelLayout = new javax.swing.GroupLayout(BackGr_Panel);
-        BackGr_Panel.setLayout(BackGr_PanelLayout);
-        BackGr_PanelLayout.setHorizontalGroup(
-            BackGr_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BackGr_PanelLayout.createSequentialGroup()
-                .addGap(170, 170, 170)
-                .addComponent(paymentMassage))
-            .addGroup(BackGr_PanelLayout.createSequentialGroup()
-                .addGap(180, 180, 180)
-                .addComponent(Credit_card_label))
-            .addGroup(BackGr_PanelLayout.createSequentialGroup()
-                .addGap(200, 200, 200)
-                .addComponent(CreditCard, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(BackGr_PanelLayout.createSequentialGroup()
-                .addGap(200, 200, 200)
-                .addComponent(Cash, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(backToprevious)
-            .addComponent(Background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        BackGr_PanelLayout.setVerticalGroup(
-            BackGr_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BackGr_PanelLayout.createSequentialGroup()
-                .addGap(100, 100, 100)
-                .addComponent(paymentMassage))
-            .addGroup(BackGr_PanelLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(Credit_card_label))
-            .addGroup(BackGr_PanelLayout.createSequentialGroup()
-                .addGap(130, 130, 130)
-                .addComponent(CreditCard, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(BackGr_PanelLayout.createSequentialGroup()
-                .addGap(260, 260, 260)
-                .addComponent(Cash, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(backToprevious)
-            .addComponent(Background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BackGr_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(BackGr_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        getContentPane().add(Background_Gray);
+        Background_Gray.setBounds(0, 0, 390, 740);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -153,12 +161,17 @@ public class Payment extends javax.swing.JFrame {
         //*** not implemented yet ***
     }//GEN-LAST:event_goToPay_byCash
 
-    private void backToprevious(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backToprevious
-        // back to payment interface
-        ConfirmAppointment X = new ConfirmAppointment();
+    private void Back_labelbackTo_pre(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Back_labelbackTo_pre
+        Date_Time X = new Date_Time();
         X.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_backToprevious
+    }//GEN-LAST:event_Back_labelbackTo_pre
+
+    private void Home_Icon_LabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Home_Icon_LabelMouseClicked
+
+        Browse_Services X = new Browse_Services();
+        X.setVisible(true);
+        this.dispose();    }//GEN-LAST:event_Home_Icon_LabelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -196,12 +209,15 @@ public class Payment extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.awt.Panel BackGr_Panel;
-    private javax.swing.JLabel Background;
+    private javax.swing.JLabel Back_label;
+    private javax.swing.JPanel Background_Gray;
+    private javax.swing.JPanel Background_White;
+    private javax.swing.JLabel Bed_OrangeSquareLabel;
     private javax.swing.JLabel Cash;
+    private javax.swing.JLabel Collar_OrangeSquareLabel;
     private javax.swing.JLabel CreditCard;
-    private javax.swing.JLabel Credit_card_label;
-    private javax.swing.JLabel backToprevious;
+    private javax.swing.JLabel Home_Icon_Label;
+    private javax.swing.JLabel PageTitle_Label;
     private javax.swing.JLabel paymentMassage;
     // End of variables declaration//GEN-END:variables
 }

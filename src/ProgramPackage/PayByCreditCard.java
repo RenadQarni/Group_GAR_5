@@ -213,7 +213,7 @@ public class PayByCreditCard extends javax.swing.JFrame {
     }//GEN-LAST:event_goTo_Next
 
     private void Back_labelbackTo_pre(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Back_labelbackTo_pre
-        Browse_Services X = new Browse_Services();
+        Payment X = new Payment();
         X.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_Back_labelbackTo_pre
