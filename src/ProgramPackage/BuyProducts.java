@@ -88,11 +88,11 @@ public class BuyProducts extends javax.swing.JFrame {
         Background_WhiteLayout.setHorizontalGroup(
             Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Background_WhiteLayout.createSequentialGroup()
-                .addContainerGap(74, Short.MAX_VALUE)
+                .addContainerGap(99, Short.MAX_VALUE)
                 .addComponent(Cart_Icon)
-                .addGap(45, 45, 45)
+                .addGap(35, 35, 35)
                 .addComponent(Home_Icon_Label)
-                .addGap(190, 190, 190))
+                .addGap(175, 175, 175))
         );
         Background_WhiteLayout.setVerticalGroup(
             Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,7 +105,7 @@ public class BuyProducts extends javax.swing.JFrame {
         );
 
         Background_Gray.add(Background_White);
-        Background_White.setBounds(0, 600, 380, 80);
+        Background_White.setBounds(0, 630, 380, 80);
 
         PageTitle_Label.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         PageTitle_Label.setForeground(new java.awt.Color(51, 0, 102));

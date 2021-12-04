@@ -48,10 +48,9 @@ public class ConfirmAppointment extends javax.swing.JFrame {
         Services_Title = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(380, 700));
         setResizable(false);
 
-        ConfirmationBackground_Panel.setBackground(new java.awt.Color(255, 255, 255));
+        ConfirmationBackground_Panel.setBackground(new java.awt.Color(249, 249, 249));
         ConfirmationBackground_Panel.setEnabled(false);
         ConfirmationBackground_Panel.setMinimumSize(new java.awt.Dimension(690, 450));
         ConfirmationBackground_Panel.setPreferredSize(new java.awt.Dimension(380, 700));
@@ -115,14 +114,13 @@ public class ConfirmAppointment extends javax.swing.JFrame {
         backToprevious.setBounds(6, 19, 15, 25);
 
         services.setEditable(false);
-        services.setBackground(new java.awt.Color(255, 255, 255));
         services.setColumns(20);
         services.setForeground(new java.awt.Color(91, 74, 132));
         services.setRows(5);
         services.setDisabledTextColor(new java.awt.Color(91, 74, 132));
         services.setFocusable(false);
         ConfirmationBackground_Panel.add(services);
-        services.setBounds(10, 360, 340, 140);
+        services.setBounds(20, 360, 340, 140);
 
         Services_Title.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         Services_Title.setForeground(new java.awt.Color(91, 74, 132));

@@ -44,7 +44,7 @@ public class Payment extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(0, 0));
         getContentPane().setLayout(null);
 
-        Background_Gray.setBackground(new java.awt.Color(255, 255, 255));
+        Background_Gray.setBackground(new java.awt.Color(249, 249, 249));
         Background_Gray.setLayout(null);
 
         Background_White.setBackground(new java.awt.Color(255, 255, 255));
@@ -60,27 +60,27 @@ public class Payment extends javax.swing.JFrame {
         Background_White.setLayout(Background_WhiteLayout);
         Background_WhiteLayout.setHorizontalGroup(
             Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Background_WhiteLayout.createSequentialGroup()
-                .addContainerGap(155, Short.MAX_VALUE)
+            .addGroup(Background_WhiteLayout.createSequentialGroup()
+                .addGap(167, 167, 167)
                 .addComponent(Home_Icon_Label)
-                .addGap(190, 190, 190))
+                .addContainerGap(178, Short.MAX_VALUE))
         );
         Background_WhiteLayout.setVerticalGroup(
             Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Background_WhiteLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addContainerGap()
                 .addComponent(Home_Icon_Label)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         Background_Gray.add(Background_White);
-        Background_White.setBounds(0, 600, 380, 80);
+        Background_White.setBounds(0, 600, 380, 70);
 
         PageTitle_Label.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         PageTitle_Label.setForeground(new java.awt.Color(51, 0, 102));
         PageTitle_Label.setText("Payment");
         Background_Gray.add(PageTitle_Label);
-        PageTitle_Label.setBounds(90, 30, 190, 37);
+        PageTitle_Label.setBounds(100, 50, 190, 37);
 
         Back_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/back_arrow.png"))); // NOI18N
         Back_label.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -94,7 +94,7 @@ public class Payment extends javax.swing.JFrame {
         paymentMassage.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         paymentMassage.setText("Choose Payment Method");
         Background_Gray.add(paymentMassage);
-        paymentMassage.setBounds(30, 110, 210, 50);
+        paymentMassage.setBounds(90, 90, 210, 50);
 
         CreditCard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/creditcard.png"))); // NOI18N
         CreditCard.setToolTipText("");
@@ -104,11 +104,11 @@ public class Payment extends javax.swing.JFrame {
             }
         });
         Background_Gray.add(CreditCard);
-        CreditCard.setBounds(130, 220, 80, 100);
+        CreditCard.setBounds(150, 220, 80, 100);
 
         Bed_OrangeSquareLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/square_purple.png"))); // NOI18N
         Background_Gray.add(Bed_OrangeSquareLabel);
-        Bed_OrangeSquareLabel.setBounds(90, 140, 149, 260);
+        Bed_OrangeSquareLabel.setBounds(110, 140, 149, 260);
 
         Cash.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cash_1.png"))); // NOI18N
         Cash.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -117,7 +117,7 @@ public class Payment extends javax.swing.JFrame {
             }
         });
         Background_Gray.add(Cash);
-        Cash.setBounds(130, 420, 70, 100);
+        Cash.setBounds(150, 420, 70, 100);
 
         Collar_OrangeSquareLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/square_purple.png"))); // NOI18N
         Collar_OrangeSquareLabel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -126,10 +126,10 @@ public class Payment extends javax.swing.JFrame {
             }
         });
         Background_Gray.add(Collar_OrangeSquareLabel);
-        Collar_OrangeSquareLabel.setBounds(90, 370, 149, 200);
+        Collar_OrangeSquareLabel.setBounds(110, 370, 149, 200);
 
         getContentPane().add(Background_Gray);
-        Background_Gray.setBounds(0, 0, 380, 740);
+        Background_Gray.setBounds(0, 0, 380, 700);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -59,7 +59,7 @@ public class PayByCreditCard extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(0, 0));
         getContentPane().setLayout(null);
 
-        Background_Gray.setBackground(new java.awt.Color(255, 255, 255));
+        Background_Gray.setBackground(new java.awt.Color(249, 249, 249));
         Background_Gray.setPreferredSize(new java.awt.Dimension(380, 700));
         Background_Gray.setLayout(null);
 

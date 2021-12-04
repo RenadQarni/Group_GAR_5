@@ -51,9 +51,8 @@ public class MakeAppointment extends javax.swing.JFrame {
         Back_label = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(380, 700));
 
-        MakeAppointmentBackground_Panel.setBackground(new java.awt.Color(255, 255, 255));
+        MakeAppointmentBackground_Panel.setBackground(new java.awt.Color(249, 249, 249));
         MakeAppointmentBackground_Panel.setPreferredSize(new java.awt.Dimension(550, 550));
         MakeAppointmentBackground_Panel.setLayout(null);
 
@@ -73,25 +72,25 @@ public class MakeAppointment extends javax.swing.JFrame {
         Health_Care_CheckBox.setForeground(new java.awt.Color(91, 74, 132));
         Health_Care_CheckBox.setText("Health Care");
         MakeAppointmentBackground_Panel.add(Health_Care_CheckBox);
-        Health_Care_CheckBox.setBounds(40, 200, 190, 24);
+        Health_Care_CheckBox.setBounds(40, 200, 190, 35);
 
         Beauty_Services_CheckBox.setBackground(new java.awt.Color(226, 221, 240));
         Beauty_Services_CheckBox.setForeground(new java.awt.Color(91, 74, 132));
         Beauty_Services_CheckBox.setText("Beauty Services");
         MakeAppointmentBackground_Panel.add(Beauty_Services_CheckBox);
-        Beauty_Services_CheckBox.setBounds(40, 280, 190, 24);
+        Beauty_Services_CheckBox.setBounds(40, 280, 190, 35);
 
         Insects_Control_CheckBox.setBackground(new java.awt.Color(226, 221, 240));
         Insects_Control_CheckBox.setForeground(new java.awt.Color(91, 74, 132));
         Insects_Control_CheckBox.setText("Insects Control");
         MakeAppointmentBackground_Panel.add(Insects_Control_CheckBox);
-        Insects_Control_CheckBox.setBounds(40, 240, 190, 24);
+        Insects_Control_CheckBox.setBounds(40, 240, 190, 35);
 
         Training_CheckBox.setBackground(new java.awt.Color(226, 221, 240));
         Training_CheckBox.setForeground(new java.awt.Color(91, 74, 132));
         Training_CheckBox.setText("Training");
         MakeAppointmentBackground_Panel.add(Training_CheckBox);
-        Training_CheckBox.setBounds(40, 320, 190, 24);
+        Training_CheckBox.setBounds(40, 320, 190, 35);
 
         pets_Label.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         pets_Label.setForeground(new java.awt.Color(91, 74, 132));
@@ -101,7 +100,7 @@ public class MakeAppointment extends javax.swing.JFrame {
 
         noOfPets_Spinner.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
         MakeAppointmentBackground_Panel.add(noOfPets_Spinner);
-        noOfPets_Spinner.setBounds(180, 130, 52, 26);
+        noOfPets_Spinner.setBounds(180, 130, 52, 32);
 
         nextStep_Button.setBackground(new java.awt.Color(91, 74, 132));
         nextStep_Button.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -133,9 +132,7 @@ public class MakeAppointment extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(MakeAppointmentBackground_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(MakeAppointmentBackground_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

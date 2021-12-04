@@ -75,6 +75,8 @@ public class Cart extends javax.swing.JFrame {
         delete_product_4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(380, 700));
+        setResizable(false);
         getContentPane().setLayout(null);
 
         Background_Gray.setBackground(new java.awt.Color(249, 249, 249));
@@ -96,20 +98,20 @@ public class Cart extends javax.swing.JFrame {
         Background_WhiteLayout.setHorizontalGroup(
             Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Background_WhiteLayout.createSequentialGroup()
-                .addContainerGap(90, Short.MAX_VALUE)
+                .addContainerGap(116, Short.MAX_VALUE)
                 .addComponent(Cart_Icon)
-                .addGap(54, 54, 54)
+                .addGap(49, 49, 49)
                 .addComponent(Home_Icon_Label)
-                .addGap(165, 165, 165))
+                .addGap(144, 144, 144))
         );
         Background_WhiteLayout.setVerticalGroup(
             Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Background_WhiteLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(32, 32, 32)
                 .addGroup(Background_WhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Cart_Icon)
                     .addComponent(Home_Icon_Label))
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         Background_Gray.add(Background_White);
@@ -342,7 +344,7 @@ public class Cart extends javax.swing.JFrame {
         delete_product_4.setBounds(10, 320, 10, 20);
 
         getContentPane().add(Background_Gray);
-        Background_Gray.setBounds(0, 0, 380, 700);
+        Background_Gray.setBounds(0, 0, 400, 700);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

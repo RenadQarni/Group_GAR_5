@@ -49,34 +49,36 @@ public class PetCareServices extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         GO_MakeAppointment_Label = new javax.swing.JLabel();
         HomeIcon_label = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(380, 700));
+        setResizable(false);
         getContentPane().setLayout(null);
 
         TrainPrice_Label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         TrainPrice_Label.setForeground(new java.awt.Color(255, 255, 255));
-        TrainPrice_Label.setText("250");
+        TrainPrice_Label.setText("250 SR");
         getContentPane().add(TrainPrice_Label);
-        TrainPrice_Label.setBounds(170, 450, 39, 25);
+        TrainPrice_Label.setBounds(170, 450, 90, 25);
 
         InsectPrice_label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         InsectPrice_label.setForeground(new java.awt.Color(255, 255, 255));
-        InsectPrice_label.setText("150");
+        InsectPrice_label.setText("150 SR");
         getContentPane().add(InsectPrice_label);
-        InsectPrice_label.setBounds(170, 350, 39, 25);
+        InsectPrice_label.setBounds(170, 350, 80, 25);
 
         BeautyPrice_Label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         BeautyPrice_Label.setForeground(new java.awt.Color(255, 255, 255));
-        BeautyPrice_Label.setText("80");
+        BeautyPrice_Label.setText("80 SR");
         getContentPane().add(BeautyPrice_Label);
-        BeautyPrice_Label.setBounds(180, 250, 26, 25);
+        BeautyPrice_Label.setBounds(180, 250, 80, 25);
 
         HealthPrice_label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         HealthPrice_label.setForeground(new java.awt.Color(255, 255, 255));
-        HealthPrice_label.setText("100");
+        HealthPrice_label.setText("100 SR");
         getContentPane().add(HealthPrice_label);
-        HealthPrice_label.setBounds(170, 160, 39, 25);
+        HealthPrice_label.setBounds(170, 160, 80, 25);
 
         MakeAppointmen_Label.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         MakeAppointmen_Label.setForeground(new java.awt.Color(51, 0, 102));
@@ -178,9 +180,9 @@ public class PetCareServices extends javax.swing.JFrame {
         getContentPane().add(HomeIcon_label);
         HomeIcon_label.setBounds(140, 630, 35, 33);
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Packground_gray.png"))); // NOI18N
-        getContentPane().add(jLabel12);
-        jLabel12.setBounds(0, 0, 330, 700);
+        jPanel1.setBackground(new java.awt.Color(249, 249, 249));
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 390, 700);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -258,10 +260,10 @@ public class PetCareServices extends javax.swing.JFrame {
     private javax.swing.JLabel TrainIcon_Label;
     private javax.swing.JLabel TrainPrice_Label;
     private javax.swing.JLabel Train_label;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
